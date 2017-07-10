@@ -1,0 +1,6 @@
+framework module Pods_HomeCares {
+  umbrella header "Pods-HomeCares-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="19W-PJ-ug0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--HOME-->
+        <scene sceneID="iTZ-Tq-BbI">
+            <objects>
+                <viewController storyboardIdentifier="HomePageViewController" id="BSA-FS-H6N" customClass="HomePageViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ocD-bB-222"/>
+                        <viewControllerLayoutGuide type="bottom" id="nR0-O5-jQR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1yj-pg-cHa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="144" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OEC-1T-YCi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlogHeaderCell" rowHeight="170" id="Upf-zR-mcD" customClass="BlogHeaderCell" customModule="HomeCares" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="170"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Upf-zR-mcD" id="Fzw-1B-p6p">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arc-2O-Ydu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/11/2017" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOf-FL-gHW">
+                                                            <rect key="frame" x="16" y="137.5" width="343" height="12"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/11/2017" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0N-E9-mZ5">
+                                                            <rect key="frame" x="16" y="116.5" width="343" height="13"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="X2o-yh-i7J"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="11"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homecare service at home" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-HT-XFz">
+                                                            <rect key="frame" x="16" y="88" width="343" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="0sw-S7-BpL"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="FOf-FL-gHW" secondAttribute="trailing" constant="16" id="6nE-9l-A6w"/>
+                                                        <constraint firstItem="FOf-FL-gHW" firstAttribute="leading" secondItem="arc-2O-Ydu" secondAttribute="leading" constant="16" id="8cs-fx-7wo"/>
+                                                        <constraint firstItem="fO0-HT-XFz" firstAttribute="leading" secondItem="arc-2O-Ydu" secondAttribute="leading" constant="16" id="9nc-g3-w9S"/>
+                                                        <constraint firstAttribute="bottom" secondItem="FOf-FL-gHW" secondAttribute="bottom" constant="10" id="Di7-0c-5qK"/>
+                                                        <constraint firstItem="z0N-E9-mZ5" firstAttribute="top" secondItem="fO0-HT-XFz" secondAttribute="bottom" constant="8" id="XwT-2i-uVc"/>
+                                                        <constraint firstItem="fO0-HT-XFz" firstAttribute="top" secondItem="arc-2O-Ydu" secondAttribute="top" constant="88" id="Y0F-JW-BfU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="z0N-E9-mZ5" secondAttribute="trailing" constant="16" id="dhN-Od-6Cl"/>
+                                                        <constraint firstItem="FOf-FL-gHW" firstAttribute="top" secondItem="z0N-E9-mZ5" secondAttribute="bottom" constant="8" id="hWp-Pf-8fK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="fO0-HT-XFz" secondAttribute="trailing" constant="16" id="pbF-3n-qzS"/>
+                                                        <constraint firstItem="z0N-E9-mZ5" firstAttribute="leading" secondItem="arc-2O-Ydu" secondAttribute="leading" constant="16" id="y2C-bB-IB5"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="arc-2O-Ydu" secondAttribute="trailing" id="1eL-Qc-XYT"/>
+                                                <constraint firstItem="arc-2O-Ydu" firstAttribute="leading" secondItem="Fzw-1B-p6p" secondAttribute="leading" id="2Nr-4C-CiP"/>
+                                                <constraint firstItem="arc-2O-Ydu" firstAttribute="width" secondItem="Fzw-1B-p6p" secondAttribute="width" id="EKY-Vb-jqw"/>
+                                                <constraint firstItem="arc-2O-Ydu" firstAttribute="top" secondItem="Fzw-1B-p6p" secondAttribute="top" id="KB4-q4-3OL"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="arc-2O-Ydu" secondAttribute="bottom" id="X1W-uh-X5s"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backGroundView" destination="arc-2O-Ydu" id="wy2-tH-QBj"/>
+                                            <outlet property="describeLabel" destination="z0N-E9-mZ5" id="e9w-Zn-VU7"/>
+                                            <outlet property="timeBlogLabel" destination="FOf-FL-gHW" id="Ptl-3W-s75"/>
+                                            <outlet property="titleBlogLabel" destination="fO0-HT-XFz" id="BN3-aP-BZd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlogCell" rowHeight="100" id="gk2-cV-ygb" customClass="BlogCell" customModule="HomeCares" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="198" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gk2-cV-ygb" id="bGa-Qc-Q4l">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homecare service at home" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btd-xN-mQQ">
+                                                    <rect key="frame" x="16" y="8" width="263" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="9b9-Q7-dJr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/11/2017" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szx-86-Quf">
+                                                    <rect key="frame" x="16" y="66" width="263" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="GoH-TA-Rer"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nio-b2-2EN">
+                                                    <rect key="frame" x="289" y="8" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="1hG-yb-7PU"/>
+                                                        <constraint firstAttribute="height" constant="70" id="PLU-HM-pZx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/11/2017" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBz-xK-fYu">
+                                                    <rect key="frame" x="16" y="36" width="265" height="13"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="ZEt-ZJ-hpN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BBz-xK-fYu" firstAttribute="top" secondItem="Btd-xN-mQQ" secondAttribute="bottom" constant="8" id="021-zV-hDB"/>
+                                                <constraint firstItem="szx-86-Quf" firstAttribute="leading" secondItem="bGa-Qc-Q4l" secondAttribute="leadingMargin" constant="8" id="DS7-gD-k8g"/>
+                                                <constraint firstItem="nio-b2-2EN" firstAttribute="top" secondItem="bGa-Qc-Q4l" secondAttribute="top" constant="8" id="Dyc-f5-G0B"/>
+                                                <constraint firstItem="szx-86-Quf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BBz-xK-fYu" secondAttribute="bottom" constant="8" id="I6X-G6-j92"/>
+                                                <constraint firstItem="szx-86-Quf" firstAttribute="bottom" secondItem="nio-b2-2EN" secondAttribute="bottom" priority="250" id="KQD-cw-krh"/>
+                                                <constraint firstItem="nio-b2-2EN" firstAttribute="leading" secondItem="szx-86-Quf" secondAttribute="trailing" constant="10" id="UrI-nI-dIK"/>
+                                                <constraint firstItem="BBz-xK-fYu" firstAttribute="leading" secondItem="bGa-Qc-Q4l" secondAttribute="leadingMargin" constant="8" id="Uxi-bo-A7C"/>
+                                                <constraint firstItem="nio-b2-2EN" firstAttribute="leading" secondItem="Btd-xN-mQQ" secondAttribute="trailing" constant="10" id="VbK-iD-I1T"/>
+                                                <constraint firstItem="nio-b2-2EN" firstAttribute="leading" secondItem="BBz-xK-fYu" secondAttribute="trailing" constant="8" id="ZPf-hi-xXO"/>
+                                                <constraint firstItem="Btd-xN-mQQ" firstAttribute="leading" secondItem="bGa-Qc-Q4l" secondAttribute="leadingMargin" constant="8" id="laN-r5-dlW"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="nio-b2-2EN" secondAttribute="bottom" constant="8" id="mNJ-Vo-VxP"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="szx-86-Quf" secondAttribute="bottom" constant="8" id="mcu-2H-qLF"/>
+                                                <constraint firstItem="Btd-xN-mQQ" firstAttribute="top" secondItem="nio-b2-2EN" secondAttribute="top" id="q0M-Sw-sbb"/>
+                                                <constraint firstAttribute="trailing" secondItem="nio-b2-2EN" secondAttribute="trailing" constant="16" id="w8x-gn-rgZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="describeLabel" destination="BBz-xK-fYu" id="70p-Ck-CWd"/>
+                                            <outlet property="imageLinkBlogLabel" destination="nio-b2-2EN" id="RBw-4i-VuY"/>
+                                            <outlet property="timeBlockLabel" destination="szx-86-Quf" id="bTg-NM-RPE"/>
+                                            <outlet property="titleBlogLabel" destination="Btd-xN-mQQ" id="cbz-56-jtW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OEC-1T-YCi" firstAttribute="top" secondItem="ocD-bB-222" secondAttribute="bottom" id="5zO-lR-rbj"/>
+                            <constraint firstItem="OEC-1T-YCi" firstAttribute="leading" secondItem="1yj-pg-cHa" secondAttribute="leading" id="iQ2-yP-mj1"/>
+                            <constraint firstAttribute="trailing" secondItem="OEC-1T-YCi" secondAttribute="trailing" id="s8C-g7-e0z"/>
+                            <constraint firstAttribute="bottom" secondItem="OEC-1T-YCi" secondAttribute="bottom" id="zJa-Kv-itu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="HomePage" image="ic_home" id="u2H-kt-06O"/>
+                    <navigationItem key="navigationItem" title="HOME" id="DAS-95-J7r">
+                        <barButtonItem key="backBarButtonItem" title=" " id="WdR-kQ-Z5x"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="OEC-1T-YCi" id="hm3-GZ-m8G"/>
+                        <segue destination="T1I-Dx-FCM" kind="show" identifier="ShowSearchDiseaseView" id="kgR-Sb-DEn"/>
+                        <segue destination="SsU-M0-TxR" kind="show" identifier="ShowSearchMedicalView" id="AOJ-WN-pfY"/>
+                        <segue destination="7n0-vf-KjK" kind="show" identifier="ShowFindPhamacyView" id="eGW-TD-Ck9"/>
+                        <segue destination="Hqs-F7-NEr" kind="show" identifier="ShowFindHospitalView" id="I8Y-zB-28M"/>
+                        <segue destination="p1c-pA-SUf" kind="show" identifier="ShowScheduleView" id="733-N9-5Ck"/>
+                        <segue destination="ZJO-1x-Wpx" kind="show" identifier="ShowBlogDetail" id="2Ki-hC-PUZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SOQ-u1-Z2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632.8" y="517.6911544227886"/>
+        </scene>
+        <!--BLOG DETAIL-->
+        <scene sceneID="Sx9-Po-f9K">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="ZJO-1x-Wpx" customClass="BlogDetailViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eV2-dZ-VCq"/>
+                        <viewControllerLayoutGuide type="bottom" id="mwM-yz-L6h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Ku-aL-CH8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wse-T9-Znp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wse-T9-Znp" secondAttribute="trailing" id="8Vd-Ot-M0H"/>
+                            <constraint firstItem="Wse-T9-Znp" firstAttribute="leading" secondItem="5Ku-aL-CH8" secondAttribute="leading" id="XqF-fE-O0g"/>
+                            <constraint firstAttribute="bottom" secondItem="Wse-T9-Znp" secondAttribute="bottom" id="xB9-RI-Ouy"/>
+                            <constraint firstItem="Wse-T9-Znp" firstAttribute="top" secondItem="5Ku-aL-CH8" secondAttribute="top" id="zlU-vK-I6s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BLOG DETAIL" id="5Ip-t9-0LP"/>
+                    <connections>
+                        <outlet property="webview" destination="Wse-T9-Znp" id="yzO-Pb-JMH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pzf-vc-Qwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2309.5999999999999" y="517.6911544227886"/>
+        </scene>
+        <!--FIND HOSPITAL-->
+        <scene sceneID="cz8-CI-7q8">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="Hqs-F7-NEr" customClass="FindHospitalViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F4V-t6-gDv"/>
+                        <viewControllerLayoutGuide type="bottom" id="y6F-jT-LNu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yab-qJ-ecW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FIND HOSPITAL" id="5OR-Hy-c1F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9Z-Di-4hm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="1371"/>
+        </scene>
+        <!--FIND PHAMACY-->
+        <scene sceneID="19w-Mo-tgM">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="7n0-vf-KjK" customClass="FindPhamacyViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dMk-1C-67J"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Vn-jL-oFC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cRh-ab-aAG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FIND PHAMACY" id="EPx-fh-LHe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4nh-TO-wrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1250" y="1372"/>
+        </scene>
+        <!--SEARCH MEDICAL-->
+        <scene sceneID="PcG-fv-UHK">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="SsU-M0-TxR" customClass="SearchMedicalViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o0P-oW-Hhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="RFY-8h-BA3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x6h-jm-bRh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SEARCH MEDICAL" id="iaJ-Yp-0tj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="umj-De-6lT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927" y="1373"/>
+        </scene>
+        <!--SEARCH DISEASE-->
+        <scene sceneID="GAe-K1-D95">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="T1I-Dx-FCM" customClass="SearchDiseaseViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P0b-a5-QJm"/>
+                        <viewControllerLayoutGuide type="bottom" id="zjS-8l-xwa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CPP-40-3qf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SEARCH DISEASE" id="SDN-CI-Bhr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lf2-0Z-j82" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2711" y="1374"/>
+        </scene>
+        <!--ServiceBookingViewController-->
+        <scene sceneID="ndK-OL-zCb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MedicalReport" referencedIdentifier="ServiceBookingViewController" id="p1c-pA-SUf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUw-sZ-SzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3266" y="1059"/>
+        </scene>
+        <!--Home Care Navigation Controller-->
+        <scene sceneID="u9D-hs-kRr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="19W-PJ-ug0" customClass="HomeCareNavigationController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="NvG-VI-S7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BSA-FS-H6N" kind="relationship" relationship="rootViewController" id="yMZ-Iw-6xZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vr9-Kh-xWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.79999999999995" y="517.6911544227886"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_home" width="24" height="20"/>
+    </resources>
+</document>

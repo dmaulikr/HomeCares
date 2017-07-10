@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>serviceItem</key>
+	<array>
+		<dict>
+			<key>background</key>
+			<string>#8edcce</string>
+			<key>icon</key>
+			<string>ic_service_home</string>
+			<key>type</key>
+			<integer>0</integer>
+			<key>service</key>
+			<dict/>
+			<key>name</key>
+			<string>THĂM KHÁM TẠI NHÀ</string>
+			<key>overview</key>
+			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<key>detail</key>
+			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
+		</dict>
+		<dict>
+			<key>background</key>
+			<string>#ea6fe6</string>
+			<key>icon</key>
+			<string>ic_service_home</string>
+			<key>type</key>
+			<integer>1</integer>
+			<key>service</key>
+			<dict/>
+			<key>name</key>
+			<string>ĐIỀU DƯỠNG TẠI NHÀ</string>
+			<key>overview</key>
+			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<key>detail</key>
+			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
+		</dict>
+		<dict>
+			<key>background</key>
+			<string>#ca8dce</string>
+			<key>icon</key>
+			<string>ic_service_home</string>
+			<key>type</key>
+			<integer>2</integer>
+			<key>service</key>
+			<dict/>
+			<key>name</key>
+			<string>XÉT NGHIỆM TẠI NHÀ</string>
+			<key>overview</key>
+			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<key>detail</key>
+			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
+		</dict>
+		<dict>
+			<key>background</key>
+			<string>#eaa418</string>
+			<key>icon</key>
+			<string>ic_service_home</string>
+			<key>type</key>
+			<integer>3</integer>
+			<key>service</key>
+			<dict/>
+			<key>name</key>
+			<string>ĐIỀU TRỊ MÃN TÍNH</string>
+			<key>overview</key>
+			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<key>detail</key>
+			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
+		</dict>
+		<dict>
+			<key>background</key>
+			<string>#1ae2e9</string>
+			<key>icon</key>
+			<string>ic_service_home</string>
+			<key>type</key>
+			<integer>4</integer>
+			<key>service</key>
+			<dict/>
+			<key>name</key>
+			<string>VẬT LÝ TRỊ LIỆU</string>
+			<key>overview</key>
+			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<key>detail</key>
+			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
+		</dict>
+		<dict>
+			<key>background</key>
+			<string>#60b2ed</string>
+			<key>icon</key>
+			<string>ic_service_home</string>
+			<key>type</key>
+			<integer>5</integer>
+			<key>service</key>
+			<dict/>
+			<key>name</key>
+			<string>THĂM KHÁM TẠI NHÀ</string>
+			<key>overview</key>
+			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<key>detail</key>
+			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
+		</dict>
+	</array>
+	<key>optionMenu</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>GỌI ĐIỆN</string>
+			<key>type</key>
+			<integer>0</integer>
+			<key>image</key>
+			<string>ic_call</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>ĐẶT LỊCH NHANH</string>
+			<key>type</key>
+			<integer>1</integer>
+			<key>image</key>
+			<string>ic_schedule</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>TÌM NHÀ THUỐC</string>
+			<key>type</key>
+			<integer>2</integer>
+			<key>image</key>
+			<string>ic_location</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>TÌM BỆNH VIỆN</string>
+			<key>type</key>
+			<integer>3</integer>
+			<key>image</key>
+			<string>ic_location</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>TRA CỨU THUỐC</string>
+			<key>type</key>
+			<integer>4</integer>
+			<key>image</key>
+			<string>ic_search</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>TRA CỨU BỆNH</string>
+			<key>type</key>
+			<integer>5</integer>
+			<key>image</key>
+			<string>ic_search</string>
+		</dict>
+	</array>
+	<key>relationShip</key>
+	<array>
+		<string>Me</string>
+		<string>Son</string>
+		<string>Daughter</string>
+		<string>Father</string>
+		<string>Mother</string>
+		<string>Father in law</string>
+		<string>Mother in law</string>
+		<string>Grand father</string>
+		<string>Grand mother</string>
+		<string>Grand father in law</string>
+		<string>Grand mother in law</string>
+		<string>Elder brother</string>
+		<string>Elder sister</string>
+		<string>Younger brother</string>
+		<string>Younger sister</string>
+		<string>Elder brother in law</string>
+		<string>Elder sister in law</string>
+		<string>Younger brother in law</string>
+		<string>Younger sister in law&quot;</string>
+		<string>Neighbour</string>
+		<string>Other</string>
+	</array>
+</dict>
+</plist>

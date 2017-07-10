@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iE4-gd-naV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Care Tabbar Controller-->
+        <scene sceneID="6JY-Ta-2zD">
+            <objects>
+                <tabBarController storyboardIdentifier="HomeCareTabbarController" id="sSY-CC-yjC" customClass="HomeCareTabbarController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="c90-z3-dJU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cdu-wh-dEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2924" y="50"/>
+        </scene>
+        <!--MORE-->
+        <scene sceneID="f38-vg-LTz">
+            <objects>
+                <viewController storyboardIdentifier="MoreViewController" id="lCj-PV-lhX" customClass="MoreViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aYH-KV-QZ7"/>
+                        <viewControllerLayoutGuide type="bottom" id="YIQ-eY-YQd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WkR-61-lMe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More" image="ic_more" id="ksk-FA-9uY"/>
+                    <navigationItem key="navigationItem" title="MORE" id="Owv-Hm-d87">
+                        <barButtonItem key="backBarButtonItem" title=" " id="quz-HU-0hg"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Loe-7Z-c7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3228" y="866"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="2Vp-fk-CTs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iE4-gd-naV" customClass="HomeCareNavigationController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" image="ic_more" id="i6M-Ci-Fsc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MUV-ju-faf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lCj-PV-lhX" kind="relationship" relationship="rootViewController" id="WJI-KZ-qON"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mdr-IG-PrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2528.8000000000002" y="865.81709145427294"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_more" width="24" height="24"/>
+    </resources>
+</document>
