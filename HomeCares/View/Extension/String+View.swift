@@ -29,5 +29,36 @@ extension String {
         }
         return nil
     }
+    
+    public var timeInterval: String {
+        if let createdTime = DateHelper.shared.date(from: self, format: .yyyy_MM_dd_T_HH_mm_ss_Z) {
+            var t = Date().timeIntervalSince(createdTime)
+            var time = Int(t)
+            if time < 60 {
+                return "\(time) giây trước"
+            }
+            time = Int(t / 60)
+            if time < 60 {
+                return "\(time) phút trước"
+            }
+            time = Int(t / 3600)
+    
+            if time < 24 {
+                return "\(time) giờ trước"
+            }
+            time = Int(t / (3600 * 24))
+            
+            if time < 30 {
+                return "\(time) ngày trước"
+            }
+            time = Int(t / (3600 * 24 * 30))
+            if time < 12 {
+                return "\(time) tháng trước"
+            }
+            time = Int(t / (3600 * 24 * 30 * 12))
+            return "\(time) năm trước"
+        }
+        return ""
+    }
 
 }

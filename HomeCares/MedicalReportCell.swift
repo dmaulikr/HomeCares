@@ -56,7 +56,14 @@ class MedicalReportCell: UITableViewCell {
             self.avatarImageView.image = "ic_user_default".image
         }
         nameMemberLabel.text = "\(patient.firstName!) \(patient.middleName!) \(patient.lastName!)"
-        genderLabel.text = patient.gender! == .male ? "Male" : "Female"
+        switch patient.gender! {
+        case .male:
+            genderLabel.text = "Nam"
+        case .female:
+            genderLabel.text = "Nữ"
+        default :
+            genderLabel.text = "Khác"
+        }
         relationLabel.text = getRelation(relation: patient.patientRelations)
         if let date = DateHelper.shared.date(from: patient.dateOfBirth, format: .yyyy_MM_dd_T_HH_mm_ss_Z) {
             oldLabel.text = "\(date.age) olds"

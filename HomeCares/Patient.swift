@@ -35,7 +35,7 @@ public enum PatientRelations: Int {
 }
 
 enum Gender: Int {
-    case female = 0, male
+    case female = 0, male = 1, other = 2
 }
 
 class Patient: NSObject {

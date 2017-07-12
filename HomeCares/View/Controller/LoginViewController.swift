@@ -18,18 +18,33 @@ class LoginViewController: UIViewController {
     
     internal let homeCareService = HomeCaresService()
     
-    // MARK: Constructor
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
+    
     // MARK: Internal method
     
     internal func prepareUI() {
-        emailTextField.addLeftImage("ic_email".image)
-        passwordTextField.addLeftImage("ic_password".image)
+        emailTextField.font = UIFont(name:"Montserrat-Light", size:16)
+        passwordTextField.font = UIFont(name:"Montserrat-Light", size:16)
+        passwordTextField.dividerNormalColor = .clear
+        emailTextField.dividerNormalColor = .clear
+
     }
     
     internal func isValidEmail() -> Bool {
@@ -44,34 +59,45 @@ class LoginViewController: UIViewController {
     // MARK: Action
 
     @IBAction func loginAction(_ sender: Any) {
-//        if !isValidEmail() {
-//            showAlert(title: "Notice",
-//                      message: "Please fill a valid email",
-//                      negativeTitle: "OK")
-//        }
-//        if !isValidPassword() {
-//            showAlert(title: "Notice",
-//                      message: "Password is at least 7 characters",
-//                      negativeTitle: "OK")
-//        }
-//        
-//        homeCareService.login(userName: emailTextField.text!, password: passwordTextField.text!) { (user) in
-//            
-//        }
-        guard let window = UIApplication.shared.keyWindow else { return }
-//        
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "mainController") as? UITabBarController {
-            window.rootViewController = vc
-        
+        if !isValidEmail() {
+            showAlert(title: "Notice",
+                      message: "Please fill a valid email",
+                      negativeTitle: "OK")
         }
-      //  window.rootViewController = UIStoryboard.i
+        if !isValidPassword() {
+            showAlert(title: "Notice",
+                      message: "Password is at least 7 characters",
+                      negativeTitle: "OK")
+        }
         
+        homeCareService.login(userName: emailTextField.text!, password: passwordTextField.text!) { [weak self] (response) in
+            
+            guard let sSelf = self else {return}
+            
+            if let user = response.data {
+                UserDefaults.userId = user.userPerson.personId
+                UserDefaults.avatar = user.userPerson.avatar
+                UserDefaults.nameUser = user.userPerson.firstName +  user.userPerson.middleName + user.userPerson.lastName
+                guard let window = UIApplication.shared.keyWindow else { return }
+                
+                if let vc = sSelf.storyboard?.instantiateViewController(withIdentifier: "mainController") as? UITabBarController {
+                    window.rootViewController = vc
+                    
+                }
+            } else {
+                sSelf.showAlert(
+                    title: "Error",
+                    message: "Username or passwork wrong.",
+                    negativeTitle: "OK")
+                
+            }
+        }
+       
         
     }
     
-    @IBAction func loginFacebookAction(_ sender: Any) {
-        
+    @IBAction func registerAction(_ sender: Any) {
+        performSegue(withIdentifier: "ShowRegisterView", sender: nil)
     }
-    
 }
 

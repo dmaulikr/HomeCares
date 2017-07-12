@@ -33,15 +33,15 @@ class BlogCell: TableViewCell {
         describeLabel.text = blog.descriptionBlog
         if let url = URL(string: blog.imageLink) {            
             imageLinkBlogLabel.af_setImage(withURL: url,
-                placeholderImage: "ic_user_default".image,
+                placeholderImage: "ic_image_default".image,
                 imageTransition: .crossDissolve(0.2),
                 completion: { (response) in
                     if let _ = response.result.error {
-                        self.imageLinkBlogLabel.image = "ic_user_default".image
+                        self.imageLinkBlogLabel.image = "ic_image_default".image
                     }
             })
         } else {
-            imageLinkBlogLabel.image = "ic_user_default".image
+            imageLinkBlogLabel.image = "ic_image_default".image
         }
     }
 }

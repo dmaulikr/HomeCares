@@ -23,6 +23,11 @@
 		6306C2181F0A80E200D03FA3 /* HomeCaresUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306C2171F0A80E200D03FA3 /* HomeCaresUITests.swift */; };
 		631281241F0D147B000D969D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631281231F0D147B000D969D /* ProfileViewController.swift */; };
 		631281261F0D15AD000D969D /* ServiceBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631281251F0D15AD000D969D /* ServiceBookingViewController.swift */; };
+		6315562E1F13C19C004FE0A7 /* UserPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315562D1F13C19C004FE0A7 /* UserPerson.swift */; };
+		631556301F13D0A5004FE0A7 /* PostQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315562F1F13D0A5004FE0A7 /* PostQuestionCell.swift */; };
+		631556321F13D0B4004FE0A7 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631556311F13D0B4004FE0A7 /* QuestionCell.swift */; };
+		631556341F13D9C9004FE0A7 /* QuestionReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631556331F13D9C8004FE0A7 /* QuestionReplyCell.swift */; };
+		631556361F13DF60004FE0A7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631556351F13DF60004FE0A7 /* Question.swift */; };
 		631D4B271F128A2900990F50 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D4B261F128A2900990F50 /* Patient.swift */; };
 		631D4B291F1294AC00990F50 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D4B281F1294AC00990F50 /* Date+Extension.swift */; };
 		631D4B2B1F12A23200990F50 /* AddMedicalReportBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D4B2A1F12A23200990F50 /* AddMedicalReportBookViewController.swift */; };
@@ -39,6 +44,9 @@
 		631F4BAE1F11255600A4CA0F /* OptionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F4BAD1F11255600A4CA0F /* OptionMenu.swift */; };
 		631F4BB11F11303500A4CA0F /* SlideShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F4BAF1F11303500A4CA0F /* SlideShowCell.swift */; };
 		631F4BB21F11303500A4CA0F /* SlideShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631F4BB01F11303500A4CA0F /* SlideShowCell.xib */; };
+		6322110E1F15028300CC3B90 /* QuestionReplyThank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6322110D1F15028300CC3B90 /* QuestionReplyThank.swift */; };
+		632211101F1503F400CC3B90 /* QuestionReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6322110F1F1503F400CC3B90 /* QuestionReply.swift */; };
+		632211121F1505CA00CC3B90 /* QuestionThank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632211111F1505CA00CC3B90 /* QuestionThank.swift */; };
 		6326C1AC1F0BCC2D00B60347 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6326C1A81F0BCC2D00B60347 /* Montserrat-Black.ttf */; };
 		6326C1AD1F0BCC2D00B60347 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6326C1A91F0BCC2D00B60347 /* Montserrat-ExtraLight.ttf */; };
 		6326C1AE1F0BCC2D00B60347 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6326C1AA1F0BCC2D00B60347 /* Montserrat-Light.ttf */; };
@@ -77,7 +85,10 @@
 		6340A5D71F0FEF340021F1C8 /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340A5D61F0FEF340021F1C8 /* ServiceDetailViewController.swift */; };
 		6340A5DC1F100AD10021F1C8 /* ServiceDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340A5DA1F100AD10021F1C8 /* ServiceDetailCell.swift */; };
 		6340A5DD1F100AD10021F1C8 /* ServiceDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6340A5DB1F100AD10021F1C8 /* ServiceDetailCell.xib */; };
+		6355F8051F16784C00735778 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6355F8041F16784C00735778 /* RegisterViewController.swift */; };
 		6371CC0A1F0C02C20070998D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6371CC091F0C02C20070998D /* MenuViewController.swift */; };
+		639AFB4E1F1529A800AC075D /* UserDefault+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639AFB4D1F1529A800AC075D /* UserDefault+Extension.swift */; };
+		639AFB501F15314F00AC075D /* PostQuestionReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639AFB4F1F15314F00AC075D /* PostQuestionReplyCell.swift */; };
 		63E5246A1F122E63009647F4 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E524691F122E63009647F4 /* DateHelper.swift */; };
 		DB789CF412412B403EB7A627 /* Pods_HomeCaresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E8AB8CE24318DC4FAF7953 /* Pods_HomeCaresTests.framework */; };
 /* End PBXBuildFile section */
@@ -122,6 +133,11 @@
 		6306C2191F0A80E200D03FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		631281231F0D147B000D969D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		631281251F0D15AD000D969D /* ServiceBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceBookingViewController.swift; sourceTree = "<group>"; };
+		6315562D1F13C19C004FE0A7 /* UserPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPerson.swift; sourceTree = "<group>"; };
+		6315562F1F13D0A5004FE0A7 /* PostQuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostQuestionCell.swift; sourceTree = "<group>"; };
+		631556311F13D0B4004FE0A7 /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		631556331F13D9C8004FE0A7 /* QuestionReplyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionReplyCell.swift; sourceTree = "<group>"; };
+		631556351F13DF60004FE0A7 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		631D4B261F128A2900990F50 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		631D4B281F1294AC00990F50 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		631D4B2A1F12A23200990F50 /* AddMedicalReportBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicalReportBookViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +154,9 @@
 		631F4BAD1F11255600A4CA0F /* OptionMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionMenu.swift; sourceTree = "<group>"; };
 		631F4BAF1F11303500A4CA0F /* SlideShowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideShowCell.swift; sourceTree = "<group>"; };
 		631F4BB01F11303500A4CA0F /* SlideShowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideShowCell.xib; sourceTree = "<group>"; };
+		6322110D1F15028300CC3B90 /* QuestionReplyThank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionReplyThank.swift; sourceTree = "<group>"; };
+		6322110F1F1503F400CC3B90 /* QuestionReply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionReply.swift; sourceTree = "<group>"; };
+		632211111F1505CA00CC3B90 /* QuestionThank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionThank.swift; sourceTree = "<group>"; };
 		6326C1A81F0BCC2D00B60347 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Black.ttf"; path = "Resource/Montserrat/Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		6326C1A91F0BCC2D00B60347 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-ExtraLight.ttf"; path = "Resource/Montserrat/Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
 		6326C1AA1F0BCC2D00B60347 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Light.ttf"; path = "Resource/Montserrat/Montserrat-Light.ttf"; sourceTree = "<group>"; };
@@ -176,7 +195,10 @@
 		6340A5D61F0FEF340021F1C8 /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
 		6340A5DA1F100AD10021F1C8 /* ServiceDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailCell.swift; sourceTree = "<group>"; };
 		6340A5DB1F100AD10021F1C8 /* ServiceDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceDetailCell.xib; sourceTree = "<group>"; };
+		6355F8041F16784C00735778 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6371CC091F0C02C20070998D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		639AFB4D1F1529A800AC075D /* UserDefault+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefault+Extension.swift"; sourceTree = "<group>"; };
+		639AFB4F1F15314F00AC075D /* PostQuestionReplyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostQuestionReplyCell.swift; sourceTree = "<group>"; };
 		63E524691F122E63009647F4 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		6684F1EC2FD063933B972579 /* Pods-HomeCaresUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeCaresUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeCaresUITests/Pods-HomeCaresUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A167C86D9A8451DA97F56B44 /* Pods-HomeCares.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeCares.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeCares/Pods-HomeCares.release.xcconfig"; sourceTree = "<group>"; };
@@ -314,6 +336,7 @@
 				63062C621F11529D003C6EB7 /* AppFABMenuViewController.swift */,
 				631D4B2A1F12A23200990F50 /* AddMedicalReportBookViewController.swift */,
 				631D4B2C1F12AAEA00990F50 /* BlogDetailViewController.swift */,
+				6355F8041F16784C00735778 /* RegisterViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -328,6 +351,7 @@
 				6326C1D01F0BD87E00B60347 /* UIColor+Extension.swift */,
 				6326C1D81F0BFBC800B60347 /* UITableView+Extension.swift */,
 				631D4B281F1294AC00990F50 /* Date+Extension.swift */,
+				639AFB4D1F1529A800AC075D /* UserDefault+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -341,6 +365,11 @@
 				632DFB0B1F10B3FB00037FDC /* Blog.swift */,
 				631F4BAD1F11255600A4CA0F /* OptionMenu.swift */,
 				631D4B261F128A2900990F50 /* Patient.swift */,
+				6315562D1F13C19C004FE0A7 /* UserPerson.swift */,
+				631556351F13DF60004FE0A7 /* Question.swift */,
+				6322110D1F15028300CC3B90 /* QuestionReplyThank.swift */,
+				6322110F1F1503F400CC3B90 /* QuestionReply.swift */,
+				632211111F1505CA00CC3B90 /* QuestionThank.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -388,6 +417,10 @@
 				631F4BAA1F1123DF00A4CA0F /* OptionItemCell.xib */,
 				631F4BAF1F11303500A4CA0F /* SlideShowCell.swift */,
 				631F4BB01F11303500A4CA0F /* SlideShowCell.xib */,
+				6315562F1F13D0A5004FE0A7 /* PostQuestionCell.swift */,
+				631556311F13D0B4004FE0A7 /* QuestionCell.swift */,
+				631556331F13D9C8004FE0A7 /* QuestionReplyCell.swift */,
+				639AFB4F1F15314F00AC075D /* PostQuestionReplyCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -761,32 +794,43 @@
 				631F4BA71F11235A00A4CA0F /* OptionMenuCell.swift in Sources */,
 				6326C1CD1F0BCE2B00B60347 /* MoreViewController.swift in Sources */,
 				6326C1D11F0BD87E00B60347 /* UIColor+Extension.swift in Sources */,
+				631556361F13DF60004FE0A7 /* Question.swift in Sources */,
 				632A88901F0D4AA300C8EA0F /* ServiceItem.swift in Sources */,
 				63E5246A1F122E63009647F4 /* DateHelper.swift in Sources */,
 				6326C1C01F0BCD3300B60347 /* ApiHelper.swift in Sources */,
 				6326C1B91F0BCD0E00B60347 /* String+View.swift in Sources */,
 				6326C1BB1F0BCD0E00B60347 /* ViewController+Extension.swift in Sources */,
 				6326C1D91F0BFBC800B60347 /* UITableView+Extension.swift in Sources */,
+				639AFB4E1F1529A800AC075D /* UserDefault+Extension.swift in Sources */,
 				631F4BAB1F1123DF00A4CA0F /* OptionItemCell.swift in Sources */,
 				6340A5D11F0FD6310021F1C8 /* IntroduceCell.swift in Sources */,
 				6326C1C71F0BCDD900B60347 /* HomePageViewController.swift in Sources */,
 				6306C1F81F0A80E200D03FA3 /* AppDelegate.swift in Sources */,
+				632211121F1505CA00CC3B90 /* QuestionThank.swift in Sources */,
 				6326C1C51F0BCD5700B60347 /* User.swift in Sources */,
 				6326C1CB1F0BCE1D00B60347 /* QuestionAnswerViewController.swift in Sources */,
 				631D4B2B1F12A23200990F50 /* AddMedicalReportBookViewController.swift in Sources */,
 				6326C1C31F0BCD3300B60347 /* HomeCaresService.swift in Sources */,
 				63062C591F114837003C6EB7 /* FindHospitalViewController.swift in Sources */,
+				6322110E1F15028300CC3B90 /* QuestionReplyThank.swift in Sources */,
 				6326C1B21F0BCCC300B60347 /* LoginViewController.swift in Sources */,
+				631556321F13D0B4004FE0A7 /* QuestionCell.swift in Sources */,
+				631556341F13D9C9004FE0A7 /* QuestionReplyCell.swift in Sources */,
 				6326C1C21F0BCD3300B60347 /* Configuration.swift in Sources */,
 				631D4B2D1F12AAEA00990F50 /* BlogDetailViewController.swift in Sources */,
+				639AFB501F15314F00AC075D /* PostQuestionReplyCell.swift in Sources */,
 				63062C5D1F11487F003C6EB7 /* SearchMedicalViewController.swift in Sources */,
 				6326C1D71F0BEB2100B60347 /* MedicalReportCell.swift in Sources */,
 				631D4B271F128A2900990F50 /* Patient.swift in Sources */,
 				6326C1D31F0BDE0700B60347 /* HomeCareTabbarController.swift in Sources */,
 				632DFB061F109C1800037FDC /* BlogCell.swift in Sources */,
+				6355F8051F16784C00735778 /* RegisterViewController.swift in Sources */,
+				631556301F13D0A5004FE0A7 /* PostQuestionCell.swift in Sources */,
 				63062C5F1F114A44003C6EB7 /* SearchDiseaseViewController.swift in Sources */,
+				632211101F1503F400CC3B90 /* QuestionReply.swift in Sources */,
 				63062C611F114D27003C6EB7 /* AppSearchBarViewController.swift in Sources */,
 				632DFB0C1F10B3FB00037FDC /* Blog.swift in Sources */,
+				6315562E1F13C19C004FE0A7 /* UserPerson.swift in Sources */,
 				6340A5CA1F0FCD310021F1C8 /* ServiceMenuCell.swift in Sources */,
 				6371CC0A1F0C02C20070998D /* MenuViewController.swift in Sources */,
 			);

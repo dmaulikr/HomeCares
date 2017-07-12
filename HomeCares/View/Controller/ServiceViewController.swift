@@ -55,19 +55,17 @@ extension ServiceViewController: UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
             return tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath)
-        case 1:
+        default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceMenuCell", for: indexPath) as! ServiceMenuCell
             cell.delegate = self
             return cell
-        default :
-            return tableView.dequeueReusableCell(withIdentifier: "IntroduceCell", for: indexPath)
         }
     }
 

@@ -24,9 +24,16 @@ class HomeCaresService {
     
     internal func login(userName: String, password: String, handler: @escaping (ApiResponse<User>) -> Void) {
         let parameters = ["userName" : userName,
-                          "password" : password]
-        apiHelper.post("\(Configuration.Api)/login", parameters: parameters) { (json, error) in
-           
+                          "passwordHash" : password]
+        apiHelper.post("\(Configuration.Api)/applicationLogin", parameters: parameters) { (json, error) in
+            
+            let response = ApiResponse<User>()
+            if let json = json {
+                response.data = User(json: json)
+            }
+            
+            response.error = error
+            handler(response)
         }
     }
     
@@ -48,6 +55,37 @@ class HomeCaresService {
             
             if let json = json {
                 response.data = json.arrayValue.map({Patient(json: $0)})
+            }
+            response.error = error
+            handler(response)
+        }
+    }
+    
+    internal func getQuestions(handler: @escaping (ApiResponse<[Question]>) -> Void) {
+        apiHelper.get("\(Configuration.Api)/getQuestions", parameters: nil) { (json, error) in
+            let response = ApiResponse<[Question]>()
+            
+            if let json = json {
+                response.data = json.arrayValue.map({Question(json: $0)})
+            }
+            response.error = error
+            handler(response)
+        }
+    }
+    
+    internal func postQuestion(question: Question, handler: @escaping (ApiResponse<Question>) -> Void) {
+        let paragrams = ["created": question.created,
+                         "updated": question.updated,
+                         "personId": question.personId,
+                         "questionThanks": question.questionThanks,
+                         "questionReplies": question.questionReplies,
+                         "content": question.content,
+                         "allowEveryOneAnswer": question.allowEveryOneAnswer] as [String:Any]
+        
+        apiHelper.post("\(Configuration.Api)/addQuestion", parameters: paragrams) { (json, error) in
+            let response = ApiResponse<Question>()
+            if let json = json {
+                response.data = Question(json:json)
             }
             response.error = error
             handler(response)

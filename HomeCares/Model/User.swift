@@ -13,34 +13,22 @@ class User: NSObject {
     
     // MARK: Property
     
-    internal var userId: Int
+    internal var id: Int
     internal var userName: String
-    internal var password: String
+    internal var passwordHash: String
     internal var email: String
-    internal var phone: String
-    internal var userRole: Int
-    internal var userState: Int
-    internal var accountState: Int
-    internal var wrongPasswordCount: Int
-    internal var activeCode: Int
-    internal var created: String
-    internal var updated: String
-    
+    internal var phoneNumber: String
+    internal var phoneNumberConfirmed: String!
+    internal var userPerson: UserPerson!
     // MARK: Constructor
     
     public init(json: JSON) {
-        userId = json["userId"].intValue
+        id = json["id"].intValue
         userName = json["userName"].stringValue
-        password = json["password"].stringValue
+        passwordHash = json["passwordHash"].stringValue
         email = json["email"].stringValue
-        phone = json["phone"].stringValue
-        userRole = json["userRole"].intValue
-        userState = json["userState"].intValue
-        accountState = json["accountState"].intValue
-        wrongPasswordCount = json["wrongPasswordCount"].intValue
-        activeCode = json["activeCode"].intValue
-        created = json["created"].stringValue
-        updated = json["updated"].stringValue
+        phoneNumber = json["phoneNumber"].stringValue
+        phoneNumberConfirmed = json["phoneNumberConfirmed"].stringValue
+        userPerson = UserPerson(json: JSON(json["userPerson"].object))
     }
-    
 }
