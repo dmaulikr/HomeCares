@@ -27,8 +27,8 @@ extension DateFormat {
     public static let MMM_dd_yyyy_HH_mm_aa = DateFormat("MMM dd, yyyy hh:mm aa")
     public static let MMM_dd_yyyy = DateFormat("MMM dd, yyyy")
     public static let hh_mm_aa = DateFormat("hh:mm aa")
-    public static let dd_MM_yyyy = DateFormat("dd-MM-yyyy")
-    
+    public static let dd_MM_yyyy = DateFormat("MM/dd/yyyy")
+    public static let HH_mm_dd_MM_yyyy = DateFormat("HH:mm - dd/MM/yyyy")
 }
 
 public class DateHelper {

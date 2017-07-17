@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJSnackBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Material-com.cosmicmind.material.fonts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,6 +82,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1238CD9439284BEE12B12DEABA7BB8B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>39AA3FC7447AC6B6A131668CFF9C01CD</key>
 		<dict>
 			<key>primary</key>
@@ -87,7 +97,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>43C6C11F5A0D748F745EB217327D1FC8</key>
+		<key>84A6544A86B9A2836D7EA8D10279F136</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8FA626A5EC7B9EE5965863372E926D0A</key>
+		<key>958AFF079440A1619F98FF0DE8E8FD9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +142,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F773BB076CA13B7CFB8E27196BBF55E8</key>
+		<key>EEABE82F9D5E7F87E2441DAEEA8644AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

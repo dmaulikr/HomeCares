@@ -27,7 +27,15 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
 
-    internal static let primary = UIColor(hex: 0x7de8be)
+    internal static let primary = UIColor(hex: 0x78E0B9)
+    internal static let dividerColor = UIColor(hex: 0xD3D3D3)
+    
+    internal static var random: UIColor {
+        let red = CGFloat(drand48())
+        let green = CGFloat(drand48())
+        let blue = CGFloat(drand48())
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+    }
     
     internal static let refresh = [UIColor(hex: 0xDD4741),
                                  UIColor(hex: 0xFF5722),

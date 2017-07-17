@@ -32,7 +32,7 @@ extension String {
     
     public var timeInterval: String {
         if let createdTime = DateHelper.shared.date(from: self, format: .yyyy_MM_dd_T_HH_mm_ss_Z) {
-            var t = Date().timeIntervalSince(createdTime)
+            let t = Date().timeIntervalSince(createdTime)
             var time = Int(t)
             if time < 60 {
                 return "\(time) giây trước"
@@ -58,7 +58,22 @@ extension String {
             time = Int(t / (3600 * 24 * 30 * 12))
             return "\(time) năm trước"
         }
-        return ""
+        return "0 giây trước."
     }
 
+}
+
+
+extension String {
+    
+    public func isValidatePhone() -> Bool {
+        let phoneRegexten = "^\\d{10}$"
+        let phoneRegexeleven = "^\\d{11}$"
+        return  NSPredicate(format: "SELF MATCHES %@", phoneRegexten).evaluate(with: self) ||  NSPredicate(format: "SELF MATCHES %@", phoneRegexeleven).evaluate(with: self)
+    }
+    
+    public func isValidEmail() -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self)
+    }
 }

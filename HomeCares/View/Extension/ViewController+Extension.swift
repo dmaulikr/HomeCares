@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MJSnackBar
 
 extension UIViewController {
     
@@ -21,5 +22,20 @@ extension UIViewController {
         alertController.addAction(UIAlertAction(title: negativeTitle, style: .cancel, handler: negativeHandler))
         showDetailViewController(alertController, sender: nil)
     }
+    
+    public func showSnackBar(message: String) {
+        let snackBar = MJSnackBar(onView: self.view)
+        snackBar.show(data: MJSnackBarData(message: message), onView: self.view)
+    }
+    
+    public func beginIgnoringEvent() {
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
+    
+    public func endIgnoringEvent() {
+        UIApplication.shared.endIgnoringInteractionEvents()
+    }
+    
+    public func didReceiveData(data: Any? = nil) {}
 
 }

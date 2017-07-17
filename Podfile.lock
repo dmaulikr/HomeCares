@@ -10,6 +10,7 @@ PODS:
   - Material (2.6.3):
     - Material/Core (= 2.6.3)
   - Material/Core (2.6.3)
+  - MJSnackBar (1.0.2)
   - SpringIndicator (1.5.0)
   - SwiftyJSON (3.1.4)
 
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - ImageSlideshow (~> 1.3)
   - IQKeyboardManagerSwift
   - Material
+  - MJSnackBar
   - SpringIndicator
   - SwiftyJSON
 
@@ -30,9 +32,10 @@ SPEC CHECKSUMS:
   ImageSlideshow: a68a76fc618ebd2b7481ce355ad67d7097203976
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
+  MJSnackBar: ed280d1d20692abbabe6836f8004590dd9c9ab3e
   SpringIndicator: 5ce3e1d8d52124fd4310f7bf32b4106e112b91e2
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 5d401d038c116506a656e2ef8145fccd732b4408
+PODFILE CHECKSUM: e1924211e18b6d766820b80d81af5e2d2b4e8e02
 
 COCOAPODS: 1.2.1

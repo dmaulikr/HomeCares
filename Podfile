@@ -14,6 +14,7 @@ target 'HomeCares' do
   pod 'SpringIndicator'
   pod 'ActionSheetPicker-3.0'
   pod 'ImageSlideshow', '~> 1.3'
+  pod 'MJSnackBar'
 
   target 'HomeCaresTests' do
     inherit! :search_paths
