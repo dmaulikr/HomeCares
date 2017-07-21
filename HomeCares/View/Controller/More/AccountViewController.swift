@@ -9,6 +9,8 @@
 import UIKit
 import Material
 import ActionSheetPicker_3_0
+import SpringIndicator
+import MJSnackBar
 
 class AccountViewController: UIViewController {
     
@@ -29,13 +31,16 @@ class AccountViewController: UIViewController {
     internal var isEdit = false
     internal var genderSelected = Gender.female
     internal var imageSelected: UIImage?
+    internal var userPerson: UserPerson!
+    internal var indicator: SpringIndicator!
+    internal var homecareService = HomeCaresService()
     
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
-
+        bindData()
     }
     
     // MARK: Internal method
@@ -53,7 +58,39 @@ class AccountViewController: UIViewController {
         addressTextField.font = UIFont(name:"Montserrat-Light", size:16)
         genderTextField.font = UIFont(name:"Montserrat-Light", size:16)
         identifyTextField.font = UIFont(name:"Montserrat-Light", size:16)
+        firstNameTextField.dividerNormalColor = .darkGray
+        middleNameTextField.dividerNormalColor = .darkGray
+        lastNameTextField.dividerNormalColor = .darkGray
+        addressTextField.dividerNormalColor = .darkGray
+        genderTextField.dividerNormalColor = .darkGray
+        identifyTextField.dividerNormalColor = .darkGray
+        birthdayTextField.dividerNormalColor = .darkGray
         switchEditAccount()
+    }
+    
+    internal func bindData() {
+        if let url = URL(string: userPerson.avatar) {
+            avatarImageView.af_setImage(
+                withURL         : url,
+                placeholderImage: "ic_user_default".image,
+                imageTransition : .crossDissolve(0.2),
+                completion: { (response) in
+                    if let _  = response.result.error {
+                        self.avatarImageView.image = "ic_user_default".image
+                    }
+            })
+        } else {
+            self.avatarImageView.image = "ic_user_default".image
+        }
+        nameLabel.text = "\(userPerson.firstName!) \(userPerson.middleName!) \(userPerson.lastName!)"
+        detailLabel.text = userPerson.subInfor
+        firstNameTextField.text = userPerson.firstName
+        middleNameTextField.text = userPerson.middleName
+        lastNameTextField.text = userPerson.lastName
+        birthdayTextField.text = userPerson.birthDay.date(format: .dd_MM_yyyy)
+        genderTextField.text = userPerson.gender! == .male ? "Male" : userPerson.gender! == .male ? "Female" : "Other"
+        addressTextField.text = userPerson.address
+        identifyTextField.text = userPerson.idCardNumber
     }
     
     internal func switchEditAccount() {
@@ -88,13 +125,70 @@ class AccountViewController: UIViewController {
         !birthdayTextField.text!.isEmpty,
         !addressTextField.text!.isEmpty,
         !genderTextField.text!.isEmpty {
-            
+            userPerson.firstName = firstNameTextField.text!
+            userPerson.middleName = middleNameTextField.text!
+            userPerson.lastName = lastNameTextField.text!
+            userPerson.address = addressTextField.text!
+            userPerson.gender = genderSelected
+            userPerson.updated = "\(Date())"
+            userPerson.idCardNumber = identifyTextField.text!
+            if let date = DateHelper.shared.date(from: birthdayTextField.text!, format: .dd_MM_yyyy) {
+                userPerson.birthDay = DateHelper.shared.string(from: date, format: .yyyy_MM_dd_T_HH_mm_ss_Z)
+            }
+            startWaiting()
+            homecareService.updateUserPerson(userPerson: userPerson, handler: {[weak self] (response) in
+                guard let sSelf = self else {return}
+                
+                sSelf.stopWaiting()
+                if let _ = response.data {
+                    sSelf.showSnackBar(message: "You updated successfully")
+                    if #available(iOS 10.0, *) {
+                        let _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
+                            sSelf.navigationController?.popViewController(animated: true)
+                        })
+                    } else {
+                        let _ = Timer.scheduledTimer(timeInterval: 1, target: sSelf, selector: #selector(sSelf.backToMore), userInfo: nil, repeats: false)
+                    }
+
+                } else if let error = response.error {
+                    sSelf.showAlert(title: "Error",
+                                    message: error.localizedDescription,
+                                    negativeTitle: "OK")
+                }
+            })
 
         } else {
             showAlert(title: "Notice",
                       message: "Please fill in information",
                       negativeTitle: "OK")
         }
+    }
+    
+    internal func backToMore() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    internal func startWaiting() {
+        indicator = SpringIndicator()
+        indicator.lineWidth = 2
+        indicator.lineColor = .white
+        
+        updateAccountButton.layout(indicator)
+            .size(CGSize(width: 24, height: 24))
+            .centerVertically()
+            .right(8)
+        indicator.startAnimation()
+    }
+    
+    internal func stopWaiting() {
+        if indicator != nil, indicator.isSpinning() {
+            indicator.stopAnimation(false)
+        }
+    }
+    public func showSnackBar(message: String) {
+        let snackBar = MJSnackBar(onView: self.view)
+        snackBar.show(data: MJSnackBarData(message: message), onView: self.view)
     }
     
     internal func showAddImage() {
@@ -119,6 +213,8 @@ class AccountViewController: UIViewController {
     }
     
     // MARK: Action
+    
+    
     
     @IBAction func choseBirthdayAction(_ sender: Any) {
         if isEdit {

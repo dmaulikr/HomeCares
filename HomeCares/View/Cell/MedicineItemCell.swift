@@ -21,6 +21,7 @@ class MedicineItemCell: TableViewCell {
     @IBOutlet weak var medicineOverview: UILabel!
     internal var medicine: Medicine!
     internal var indexPath: IndexPath!
+    internal var disease: Disease!
     
     // MARK: Internal method
     
@@ -53,5 +54,6 @@ class MedicineItemCell: TableViewCell {
             return
         }
     }
+    
     
 }

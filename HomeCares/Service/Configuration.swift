@@ -11,7 +11,7 @@ import Foundation
 
 internal struct Configuration {
     
-    public static let BaseUrl = "http://homecares.vn/"
-    public static let Api = "api"
+    public static let BaseUrl = "http://homecares.vn"
+    public static let Api = "/api"
     
 }

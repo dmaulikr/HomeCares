@@ -41,6 +41,7 @@ public class ApiHelper: NSObject {
                     "\(baseUrl)\(url)",
                     method      : method,
                     parameters  : parameters)
+                 .validate(statusCode: 200..<300)
                  .responseJSON { response in
                     UIApplication.shared.isNetworkActivityIndicatorVisible = false
                     self.handleResponse(response, responseHandler: responseHandler)
@@ -94,4 +95,75 @@ extension ApiHelper {
             responseHandler : responseHandler
         )
     }
+    
+    public func put(
+        _ url           : URLConvertible,
+        parameters      : Parameters? = nil,
+        encoding        : ParameterEncoding = URLEncoding.default,
+        headers         : HTTPHeaders? = nil,
+        responseHandler : ResponseHandler? = nil) {
+        
+        request(
+            url,
+            method          : .put,
+            parameters      : parameters,
+            encoding        : encoding,
+            headers         : headers,
+            responseHandler : responseHandler
+        )
+    }
+
+    
+    public func delete(
+        _ url           : URLConvertible,
+        parameters      : Parameters? = nil,
+        encoding        : ParameterEncoding = URLEncoding.default,
+        headers         : HTTPHeaders? = nil,
+        responseHandler : ResponseHandler? = nil) {
+        
+        request(
+            url,
+            method          : .delete,
+            parameters      : parameters,
+            encoding        : encoding,
+            headers         : headers,
+            responseHandler : responseHandler
+        )
+    }
+    
+    public func upload(
+        _ url           : URLConvertible,
+        parameters      : Parameters? = nil,
+        headers         : HTTPHeaders? = nil,
+        data            : Data,
+        responseHandler : ResponseHandler? = nil) {
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        Alamofire.upload(multipartFormData: { (formData) in
+            
+            if let hasParam = parameters {
+                for (key, value) in hasParam {
+                    if let data = value as? Data {
+                        formData.append(data, withName: key)
+                    } else {
+                        formData.append("\(value)".data(using: .utf8)!, withName: key)
+                    }
+                }
+            }
+//            formData.append(data, withName: "upload")
+            formData.append(data, withName: "upload", mimeType: "image/png")
+        }, to: "\(baseUrl)\(url)", headers: headers) { (completion) in
+            switch completion {
+            case .success(let request, _, _):
+                request.responseJSON { (response) in
+                    
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    self.handleResponse(response, responseHandler: responseHandler)
+                }
+            case .failure(let error):
+                responseHandler?(nil, error)
+            }
+        }
+    }
+
 }

@@ -15,6 +15,7 @@ target 'HomeCares' do
   pod 'ActionSheetPicker-3.0'
   pod 'ImageSlideshow', '~> 1.3'
   pod 'MJSnackBar'
+  pod 'XLPagerTabStrip', '~> 7.0'
 
   target 'HomeCaresTests' do
     inherit! :search_paths

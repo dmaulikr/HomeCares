@@ -48,5 +48,9 @@
 	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Take your picture</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
 </dict>
 </plist>

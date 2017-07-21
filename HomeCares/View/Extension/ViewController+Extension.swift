@@ -23,10 +23,7 @@ extension UIViewController {
         showDetailViewController(alertController, sender: nil)
     }
     
-    public func showSnackBar(message: String) {
-        let snackBar = MJSnackBar(onView: self.view)
-        snackBar.show(data: MJSnackBarData(message: message), onView: self.view)
-    }
+    
     
     public func beginIgnoringEvent() {
         UIApplication.shared.beginIgnoringInteractionEvents()

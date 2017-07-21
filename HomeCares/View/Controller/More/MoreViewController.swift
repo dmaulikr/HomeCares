@@ -19,23 +19,50 @@ class MoreViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     internal var menus = [OptionMenu]()
+    internal var userPerson: UserPerson!
+    internal var homecareService = HomeCaresService()
     
     // MARK: Lifecycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getUserPerson()
+    }
 
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareUI()
-        prepareData()
+        menus = OptionMenu.getMenus(of: "application")
     }
     
     // MARK: Internal method
     
-    internal func prepareData() {
-        menus = OptionMenu.getMenus(of: "application")
+
+    internal func getUserPerson() {
+        guard let userId = UserDefaults.userId else {
+            return
+        }
+        homecareService.getUserPersonBy(userId: userId) { [weak self] (response) in
+            guard let sSelf = self else { return }
+            
+            if let data = response.data {
+                sSelf.userPerson = data
+                sSelf.bindData()
+            }
+            
+            if let error = response.error {
+                sSelf.showAlert(title: "Error", message: error.localizedDescription, negativeTitle: "OK")
+            }
+        }
+    }
+    
+    internal func bindData() {
+       
         avatarImageView.layer.cornerRadius = 30
         
-        if let avatar = UserDefaults.avatar, let url = URL(string: avatar) {
+        if let url = URL(string: userPerson.avatar) {
             avatarImageView.af_setImage(
                 withURL         : url,
                 placeholderImage: "ic_user_default".image,
@@ -48,7 +75,8 @@ class MoreViewController: UIViewController {
         } else {
             avatarImageView.image = "ic_user_default".image
         }
-        nameLabel.text = UserDefaults.nameUser!
+        nameLabel.text = "Welcome \(userPerson.firstName!)"
+        detailLabel.text = "Your account have \(userPerson.balances!) VND."
     }
     
     internal func prepareUI() {
@@ -59,6 +87,14 @@ class MoreViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowAccountView" {
+            if let vc = segue.destination as? AccountViewController {
+                vc.userPerson = sender as? UserPerson
+            }
+        }
+    }
+    
     // MARK: Action
     
     @IBAction func settingAction(_ sender: Any) {
@@ -66,6 +102,9 @@ class MoreViewController: UIViewController {
         
     }
     
+    @IBAction func showDetailAccountAction(_ sender: Any) {
+        performSegue(withIdentifier: "ShowAccountView", sender: userPerson)
+    }
 
 }
 

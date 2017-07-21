@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,7 +50,10 @@
                                                     <rect key="frame" x="0.0" y="80" width="375" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hôm nay gia đình bạn thế nào?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6L-5e-9Ue">
-                                                            <rect key="frame" x="8" y="8" width="359" height="26"/>
+                                                            <rect key="frame" x="8" y="4" width="359" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="2fH-vg-zOp"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="21"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -60,9 +62,11 @@
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.27159441021126762" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="e6L-5e-9Ue" secondAttribute="trailing" constant="8" id="GXH-t5-qXX"/>
+                                                        <constraint firstItem="e6L-5e-9Ue" firstAttribute="top" secondItem="Iwv-Ow-BRU" secondAttribute="top" constant="4" id="OVZ-yQ-vXq"/>
+                                                        <constraint firstAttribute="bottom" secondItem="e6L-5e-9Ue" secondAttribute="bottom" constant="4" id="PHI-8p-ucZ"/>
                                                         <constraint firstItem="e6L-5e-9Ue" firstAttribute="leading" secondItem="Iwv-Ow-BRU" secondAttribute="leading" constant="8" id="f5c-9p-alI"/>
                                                         <constraint firstItem="e6L-5e-9Ue" firstAttribute="centerY" secondItem="Iwv-Ow-BRU" secondAttribute="centerY" id="uHE-2x-kQJ"/>
-                                                        <constraint firstAttribute="height" constant="40" id="wKT-do-RqD"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="wKT-do-RqD"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -248,7 +252,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jdo-rj-wIe" customClass="HomeCareNavigationController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Service" image="ic_library_books" id="2Ug-Ip-YPM"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yDA-WV-tzy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yDA-WV-tzy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

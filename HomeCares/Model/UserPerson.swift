@@ -30,6 +30,15 @@ class UserPerson: NSObject {
     internal var created: String!
     internal var updated: String!
     
+    internal var subInfor: String {
+        get {
+            if let date = DateHelper.shared.date(from: self.birthDay, format: .yyyy_MM_dd_T_HH_mm_ss_Z) {
+                return self.gender! == .male ? "Male - " + " \(date.age) years old." : self.gender! == .male ? "Female - " + " \(date.age) years old.": "Other - "  + " \(date.age) years old."
+            }
+            return ""
+        }
+    }
+    
     // MARK: Constructor
     
     override init() {
@@ -46,13 +55,45 @@ class UserPerson: NSObject {
         middleName = json["middleName"].stringValue
         gender = Gender(rawValue: json["gender"].intValue)
         address = json["address"].stringValue
-        avatar = "\(Configuration.BaseUrl)/\(json["avatar"].stringValue)"
+        avatar = "\(Configuration.BaseUrl)\(json["avatar"].stringValue)"
         birthDay = json["birthDay"].stringValue
         latitude = json["latitude"].doubleValue
         longitude = json["longitude"].doubleValue
         information = json["information"].stringValue
         created = json["created"].stringValue
         updated = json["updated"].stringValue
+    }
+    // MARK: Internal method
+    
+    internal var parameters: [String: Any] {
+        return [ "firstName":firstName,
+                 "middleName":middleName,
+                 "lastName":lastName,
+                 "address":address,
+                 "idCardNumber":idCardNumber,
+                 "birthDay":birthDay,
+                 "updated":updated,
+                 "gender":gender.rawValue
+        ]
+    }
+    internal var parametersUpdate: [String: Any] {
+        return [ "firstName":firstName,
+                 "middleName":middleName,
+                 "lastName":lastName,
+                 "address":address,
+                 "birthDay":birthDay,
+                 "updated":updated,
+                 "gender":gender.rawValue,
+                 "personId":personId,
+                 "userId":userId,
+                 "idCardNumber":idCardNumber,
+                 "information": information,
+                 "created":created,
+                 "avatar":avatar,
+                 "balances":balances,
+                 "longitude":longitude,
+                 "latitude":latitude
+        ]
     }
     
 }

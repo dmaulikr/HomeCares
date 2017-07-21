@@ -49,7 +49,7 @@ class HomePageViewController: UIViewController {
             guard let sSelf = self else {return}
             
             if let hasData = response.data {
-                sSelf.blogs = hasData
+                sSelf.blogs = hasData.filter({$0.postType == 100})
                 sSelf.tableView.reloadData()
             }
             sSelf.tableView.stopHeaderLoading()
@@ -63,10 +63,6 @@ class HomePageViewController: UIViewController {
             //performSegue(withIdentifier: "ShowCallView", sender: menu)
         case .schedule:
             performSegue(withIdentifier: "ShowScheduleView", sender: menu)
-        case .findHospital:
-            performSegue(withIdentifier: "ShowFindHospitalView", sender: menu)
-        case .findPhamacy:
-            performSegue(withIdentifier: "ShowFindPhamacyView", sender: menu)
         case .searchMedical:
             performSegue(withIdentifier: "ShowSearchMedicalView", sender: menu)
         default:

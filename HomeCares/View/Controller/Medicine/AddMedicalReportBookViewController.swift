@@ -44,20 +44,24 @@ class AddMedicalReportBookViewController: UIViewController {
         genderTextField.addRightImage("ic_arrow_down".image)
         dateOfBirthTextField.addRightImage("ic_arrow_down".image)
         
-        firstNameTextField.font = UIFont(name:"Montserrat-Light", size:16)
-        middleNameTextField.font = UIFont(name:"Montserrat-Light", size:16)
-        lastNameTextField.font = UIFont(name:"Montserrat-Light", size:16)
-        dateOfBirthTextField.font = UIFont(name:"Montserrat-Light", size:16)
-        genderTextField.font = UIFont(name:"Montserrat-Light", size:16)
-        relationshipTextField.font = UIFont(name:"Montserrat-Light", size:16)
+        firstNameTextField.font = UIFont(name:"Montserrat-Light", size:15)
+        middleNameTextField.font = UIFont(name:"Montserrat-Light", size:15)
+        lastNameTextField.font = UIFont(name:"Montserrat-Light", size:15)
+        dateOfBirthTextField.font = UIFont(name:"Montserrat-Light", size:15)
+        genderTextField.font = UIFont(name:"Montserrat-Light", size:15)
+        relationshipTextField.font = UIFont(name:"Montserrat-Light", size:15)
         
-        firstNameTextField.placeholder = "First name"
-        middleNameTextField.placeholder = "Middle name"
-        lastNameTextField.placeholder = "Last name"
-        dateOfBirthTextField.placeholder = "Birthday"
-        genderTextField.placeholder = "Gender"
-        relationshipTextField.placeholder = "Relationship"
+        firstNameTextField.dividerNormalColor = .darkGray
+        middleNameTextField.dividerNormalColor = .darkGray
+        lastNameTextField.dividerNormalColor = .darkGray
+        dateOfBirthTextField.dividerNormalColor = .darkGray
+        genderTextField.dividerNormalColor = .darkGray
+        relationshipTextField.dividerNormalColor = .darkGray
         relations = getRelationShip(of: "relationShip")
+        
+        dateOfBirthTextField.text = "\(DateHelper.shared.string(from: Date(), format: .dd_MM_yyyy))"
+        genderTextField.text = "Female"
+        relationshipTextField.text = "Me"
         
     }
     
@@ -74,7 +78,7 @@ class AddMedicalReportBookViewController: UIViewController {
             return
         }
         
-        guard  let userId = UserDefaults.userId else { return }
+        guard  let personId = UserDefaults.personId else { return }
         
         let patient = Patient()
         patient.firstName = firstNameTextField.text!
@@ -83,7 +87,7 @@ class AddMedicalReportBookViewController: UIViewController {
         patient.dateOfBirth = dateOfBirthTextField.text!
         patient.healthOverview = "Sổ Y Bạ vừa được tạo, hãy cập nhật thông tin!"
         patient.gender = genderSelected
-        patient.userId = userId
+        patient.personId = personId
         patient.patientRelations = relationSelected
         patient.idCardNumber = ""
         patient.insuranceNumber = ""

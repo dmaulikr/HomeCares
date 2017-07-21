@@ -29,6 +29,7 @@ extension UIColor {
 
     internal static let primary = UIColor(hex: 0x78E0B9)
     internal static let dividerColor = UIColor(hex: 0xD3D3D3)
+    internal static let pink = UIColor(hex: 0xf50057)
     
     internal static var random: UIColor {
         let red = CGFloat(drand48())

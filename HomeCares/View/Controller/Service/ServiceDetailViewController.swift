@@ -27,6 +27,7 @@ class ServiceDetailViewController: UIViewController {
     internal func prepareUI() {
         if let serviceItem = serviceItem {
             title = serviceItem.service.name
+            navigationItem.backBarButtonItem?.title = ""
         }
         
         tableView.rowHeight = UITableViewAutomaticDimension

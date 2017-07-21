@@ -95,6 +95,7 @@ class QuestionReplyCell: UITableViewCell {
     }
     
     @IBAction func editAction(_ sender: Any) {
+        delegate?.didEditReplyQuestion(question: question, indexPath: indexPath)
     }
 }
 

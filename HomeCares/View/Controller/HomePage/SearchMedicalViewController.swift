@@ -25,6 +25,8 @@ class SearchMedicalViewController: UIViewController {
         getMedicines()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 80
         self.navigationItem.titleView = searchBars
         searchBars.placeholder = "Search medicine"
         searchBars.showsCancelButton = false
@@ -56,10 +58,25 @@ class SearchMedicalViewController: UIViewController {
             }
         }
     }
+    
+    internal func openDetailMedicine(medicine: Medicine) {
+        performSegue(withIdentifier: "ShowDetailMedicineView", sender: medicine)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailMedicineView" {
+            if let vc = segue.destination as? MedicineDetailViewController {
+                vc.medicine = sender as! Medicine
+            }
+        }
+    }
 
 }
 
 extension SearchMedicalViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        openDetailMedicine(medicine: medicines[indexPath.row])
+    }
 
 }
 

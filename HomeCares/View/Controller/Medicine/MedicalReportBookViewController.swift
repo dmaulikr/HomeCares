@@ -79,8 +79,8 @@ class MedicalReportBookViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowProfileView" {
-            if let vc = segue.destination as? ProfileViewController {
+        if segue.identifier == "ShowDetailPatientView" {
+            if let vc = segue.destination as? PatientDetailViewController {
                 vc.patient = sender as? Patient
             }
         }
@@ -95,13 +95,13 @@ class MedicalReportBookViewController: UIViewController {
 
 extension MedicalReportBookViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-
-        return false
+        return true
     }
     
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            patients.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
      }
@@ -127,7 +127,7 @@ extension MedicalReportBookViewController: UITableViewDataSource {
 extension MedicalReportBookViewController: MedicalReportCellDelegate {
     
     func didSelectViewFrofile(patient: Patient) {
-        performSegue(withIdentifier: "ShowProfileView", sender: patient)
+        performSegue(withIdentifier: "ShowDetailPatientView", sender: patient)
     }
     
     func didSelectMakeAppointment(patient: Patient) {

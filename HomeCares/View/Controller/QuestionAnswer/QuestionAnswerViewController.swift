@@ -189,16 +189,46 @@ extension QuestionAnswerViewController: PostQuestionReplyCellDelegate {
             sSelf.tableView.reloadData()
         }
     }
+    
+    func didPostEditQuestionReply(question: QuestionReply, indexPath: IndexPath) {
+        homeCareService.updateReplyQuestion(question: question) {[weak self] (response) in
+            guard let sSelf = self else {return}
+            
+            if let hasData = response.data {
+                sSelf.questions[indexPath.section - 1].questionReplies.insert(hasData, at: sSelf.questions[indexPath.section - 1].questionReplies.count)
+                sSelf.moreComment[indexPath.section - 1] =  sSelf.moreComment[indexPath.section - 1] + 1
+            }
+            sSelf.tableView.reloadData()
+        }
+    }
 }
 
 extension QuestionAnswerViewController: QuestionReplyCellDelegate {
     
     func didEditReplyQuestion(question: QuestionReply, indexPath: IndexPath) {
+        questions[indexPath.section - 1].questionReplies.remove(at: indexPath.row - 1)
+        moreComment[indexPath.section - 1] =  moreComment[indexPath.section - 1] - 1
+        tableView.reloadData()
+        let newIndexPath = IndexPath(row: moreComment[indexPath.section - 1], section: indexPath.section)
+        if let cell = tableView.cellForRow(at: newIndexPath) as? PostQuestionReplyCell {
+            cell.messageTextField.text = question.content
+            cell.isEditQuestion = true
+            cell.questionEdit = question
+        }
         
     }
     
     func didUnthankReplyQuestion(question: QuestionReplyThank, indexPath: IndexPath) {
-        
+        homeCareService.deleteQuestionReplyThank(question: question) { [weak self] (response) in
+            guard let sSelf = self else {return }
+            
+            if let hasData = response.data {
+                if let indexQuestionReplyThank = sSelf.questions[indexPath.section - 1].questionReplies[indexPath.row - 1].questionReplyThanks.index(where: {$0.questionReplyThankId == hasData.questionReplyThankId}) {
+                    sSelf.questions[indexPath.section - 1].questionReplies[indexPath.row - 1].questionReplyThanks.remove(at: indexQuestionReplyThank)
+                }
+            }
+            sSelf.tableView.reloadData()
+        }
     }
     
     func didThankReplyQuestion(question: QuestionReplyThank, indexPath: IndexPath) {

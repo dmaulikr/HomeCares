@@ -62,10 +62,9 @@ class QuestionCell: UITableViewCell {
         default :
             gender = "Khác"
         }
-        timeLabel.text = question.created.timeInterval + " . "
+        timeLabel.text = question.updated.timeInterval + " . "
             + gender + " . "
-            + old + " . "
-            + question.userPerson.address
+            + old
         thankLabel.text = "\(question.questionThanks.count) cảm ơn."
         moreCommentButton.isHidden = false
         commentButtonHeight.constant = 15.0

@@ -11,7 +11,7 @@ import UIKit
 import SwiftyJSON
 
 enum OptionMenuType: Int {
-    case call = 0, schedule, findPhamacy, findHospital, searchMedical, searchDisease, none
+    case call = 0, schedule, searchMedical, searchDisease, none
 }
 
 class OptionMenu: NSObject {

@@ -13,6 +13,7 @@ PODS:
   - MJSnackBar (1.0.2)
   - SpringIndicator (1.5.0)
   - SwiftyJSON (3.1.4)
+  - XLPagerTabStrip (7.0.0)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - MJSnackBar
   - SpringIndicator
   - SwiftyJSON
+  - XLPagerTabStrip (~> 7.0)
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
@@ -35,7 +37,8 @@ SPEC CHECKSUMS:
   MJSnackBar: ed280d1d20692abbabe6836f8004590dd9c9ab3e
   SpringIndicator: 5ce3e1d8d52124fd4310f7bf32b4106e112b91e2
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: e1924211e18b6d766820b80d81af5e2d2b4e8e02
+PODFILE CHECKSUM: ae4a25a05bb1d8c5aa57257004d0f1249b6a31fe
 
 COCOAPODS: 1.2.1

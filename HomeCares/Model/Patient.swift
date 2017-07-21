@@ -43,7 +43,7 @@ class Patient: NSObject {
     // MARK: Property
 
     internal var patientId: Int!
-    internal var userId: Int!
+    internal var personId: Int!
     internal var patientRelations: PatientRelations!
     internal var firstName: String!
     internal var middleName: String!
@@ -64,6 +64,14 @@ class Patient: NSObject {
     internal var note: String!
     internal var created: String!
     internal var updated: String!
+    internal var subInfor: String {
+        get {
+            if let date = DateHelper.shared.date(from: self.dateOfBirth, format: .yyyy_MM_dd_T_HH_mm_ss_Z) {
+                return self.gender! == .male ? "Male - " + " \(date.age) years old." : self.gender! == .male ? "Female - " + " \(date.age) years old.": "Other - "  + " \(date.age) years old."
+            }
+            return ""
+        }
+    }
     
     // MARK: Constructor
     
@@ -73,7 +81,7 @@ class Patient: NSObject {
     
     public init(json: JSON) {
         patientId = json["patientId"].intValue
-        userId =  json["userId"].intValue
+        personId =  json["personId"].intValue
         patientRelations = PatientRelations(rawValue: json["patientRelations"].intValue)
         firstName = json["firstName"].stringValue
         middleName = json["middleName"].stringValue
@@ -97,13 +105,38 @@ class Patient: NSObject {
     }
     
     internal var parameters: [String: Any] {
-        return ["userId":userId,
+        return ["personId":personId,
                 "patientRelations":patientRelations.rawValue,
                 "firstName":firstName,
                 "middleName":middleName,
                 "lastName":lastName,
                 "dateOfBirth":dateOfBirth,
                 "gender":gender.rawValue,
+                "created":created,
+                "updated":updated,
                 "phone":phone]
+    }
+    internal var parametersUpdate: [String: Any] {
+        return ["personId":personId,
+                "patientRelations":patientRelations.rawValue,
+                "firstName":firstName,
+                "middleName":middleName,
+                "lastName":lastName,
+                "dateOfBirth":dateOfBirth,
+                "gender":gender.rawValue,
+                "created":created,
+                "updated":updated,
+                "idCardNumber":idCardNumber,
+                "insuranceNumber":insuranceNumber,
+                "healthOverview":healthOverview,
+                "medicalHistory":medicalHistory,
+                "allergyHistory":allergyHistory,
+                "address":address,
+                "phone":phone,
+                "email":email,
+                "patientId":patientId,
+                "longitude":longitude,
+                "latitude":latitude,
+                "avatar":avatar]
     }
 }

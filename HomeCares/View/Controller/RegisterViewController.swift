@@ -39,25 +39,25 @@ class RegisterViewController: UIViewController {
         birthdayLabel.addRightImage("ic_arrow_down".image)
         genderLabel.addRightImage("ic_arrow_down".image)
         
-        firstNameLabel.font = UIFont(name:"Montserrat-Light", size:16)
-        middleNameLabel.font = UIFont(name:"Montserrat-Light", size:16)
-        lastNameLabel.font = UIFont(name:"Montserrat-Light", size:16)
-        emailLabel.font = UIFont(name:"Montserrat-Light", size:16)
-        phoneNumberLabel.font = UIFont(name:"Montserrat-Light", size:16)
-        birthdayLabel.font = UIFont(name:"Montserrat-Light", size:16)
-        genderLabel.font = UIFont(name:"Montserrat-Light", size:16)
-        passwordLabel.font = UIFont(name:"Montserrat-Light", size:16)
-        confirmPassword.font = UIFont(name:"Montserrat-Light", size:16)
+        firstNameLabel.font = UIFont(name:"Montserrat-Light", size:15)
+        middleNameLabel.font = UIFont(name:"Montserrat-Light", size:15)
+        lastNameLabel.font = UIFont(name:"Montserrat-Light", size:15)
+        emailLabel.font = UIFont(name:"Montserrat-Light", size:15)
+        phoneNumberLabel.font = UIFont(name:"Montserrat-Light", size:15)
+        birthdayLabel.font = UIFont(name:"Montserrat-Light", size:15)
+        genderLabel.font = UIFont(name:"Montserrat-Light", size:15)
+        passwordLabel.font = UIFont(name:"Montserrat-Light", size:15)
+        confirmPassword.font = UIFont(name:"Montserrat-Light", size:15)
         
-        firstNameLabel.placeholder = "First name"
-        middleNameLabel.placeholder = "Middle name"
-        lastNameLabel.placeholder = "Last name"
-        emailLabel.placeholder = "Email"
-        phoneNumberLabel.placeholder = "Phone number"
-        birthdayLabel.placeholder = "Birthday"
-        genderLabel.placeholder = "Gender"
-        passwordLabel.placeholder = "Password"
-        confirmPassword.placeholder = "Confirm password"
+        firstNameLabel.dividerNormalColor = .darkGray
+        middleNameLabel.dividerNormalColor = .darkGray
+        lastNameLabel.dividerNormalColor = .darkGray
+        emailLabel.dividerNormalColor = .darkGray
+        phoneNumberLabel.dividerNormalColor = .darkGray
+        birthdayLabel.dividerNormalColor = .darkGray
+        genderLabel.dividerNormalColor = .darkGray
+        passwordLabel.dividerNormalColor = .darkGray
+        confirmPassword.dividerNormalColor = .darkGray
 
     }
 

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,23 +37,23 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="201"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Upf-zR-mcD" id="Fzw-1B-p6p">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arc-2O-Ydu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="132.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bg" translatesAutoresizingMaskIntoConstraints="NO" id="T6d-cu-r8E">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="132.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/11/2017" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOf-FL-gHW">
-                                                            <rect key="frame" x="16" y="110.5" width="343" height="12"/>
-                                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
+                                                            <rect key="frame" x="16" y="111.5" width="343" height="12"/>
+                                                            <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="10"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/11/2017" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0N-E9-mZ5">
-                                                            <rect key="frame" x="16" y="89.5" width="343" height="13"/>
+                                                            <rect key="frame" x="16" y="90.5" width="343" height="13"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" id="X2o-yh-i7J"/>
                                                             </constraints>
@@ -63,7 +62,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homecare service at home" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-HT-XFz">
-                                                            <rect key="frame" x="16" y="60" width="343" height="21"/>
+                                                            <rect key="frame" x="16" y="60" width="343" height="22"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" id="0sw-S7-BpL"/>
                                                             </constraints>
@@ -110,11 +109,11 @@
                                         <rect key="frame" x="0.0" y="229" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gk2-cV-ygb" id="bGa-Qc-Q4l">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homecare service at home" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btd-xN-mQQ">
-                                                    <rect key="frame" x="16" y="8" width="263" height="19"/>
+                                                    <rect key="frame" x="16" y="8" width="263" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" id="9b9-Q7-dJr"/>
                                                     </constraints>
@@ -127,8 +126,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" id="GoH-TA-Rer"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="10"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nio-b2-2EN">
@@ -139,7 +138,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/11/2017" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBz-xK-fYu">
-                                                    <rect key="frame" x="16" y="35" width="265" height="13"/>
+                                                    <rect key="frame" x="16" y="36" width="265" height="13"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" id="ZEt-ZJ-hpN"/>
                                                     </constraints>
@@ -192,8 +191,6 @@
                         <outlet property="tableView" destination="OEC-1T-YCi" id="hm3-GZ-m8G"/>
                         <segue destination="T1I-Dx-FCM" kind="show" identifier="ShowSearchDiseaseView" id="kgR-Sb-DEn"/>
                         <segue destination="SsU-M0-TxR" kind="show" identifier="ShowSearchMedicalView" id="AOJ-WN-pfY"/>
-                        <segue destination="7n0-vf-KjK" kind="show" identifier="ShowFindPhamacyView" id="eGW-TD-Ck9"/>
-                        <segue destination="Hqs-F7-NEr" kind="show" identifier="ShowFindHospitalView" id="I8Y-zB-28M"/>
                         <segue destination="p1c-pA-SUf" kind="show" identifier="ShowScheduleView" id="733-N9-5Ck"/>
                         <segue destination="ZJO-1x-Wpx" kind="show" identifier="ShowBlogDetail" id="2Ki-hC-PUZ"/>
                     </connections>
@@ -235,44 +232,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pzf-vc-Qwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2309.5999999999999" y="517.6911544227886"/>
-        </scene>
-        <!--FIND HOSPITAL-->
-        <scene sceneID="cz8-CI-7q8">
-            <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="Hqs-F7-NEr" customClass="FindHospitalViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="F4V-t6-gDv"/>
-                        <viewControllerLayoutGuide type="bottom" id="y6F-jT-LNu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Yab-qJ-ecW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="FIND HOSPITAL" id="5OR-Hy-c1F"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P9Z-Di-4hm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="513" y="1371"/>
-        </scene>
-        <!--FIND PHAMACY-->
-        <scene sceneID="19w-Mo-tgM">
-            <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="7n0-vf-KjK" customClass="FindPhamacyViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dMk-1C-67J"/>
-                        <viewControllerLayoutGuide type="bottom" id="4Vn-jL-oFC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cRh-ab-aAG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="FIND PHAMACY" id="EPx-fh-LHe"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4nh-TO-wrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1250" y="1372"/>
         </scene>
         <!--SEARCH MEDICAL-->
         <scene sceneID="PcG-fv-UHK">
@@ -319,13 +278,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4p4-oX-sR5">
-                                                            <rect key="frame" x="56" y="38" width="29.5" height="13.5"/>
+                                                            <rect key="frame" x="56" y="38.5" width="29.5" height="13"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4G-45-p4c">
-                                                            <rect key="frame" x="56" y="16.5" width="37.5" height="17.5"/>
+                                                            <rect key="frame" x="56" y="17" width="37.5" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -387,11 +346,48 @@
                     <navigationItem key="navigationItem" title="SEARCH MEDICAL" id="iaJ-Yp-0tj"/>
                     <connections>
                         <outlet property="tableView" destination="5at-R2-nBV" id="RF5-fg-Lhl"/>
+                        <segue destination="z44-sh-tzj" kind="show" identifier="ShowDetailMedicineView" id="fRy-DZ-7a5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umj-De-6lT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1925.5999999999999" y="1371.3643178410796"/>
+            <point key="canvasLocation" x="1361" y="1346"/>
+        </scene>
+        <!--Medicine Detail View Controller-->
+        <scene sceneID="k9N-2s-SOX">
+            <objects>
+                <viewController storyboardIdentifier="MedicineDetailViewController" id="z44-sh-tzj" customClass="MedicineDetailViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="waX-9a-gRI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jck-ei-PQc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EsF-Cn-4SO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ux1-nL-AfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361" y="2131"/>
+        </scene>
+        <!--Disease Detail View Controller-->
+        <scene sceneID="gSV-XQ-mXz">
+            <objects>
+                <viewController id="9qb-Op-v1q" customClass="DiseaseDetailViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Lo-Fy-mmQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fqN-cd-nca"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a0c-aC-K9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mw1-yL-zCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2030" y="2131"/>
         </scene>
         <!--SEARCH DISEASE-->
         <scene sceneID="GAe-K1-D95">
@@ -404,13 +400,125 @@
                     <view key="view" contentMode="scaleToFill" id="CPP-40-3qf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6ds-wi-iAo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.89942976969999999" green="0.91856657330000002" blue="0.91856657330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiseaseCell" rowHeight="90" id="EyC-qB-Smc" customClass="DiseaseCell" customModule="HomeCares" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EyC-qB-Smc" id="ZGY-4M-Bta">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iA7-gg-G1u">
+                                                    <rect key="frame" x="4" y="2" width="367" height="86"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZuP-RA-mJf">
+                                                            <rect key="frame" x="16" y="27.5" width="32" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="32" id="hU1-vU-sf6"/>
+                                                                <constraint firstAttribute="height" constant="32" id="r8j-Bf-s5v"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="16"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5n-Ao-Xkc">
+                                                            <rect key="frame" x="22.5" y="35" width="19.5" height="18.5"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdu-hs-SU8">
+                                                            <rect key="frame" x="56" y="45" width="29.5" height="0.0"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" id="0uj-LK-I3D"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQh-tF-bj9">
+                                                            <rect key="frame" x="56" y="21.5" width="37.5" height="17.5"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-eA-sYX">
+                                                            <rect key="frame" x="56" y="39" width="24.5" height="11.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="Wtd-9l-rYU"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="10"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="ZuP-RA-mJf" firstAttribute="leading" secondItem="iA7-gg-G1u" secondAttribute="leading" constant="16" id="4o2-DA-xCI"/>
+                                                        <constraint firstItem="gQh-tF-bj9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iA7-gg-G1u" secondAttribute="top" constant="8" id="Ezz-7I-qQC"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kdu-hs-SU8" secondAttribute="trailing" constant="16" id="ICd-16-3tr"/>
+                                                        <constraint firstItem="gQh-tF-bj9" firstAttribute="leading" secondItem="Kdu-hs-SU8" secondAttribute="leading" id="LqM-Cy-SJd"/>
+                                                        <constraint firstItem="Xch-eA-sYX" firstAttribute="leading" secondItem="Kdu-hs-SU8" secondAttribute="leading" id="QzA-aI-Nv4"/>
+                                                        <constraint firstItem="Xch-eA-sYX" firstAttribute="top" secondItem="Kdu-hs-SU8" secondAttribute="bottom" constant="-6" id="R9T-xB-tdz"/>
+                                                        <constraint firstItem="i5n-Ao-Xkc" firstAttribute="centerY" secondItem="ZuP-RA-mJf" secondAttribute="centerY" id="RZl-ha-oYZ"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xch-eA-sYX" secondAttribute="trailing" constant="16" id="Vcn-Ab-GKb"/>
+                                                        <constraint firstItem="Kdu-hs-SU8" firstAttribute="centerY" secondItem="i5n-Ao-Xkc" secondAttribute="centerY" id="cec-G5-VGt"/>
+                                                        <constraint firstItem="Kdu-hs-SU8" firstAttribute="leading" secondItem="ZuP-RA-mJf" secondAttribute="trailing" constant="8" id="h6M-HO-Mc4"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Xch-eA-sYX" secondAttribute="bottom" constant="8" id="pb3-5r-MTf"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gQh-tF-bj9" secondAttribute="trailing" constant="16" id="r0V-6Q-Oey"/>
+                                                        <constraint firstItem="i5n-Ao-Xkc" firstAttribute="centerX" secondItem="ZuP-RA-mJf" secondAttribute="centerX" id="sL7-QG-pgC"/>
+                                                        <constraint firstItem="Kdu-hs-SU8" firstAttribute="top" secondItem="gQh-tF-bj9" secondAttribute="bottom" constant="6" id="xHp-QU-OTh"/>
+                                                        <constraint firstItem="ZuP-RA-mJf" firstAttribute="centerY" secondItem="iA7-gg-G1u" secondAttribute="centerY" id="ztw-q3-ESf"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iA7-gg-G1u" firstAttribute="leading" secondItem="ZGY-4M-Bta" secondAttribute="leading" constant="4" id="0uc-Uv-ws2"/>
+                                                <constraint firstAttribute="trailing" secondItem="iA7-gg-G1u" secondAttribute="trailing" constant="4" id="FhW-kM-2oB"/>
+                                                <constraint firstItem="iA7-gg-G1u" firstAttribute="top" secondItem="ZGY-4M-Bta" secondAttribute="top" constant="2" id="XAN-84-urp"/>
+                                                <constraint firstAttribute="bottom" secondItem="iA7-gg-G1u" secondAttribute="bottom" constant="2" id="ZNI-vE-CdB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="backGroundView" destination="iA7-gg-G1u" id="CZn-GM-onQ"/>
+                                            <outlet property="detailLabel" destination="Xch-eA-sYX" id="bqC-Lf-mow"/>
+                                            <outlet property="iconImageView" destination="ZuP-RA-mJf" id="G8c-F6-Uzi"/>
+                                            <outlet property="nameLabel" destination="gQh-tF-bj9" id="h6j-ei-qXZ"/>
+                                            <outlet property="numberLabel" destination="i5n-Ao-Xkc" id="D2Q-eK-9VT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="T1I-Dx-FCM" id="iaS-TR-cZs"/>
+                                    <outlet property="delegate" destination="T1I-Dx-FCM" id="rza-H0-nYm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6ds-wi-iAo" secondAttribute="trailing" id="6vf-sB-8JL"/>
+                            <constraint firstItem="6ds-wi-iAo" firstAttribute="top" secondItem="CPP-40-3qf" secondAttribute="top" id="Ie5-xA-CZS"/>
+                            <constraint firstItem="6ds-wi-iAo" firstAttribute="leading" secondItem="CPP-40-3qf" secondAttribute="leading" id="aH3-eZ-qsp"/>
+                            <constraint firstAttribute="bottom" secondItem="6ds-wi-iAo" secondAttribute="bottom" id="nOL-xJ-oFZ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SEARCH DISEASE" id="SDN-CI-Bhr"/>
+                    <navigationItem key="navigationItem" title="SEARCH DISEASE" id="SDN-CI-Bhr">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="LSp-kk-tUa"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="6ds-wi-iAo" id="GT9-IE-35R"/>
+                        <segue destination="9qb-Op-v1q" kind="show" identifier="ShowDetailDiseaseView" id="ZeX-cr-oYn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lf2-0Z-j82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2711" y="1374"/>
+            <point key="canvasLocation" x="2031" y="1346"/>
         </scene>
         <!--ServiceBookingViewController-->
         <scene sceneID="ndK-OL-zCb">
@@ -418,14 +526,14 @@
                 <viewControllerPlaceholder storyboardName="MedicalReport" referencedIdentifier="ServiceBookingViewController" id="p1c-pA-SUf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUw-sZ-SzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3266" y="1059"/>
+            <point key="canvasLocation" x="2697" y="1036"/>
         </scene>
         <!--Home Care Navigation Controller-->
         <scene sceneID="u9D-hs-kRr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="19W-PJ-ug0" customClass="HomeCareNavigationController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NvG-VI-S7Q">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="NvG-VI-S7Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

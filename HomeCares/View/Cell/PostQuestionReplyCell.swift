@@ -19,12 +19,17 @@ class PostQuestionReplyCell: UITableViewCell {
     internal weak var delegate: PostQuestionReplyCellDelegate?
     internal var question: Question!
     internal var indexPath: IndexPath!
+    internal var isEditQuestion = false
+    internal var questionEdit: QuestionReply!
     
     // MARK: Internal method
     
     internal func configure(question: Question, indexPath: IndexPath) {
+       
         self.question = question
         self.indexPath = indexPath
+        messageTextField.text = ""
+        isEditQuestion = false
         if let avatar =  UserDefaults.avatar, let url = URL(string: avatar) {
             avatarImageView.af_setImage(
                 withURL         : url,
@@ -44,20 +49,30 @@ class PostQuestionReplyCell: UITableViewCell {
 
     @IBAction func postQuestionAction(_ sender: UIButton) {
         if messageTextField.text!.isEmpty { return }
-        let question = QuestionReply()
-        question.created = "\(Date())"
-        question.updated = "\(Date())"
-        question.content = messageTextField.text!
-        if let personId = UserDefaults.personId {
-            question.personId = personId
+    
+        if isEditQuestion {
+            questionEdit.content = messageTextField.text!
+            questionEdit.updated = "\(Date())"
+            delegate?.didPostEditQuestionReply(question: questionEdit, indexPath: indexPath)
+            print("Post edit q")
+        } else {
+            let question = QuestionReply()
+            question.updated = "\(Date())"
+            question.content = messageTextField.text!
+            if let personId = UserDefaults.personId {
+                question.personId = personId
+            }
+            question.questionReplyThanks = []
+            question.questionId = self.question.questionId
+            question.created = "\(Date())"
+            delegate?.didPostQuestionReply(question: question, indexPath: indexPath)
+            print("Post reply q")
         }
-        question.questionReplyThanks = []
-        question.questionId = self.question.questionId
-         messageTextField.text = ""
-        delegate?.didPostQuestionReply(question: question, indexPath: indexPath)
+        messageTextField.text = ""
     }
 }
 
 protocol PostQuestionReplyCellDelegate: class {
     func didPostQuestionReply(question: QuestionReply, indexPath: IndexPath)
+    func didPostEditQuestionReply(question: QuestionReply, indexPath: IndexPath)
 }

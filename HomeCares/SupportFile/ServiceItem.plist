@@ -94,7 +94,7 @@
 			<key>service</key>
 			<dict/>
 			<key>name</key>
-			<string>KHÁM SỨC KHOẺ DOANH NGHIỆP</string>
+			<string>KHÁM SỨC KHOẺ DN</string>
 			<key>overview</key>
 			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
 			<key>detail</key>
@@ -121,25 +121,9 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Tìm nhà thuốc</string>
-			<key>type</key>
-			<integer>2</integer>
-			<key>image</key>
-			<string>ic_location</string>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Tìm bệnh viện</string>
-			<key>type</key>
-			<integer>3</integer>
-			<key>image</key>
-			<string>ic_location</string>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>Tra cứu thuốc</string>
 			<key>type</key>
-			<integer>4</integer>
+			<integer>2</integer>
 			<key>image</key>
 			<string>ic_search</string>
 		</dict>
@@ -147,7 +131,7 @@
 			<key>name</key>
 			<string>Tra cứu bệnh</string>
 			<key>type</key>
-			<integer>5</integer>
+			<integer>3</integer>
 			<key>image</key>
 			<string>ic_search</string>
 		</dict>

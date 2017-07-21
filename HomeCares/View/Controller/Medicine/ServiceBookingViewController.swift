@@ -9,6 +9,10 @@
 import UIKit
 import Material
 import ActionSheetPicker_3_0
+import MapKit
+import SpringIndicator
+import MJSnackBar
+import CoreLocation
 
 class ServiceBookingViewController: UIViewController {
     
@@ -22,7 +26,8 @@ class ServiceBookingViewController: UIViewController {
     @IBOutlet weak var peopleUseServiceButton: UIButton!
     @IBOutlet weak var typeServiceButton: UIButton!
     @IBOutlet weak var timeButton: UIButton!
-    
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var confirmButton: Button!
     internal var homecareService = HomeCaresService()
     internal var patientSelected: Patient!
     internal var patients:[Patient]!
@@ -30,6 +35,8 @@ class ServiceBookingViewController: UIViewController {
     internal var serviceSelected: ServiceItem!
     internal var serviceItems:[ServiceItem]!
     internal var services = [String]()
+    internal var indicator: SpringIndicator!
+    internal var locationManager: CLLocationManager!
 
     // MARK: Liferecycle
     
@@ -38,31 +45,46 @@ class ServiceBookingViewController: UIViewController {
 
         prepareUI()
         prepareData()
+        setUpLocation()
     }
     
     // MARK: Internal method
+    internal func setUpLocation() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+        }
+    }
     
     internal func prepareData() {
         serviceItems = ServiceItem.getMenus(of: "serviceItem")
         services = serviceItems.map({$0.service.name})
-        if patientSelected != nil {
-            peopleUseServiceTextField.text = patientSelected.firstName + " " + patientSelected.middleName + " " + patientSelected.lastName
-        }
+        
         
         if serviceSelected != nil {
             typeServiceTextField.text = serviceSelected.service.name
         } else if let serviceDefault = services.first {
             typeServiceTextField.text = serviceDefault
         }
-        
-        homecareService.getPatientsBy(personId: 6) { [weak self] (response) in
-            
-            guard let sSelf = self else {return}
-            
-            if let hasData = response.data {
-                sSelf.peoples = hasData.map({$0.firstName + " " + $0.middleName + " " + $0.lastName})
-                sSelf.patients = hasData
+        if let personId = UserDefaults.personId {
+            homecareService.getPatientsBy(personId: personId) { [weak self] (response) in
+                guard let sSelf = self else {return}
+                if let hasData = response.data {
+                    sSelf.peoples = hasData.map({$0.firstName + " " + $0.middleName + " " + $0.lastName})
+                    sSelf.patients = hasData
+                    if sSelf.patientSelected == nil, !hasData.isEmpty {
+                       sSelf.patientSelected = hasData.first!
+                       sSelf.peopleUseServiceTextField.text = sSelf.patientSelected.firstName + " " + sSelf.patientSelected.middleName + " " + sSelf.patientSelected.lastName
+                    }
+                }
             }
+        }
+        
+        if patientSelected != nil {
+            peopleUseServiceTextField.text = patientSelected.firstName + " " + patientSelected.middleName + " " + patientSelected.lastName
         }
     }
     
@@ -78,6 +100,29 @@ class ServiceBookingViewController: UIViewController {
         phoneNumberTextField.font = UIFont(name:"Montserrat-Light", size:16)
         addressTextField.font = UIFont(name:"Montserrat-Light", size:16)
         detailInfTextField.font = UIFont(name:"Montserrat-Light", size:16)
+    }
+    
+    internal func startWaiting() {
+        indicator = SpringIndicator()
+        indicator.lineWidth = 2
+        indicator.lineColor = .white
+        
+        confirmButton.layout(indicator)
+            .size(CGSize(width: 24, height: 24))
+            .centerVertically()
+            .right(8)
+        indicator.startAnimation()
+    }
+    
+    internal func stopWaiting() {
+        if indicator != nil, indicator.isSpinning() {
+            indicator.stopAnimation(false)
+        }
+    }
+
+    public func showSnackBar(message: String) {
+        let snackBar = MJSnackBar(onView: self.view)
+        snackBar.show(data: MJSnackBarData(message: message), onView: self.view)
     }
     
     // MARK: Action
@@ -163,16 +208,24 @@ class ServiceBookingViewController: UIViewController {
         order.latitude = 0.1
         order.updated = "\(Date())"
         order.created = "\(Date())"
-        order.bookingTime = timeTextField.text!
+        if let date = DateHelper.shared.date(from: timeTextField.text!, format: .HH_mm_dd_MM_yyyy) {
+            order.bookingTime = DateHelper.shared.string(from: date, format: .yyyy_MM_dd_T_HH_mm_ss_Z)
+        }
         
+        startWaiting()
         homecareService.addOrder(order: order) { [weak self] (response) in
             guard let sSelf = self else { return }
             
+            sSelf.stopWaiting()
             if let _ = response.data {
                 sSelf.showSnackBar(message: "You booked service successfully")
-                let _ = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
-                    sSelf.navigationController?.popViewController(animated: true)
-                })
+                if #available(iOS 10.0, *) {
+                    let _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
+                        sSelf.navigationController?.popViewController(animated: true)
+                    })
+                } else {
+                    let _ = Timer.scheduledTimer(timeInterval: 1, target: sSelf, selector: #selector(sSelf.backToVC), userInfo: nil, repeats: false)
+                }
             } else if let error = response.error {
                 sSelf.showAlert(title: "Error",
                                 message: error.localizedDescription,
@@ -180,5 +233,22 @@ class ServiceBookingViewController: UIViewController {
             }
             
         }
+    }
+    
+    @objc
+    internal func backToVC() {
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+extension ServiceBookingViewController: CLLocationManagerDelegate {
+
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        let location = locations.last as! CLLocation
+    
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+    
+        mapView.setRegion(region, animated: true)
     }
 }
