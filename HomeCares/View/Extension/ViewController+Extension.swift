@@ -23,8 +23,7 @@ extension UIViewController {
         showDetailViewController(alertController, sender: nil)
     }
     
-    
-    
+
     public func beginIgnoringEvent() {
         UIApplication.shared.beginIgnoringInteractionEvents()
     }
@@ -32,7 +31,4 @@ extension UIViewController {
     public func endIgnoringEvent() {
         UIApplication.shared.endIgnoringInteractionEvents()
     }
-    
-    public func didReceiveData(data: Any? = nil) {}
-
 }

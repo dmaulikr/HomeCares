@@ -58,7 +58,11 @@ public class ApiHelper: NSObject {
                 responseHandler?(nil, response.result.error)
             }
         case .failure(let error):
-            responseHandler?(nil, error)
+            if let statusCode = response.response?.statusCode {
+                responseHandler?(nil, NSError(domain: "", code: statusCode, userInfo: nil))
+            } else {
+                responseHandler?(nil, error)
+            }
         }
     }
 
@@ -86,15 +90,20 @@ extension ApiHelper {
     public func post(
         _ url           : URLConvertible,
         parameters      : Parameters? = nil,
+        encoding        : ParameterEncoding = URLEncoding.default,
+        headers         : HTTPHeaders? = nil,
         responseHandler : ResponseHandler? = nil) {
         
         request(
             url,
             method          : .post,
             parameters      : parameters,
+            encoding        : encoding,
+            headers         : headers,
             responseHandler : responseHandler
         )
     }
+
     
     public func put(
         _ url           : URLConvertible,
@@ -139,30 +148,26 @@ extension ApiHelper {
         responseHandler : ResponseHandler? = nil) {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
         Alamofire.upload(multipartFormData: { (formData) in
             
             if let hasParam = parameters {
                 for (key, value) in hasParam {
-                    if let data = value as? Data {
-                        formData.append(data, withName: key)
-                    } else {
-                        formData.append("\(value)".data(using: .utf8)!, withName: key)
-                    }
+                    formData.append("\(value)".data(using: .utf8)!, withName: key)
                 }
             }
-//            formData.append(data, withName: "upload")
-            formData.append(data, withName: "upload", mimeType: "image/png")
-        }, to: "\(baseUrl)\(url)", headers: headers) { (completion) in
+            formData.append(data, withName: "upload", fileName: "\(Date().timeIntervalSince1970).JPG", mimeType: "image/*")
+        }, to: "\(baseUrl)\(url)", method: .post, headers: headers) { (completion) in
             switch completion {
             case .success(let request, _, _):
                 request.responseJSON { (response) in
-                    
                     UIApplication.shared.isNetworkActivityIndicatorVisible = false
                     self.handleResponse(response, responseHandler: responseHandler)
                 }
             case .failure(let error):
                 responseHandler?(nil, error)
             }
+            
         }
     }
 

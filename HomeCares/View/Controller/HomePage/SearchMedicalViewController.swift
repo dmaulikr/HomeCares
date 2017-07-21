@@ -28,7 +28,7 @@ class SearchMedicalViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
         self.navigationItem.titleView = searchBars
-        searchBars.placeholder = "Search medicine"
+        searchBars.placeholder = "Tìm kiếm thuốc"
         searchBars.showsCancelButton = false
         searchBars.delegate = self
         searchBars.enablesReturnKeyAutomatically = true

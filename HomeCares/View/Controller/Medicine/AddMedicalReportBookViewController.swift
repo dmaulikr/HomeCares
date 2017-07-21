@@ -60,8 +60,8 @@ class AddMedicalReportBookViewController: UIViewController {
         relations = getRelationShip(of: "relationShip")
         
         dateOfBirthTextField.text = "\(DateHelper.shared.string(from: Date(), format: .dd_MM_yyyy))"
-        genderTextField.text = "Female"
-        relationshipTextField.text = "Me"
+        genderTextField.text = "Nữ"
+        relationshipTextField.text = "Tôi"
         
     }
     
@@ -72,8 +72,8 @@ class AddMedicalReportBookViewController: UIViewController {
         || dateOfBirthTextField.text!.isEmpty
         || genderTextField.text!.isEmpty
         || relationshipTextField.text!.isEmpty {
-            showAlert(title: "Notice",
-                      message: "Please fill in information",
+            showAlert(title: "Chú ý",
+                      message: "Vui lòng điền đầy đủ thông tin.",
                       negativeTitle: "OK")
             return
         }
@@ -165,7 +165,7 @@ class AddMedicalReportBookViewController: UIViewController {
     }
     
     @IBAction func choseGenderAction(_ sender: Any) {
-        let gender = ["Female","Male"]
+        let gender = ["Nữ","Nam","Khác"]
         let initialSelection = gender.index(of: genderTextField.text!) ?? 0
         let picker = ActionSheetStringPicker(title: "Giới tính", rows: gender, initialSelection: initialSelection, doneBlock: { (_, index, value) in
             if let gen = value as? String {

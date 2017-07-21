@@ -73,19 +73,26 @@ class LoginViewController: UIViewController {
         }
     }
     
+    override var shouldAutorotate: Bool {
+        return false
+    }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
     // MARK: Action
 
     @IBAction func loginAction(_ sender: Any) {
         if !emailTextField.text!.isValidEmail() {
-            showAlert(title: "Notice",
-                      message: "Please fill a valid email",
+            showAlert(title: "Chú ý",
+                      message: "Email không hợp lệ.",
                       negativeTitle: "OK")
             return
         }
         if !isValidPassword() {
-            showAlert(title: "Notice",
-                      message: "Password is at least 7 characters",
+            showAlert(title: "Chú ý",
+                      message: "Mật khẩu ít nhất 7 kí tự.",
                       negativeTitle: "OK")
             return
         }
@@ -110,8 +117,8 @@ class LoginViewController: UIViewController {
                 }
             } else {
                 sSelf.showAlert(
-                    title: "Error",
-                    message: "Username or passwork wrong.",
+                    title: "Lỗi",
+                    message: "Email hoặc mật khẩu không đúng.",
                     negativeTitle: "OK")
             }
         }

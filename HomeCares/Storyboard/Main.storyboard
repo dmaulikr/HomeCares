@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nx519069@" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1EL-zv-gme" customClass="TextField" customModule="Material">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1EL-zv-gme" customClass="TextField" customModule="Material">
                                 <rect key="frame" x="62" y="318.5" width="281" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9kN-we-jBV"/>
@@ -38,7 +38,7 @@
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mật khẩu"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
@@ -53,7 +53,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nnxuan09@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKq-ja-gvg" customClass="TextField" customModule="Material">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKq-ja-gvg" customClass="TextField" customModule="Material">
                                 <rect key="frame" x="62" y="263.5" width="281" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CK2-sN-CK9"/>
@@ -113,7 +113,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HomeCares" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAY-By-X8q">
-                                <rect key="frame" x="74" y="182" width="228" height="46.5"/>
+                                <rect key="frame" x="73.5" y="182" width="228" height="46.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="38"/>
                                 <color key="textColor" red="0.47058823529999999" green="0.87843137250000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -238,7 +238,7 @@
             </objects>
             <point key="canvasLocation" x="1263.2" y="62.518740629685162"/>
         </scene>
-        <!--REGISTER-->
+        <!--ĐĂNG KÍ-->
         <scene sceneID="HMV-xt-QdT">
             <objects>
                 <viewController id="a5D-xn-Ahh" customClass="RegisterViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
@@ -256,7 +256,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHC-yH-geK">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h8c-hJ-kgk" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Họ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h8c-hJ-kgk" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="41" width="167.5" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="gBm-d0-uP3"/>
@@ -266,14 +266,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Middle name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SjT-75-2DZ" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên đệm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SjT-75-2DZ" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="191.5" y="41" width="167.5" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="uj8-QI-SMd"/>
@@ -283,14 +283,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-Th-dDg" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-Th-dDg" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="112" width="343" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="dXx-wm-h6a"/>
@@ -300,10 +300,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -317,14 +317,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9WQ-Bb-pSV" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9WQ-Bb-pSV" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="254" width="343" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="rlD-y8-75L"/>
@@ -334,14 +334,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJN-r2-ACg" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ngày sinh" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJN-r2-ACg" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="325" width="239.5" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="KpD-eV-pe1"/>
@@ -351,14 +351,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bvR-WW-eEy" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Giới tính" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bvR-WW-eEy" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="263.5" y="325" width="95.5" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="32O-8q-SRX"/>
@@ -368,14 +368,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="it1-tY-Yof" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="it1-tY-Yof" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="396" width="343" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="1ak-Z5-fCU"/>
@@ -385,14 +385,14 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xpj-oh-cp5" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Xác nhận mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xpj-oh-cp5" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="467" width="343" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="HrA-nI-1sM"/>
@@ -402,10 +402,10 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -428,7 +428,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="TxL-Tg-AZP"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
-                                                <state key="normal" title="Register">
+                                                <state key="normal" title="ĐĂNG KÍ">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -443,8 +443,8 @@
                                                     <action selector="resgisterAction:" destination="a5D-xn-Ahh" eventType="touchUpInside" id="GPZ-7v-0P3"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wh-Gb-kTk">
-                                                <rect key="frame" x="16" y="16" width="73.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wh-Gb-kTk">
+                                                <rect key="frame" x="16" y="16" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="hzV-qw-9Sq"/>
                                                 </constraints>
@@ -452,8 +452,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Middle name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcC-yy-RaT">
-                                                <rect key="frame" x="191" y="16" width="92.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên đệm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcC-yy-RaT">
+                                                <rect key="frame" x="191" y="16" width="60.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="uje-Ah-TFo"/>
                                                 </constraints>
@@ -461,8 +461,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03d-Xd-skw">
-                                                <rect key="frame" x="16" y="87" width="71.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03d-Xd-skw">
+                                                <rect key="frame" x="16" y="87" width="24.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="HTj-kg-A16"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="ZFZ-HL-vf6"/>
@@ -480,8 +480,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buu-pY-Wiv">
-                                                <rect key="frame" x="16" y="229" width="105" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số điện thoại" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buu-pY-Wiv">
+                                                <rect key="frame" x="16" y="229" width="91" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="lKV-Mm-uZg"/>
                                                 </constraints>
@@ -489,8 +489,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he2-35-Fbx">
-                                                <rect key="frame" x="16" y="300" width="59" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày sinh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he2-35-Fbx">
+                                                <rect key="frame" x="16" y="300" width="68" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="zeS-6y-1re"/>
                                                 </constraints>
@@ -498,7 +498,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q3-PT-lCg">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q3-PT-lCg">
                                                 <rect key="frame" x="16" y="371" width="66" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Mj1-zk-FUi"/>
@@ -507,8 +507,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8a-Dc-uXW">
-                                                <rect key="frame" x="18" y="442" width="126" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xác nhận mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8a-Dc-uXW">
+                                                <rect key="frame" x="18" y="442" width="135.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="ECA-Mc-jVD"/>
                                                 </constraints>
@@ -597,7 +597,7 @@
                             <constraint firstItem="5oc-Mb-naO" firstAttribute="top" secondItem="nKs-Un-6wt" secondAttribute="bottom" id="zk3-oQ-U5y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="REGISTER" id="xR5-72-cRr"/>
+                    <navigationItem key="navigationItem" title="ĐĂNG KÍ" id="xR5-72-cRr"/>
                     <connections>
                         <outlet property="birthdayLabel" destination="EJN-r2-ACg" id="5Gb-kj-IXq"/>
                         <outlet property="confirmPassword" destination="xpj-oh-cp5" id="kfz-yQ-LsX"/>

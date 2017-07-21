@@ -32,7 +32,7 @@ class PatientDetailViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarItemsShouldFillAvailableWidth = true
         super.viewDidLoad()
         
-        title = "PATIENT DETAIL"
+        title = "CHI TIẾT SỔ Y BẠ"
     }
     
 }

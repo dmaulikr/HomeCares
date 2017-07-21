@@ -138,27 +138,27 @@
 	</array>
 	<key>relationShip</key>
 	<array>
-		<string>Me</string>
-		<string>Son</string>
-		<string>Daughter</string>
-		<string>Father</string>
-		<string>Mother</string>
-		<string>Father in law</string>
-		<string>Mother in law</string>
-		<string>Grand father</string>
-		<string>Grand mother</string>
-		<string>Grand father in law</string>
-		<string>Grand mother in law</string>
-		<string>Elder brother</string>
-		<string>Elder sister</string>
-		<string>Younger brother</string>
-		<string>Younger sister</string>
-		<string>Elder brother in law</string>
-		<string>Elder sister in law</string>
-		<string>Younger brother in law</string>
-		<string>Younger sister in law&quot;</string>
-		<string>Neighbour</string>
-		<string>Other</string>
+		<string>Tôi</string>
+		<string>Con trai</string>
+		<string>Con gái</string>
+		<string>Cha</string>
+		<string>Mẹ</string>
+		<string>Bố chồng(vợ)</string>
+		<string>Mẹ chồng(vợ)</string>
+		<string>Ông</string>
+		<string>Bà</string>
+		<string>Ông bên chồng(vợ)</string>
+		<string>Bà bên chồng(vợ)</string>
+		<string>Anh trai</string>
+		<string>Chị gái</string>
+		<string>Em trai</string>
+		<string>Em gái</string>
+		<string>Anh trai chồng(vợ)</string>
+		<string>Chị gái chồng(vợ)</string>
+		<string>Em trai chồng(vợ)</string>
+		<string>Em gái chồng(vợ)</string>
+		<string>Hàng xóm</string>
+		<string>Khác</string>
 	</array>
 	<key>application</key>
 	<array>

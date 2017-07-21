@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--QUESTION ANSWER-->
+        <!--HỎI ĐÁP-->
         <scene sceneID="bbZ-h1-Nc5">
             <objects>
                 <viewController storyboardIdentifier="QuestionAnswerViewController" id="6hK-EZ-le0" customClass="QuestionAnswerViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,7 +63,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cho phép cộng đồng trả lời" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzH-CE-Yw9">
-                                                    <rect key="frame" x="39" y="63" width="161.5" height="14"/>
+                                                    <rect key="frame" x="39" y="63" width="148.5" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" id="5dT-Hq-xFX"/>
                                                     </constraints>
@@ -171,7 +170,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Da hoi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baw-4l-gio">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đã hỏi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baw-4l-gio">
                                                     <rect key="frame" x="108" y="18" width="41.5" height="16"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="13"/>
                                                     <nil key="textColor"/>
@@ -338,14 +337,14 @@
                                                     <state key="normal" image="ic_edit"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sF-wT-RLW">
-                                                    <rect key="frame" x="195.5" y="128.5" width="30" height="15"/>
+                                                    <rect key="frame" x="195.5" y="128.5" width="55" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="jnC-kR-TsL"/>
                                                         <constraint firstAttribute="height" constant="15" id="vD8-4n-aor"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
                                                     <color key="tintColor" red="0.49019607840000001" green="0.90980392160000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="Sửa">
+                                                    <state key="normal" title="Chỉnh sửa">
                                                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -469,8 +468,8 @@
                             <constraint firstAttribute="bottom" secondItem="gIF-HE-Lj9" secondAttribute="bottom" id="RUi-tM-m5B"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="QuestionAnswer" image="ic_chat" id="VYb-fB-yKt"/>
-                    <navigationItem key="navigationItem" title="QUESTION ANSWER" id="P0h-fF-GiQ"/>
+                    <tabBarItem key="tabBarItem" title="Hỏi đáp" image="ic_chat" id="VYb-fB-yKt"/>
+                    <navigationItem key="navigationItem" title="HỎI ĐÁP" id="P0h-fF-GiQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="gIF-HE-Lj9" id="D32-GZ-S9N"/>
@@ -485,7 +484,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5mA-0y-uO2" customClass="HomeCareNavigationController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8Sc-9o-hxU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Sc-9o-hxU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -505,6 +504,6 @@
         <image name="ic_check" width="24" height="24"/>
         <image name="ic_edit" width="18" height="18"/>
         <image name="ic_favourite" width="24" height="24"/>
-        <image name="ic_send" width="36" height="31"/>
+        <image name="ic_send" width="56" height="56"/>
     </resources>
 </document>

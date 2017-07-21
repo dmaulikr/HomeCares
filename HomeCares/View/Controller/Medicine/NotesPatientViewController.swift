@@ -24,6 +24,6 @@ class NotesPatientViewController: UIViewController {
 
 extension NotesPatientViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Medical book")
+        return IndicatorInfo(title: "Sổ y bạ")
     }
 }

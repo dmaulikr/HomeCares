@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--HOME-->
+        <!--TRANG CHỦ-->
         <scene sceneID="iTZ-Tq-BbI">
             <objects>
                 <viewController storyboardIdentifier="HomePageViewController" id="BSA-FS-H6N" customClass="HomePageViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
@@ -182,8 +182,8 @@
                             <constraint firstAttribute="bottom" secondItem="OEC-1T-YCi" secondAttribute="bottom" id="zJa-Kv-itu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="HomePage" image="ic_home" id="u2H-kt-06O"/>
-                    <navigationItem key="navigationItem" title="HOME" id="DAS-95-J7r">
+                    <tabBarItem key="tabBarItem" title="Trang chủ" image="ic_home" id="u2H-kt-06O"/>
+                    <navigationItem key="navigationItem" title="TRANG CHỦ" id="DAS-95-J7r">
                         <barButtonItem key="backBarButtonItem" title=" " id="WdR-kQ-Z5x"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -199,7 +199,7 @@
             </objects>
             <point key="canvasLocation" x="1574" y="518"/>
         </scene>
-        <!--BLOG DETAIL-->
+        <!--CHI TIẾT BÀI VIẾT-->
         <scene sceneID="Sx9-Po-f9K">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="ZJO-1x-Wpx" customClass="BlogDetailViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
@@ -224,7 +224,7 @@
                             <constraint firstItem="Wse-T9-Znp" firstAttribute="top" secondItem="5Ku-aL-CH8" secondAttribute="top" id="zlU-vK-I6s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="BLOG DETAIL" id="5Ip-t9-0LP"/>
+                    <navigationItem key="navigationItem" title="CHI TIẾT BÀI VIẾT" id="5Ip-t9-0LP"/>
                     <connections>
                         <outlet property="webview" destination="Wse-T9-Znp" id="yzO-Pb-JMH"/>
                     </connections>
@@ -233,7 +233,7 @@
             </objects>
             <point key="canvasLocation" x="2309.5999999999999" y="517.6911544227886"/>
         </scene>
-        <!--SEARCH MEDICAL-->
+        <!--TÌM THUỐC-->
         <scene sceneID="PcG-fv-UHK">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="SsU-M0-TxR" customClass="SearchMedicalViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
@@ -272,7 +272,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0k3-lf-uCp">
-                                                            <rect key="frame" x="22.5" y="35" width="19.5" height="18.5"/>
+                                                            <rect key="frame" x="23" y="35" width="19.5" height="18.5"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -343,7 +343,7 @@
                             <constraint firstAttribute="trailing" secondItem="5at-R2-nBV" secondAttribute="trailing" id="vSk-OB-Vvz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SEARCH MEDICAL" id="iaJ-Yp-0tj"/>
+                    <navigationItem key="navigationItem" title="TÌM THUỐC" id="iaJ-Yp-0tj"/>
                     <connections>
                         <outlet property="tableView" destination="5at-R2-nBV" id="RF5-fg-Lhl"/>
                         <segue destination="z44-sh-tzj" kind="show" identifier="ShowDetailMedicineView" id="fRy-DZ-7a5"/>
@@ -389,7 +389,7 @@
             </objects>
             <point key="canvasLocation" x="2030" y="2131"/>
         </scene>
-        <!--SEARCH DISEASE-->
+        <!--TÌM BỆNH-->
         <scene sceneID="GAe-K1-D95">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="T1I-Dx-FCM" customClass="SearchDiseaseViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
@@ -428,7 +428,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5n-Ao-Xkc">
-                                                            <rect key="frame" x="22.5" y="35" width="19.5" height="18.5"/>
+                                                            <rect key="frame" x="23" y="35" width="19.5" height="18.5"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -508,7 +508,7 @@
                             <constraint firstAttribute="bottom" secondItem="6ds-wi-iAo" secondAttribute="bottom" id="nOL-xJ-oFZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SEARCH DISEASE" id="SDN-CI-Bhr">
+                    <navigationItem key="navigationItem" title="TÌM BỆNH" id="SDN-CI-Bhr">
                         <barButtonItem key="backBarButtonItem" title="Back" id="LSp-kk-tUa"/>
                     </navigationItem>
                     <connections>

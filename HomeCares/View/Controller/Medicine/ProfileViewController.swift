@@ -6,6 +6,8 @@
 //  Copyright © 2017 Tuat Tran. All rights reserved.
 //
 
+import AVFoundation
+import MobileCoreServices
 import UIKit
 import XLPagerTabStrip
 import Material
@@ -113,19 +115,7 @@ class ProfileViewController: UIViewController {
 
     
     internal func initData() {
-        if let url = URL(string: patient.avatar) {
-            avatarImageView.af_setImage(
-                withURL         : url,
-                placeholderImage: "ic_user_default".image,
-                imageTransition : .crossDissolve(0.2),
-                completion: { response in
-                    if let _ = response.result.error {
-                        self.avatarImageView.image = "ic_user_default".image
-                    }
-            })
-        } else {
-            avatarImageView.image = "ic_user_default".image
-        }
+        restoreImageView()
         detailLabel.text = patient.subInfor
         relationSelected = patient.patientRelations
         genderSelected = patient.gender
@@ -136,7 +126,7 @@ class ProfileViewController: UIViewController {
         relationTextField.text = relations[patient.patientRelations.rawValue]
         nameLabel.text = patient.firstName! + " " + patient.middleName! + " " + patient.lastName!
         birthdayTextField.text = patient.dateOfBirth.date(format: .dd_MM_yyyy)
-        genderTextField.text = patient.gender! == .male ? "Male" : patient.gender! == .male ? "Female" : "Other"
+        genderTextField.text = patient.gender! == .male ? "Nam" : patient.gender! == .female ? "Nữ" : "Khác"
         emailTextField.text = patient.email
         phoneNumberTextField.text = patient.phone
         addressTextField.text = patient.address
@@ -171,11 +161,11 @@ class ProfileViewController: UIViewController {
     
     internal func updatePatient() {
         if !emailTextField.text!.isEmpty, !emailTextField.text!.isValidEmail() {
-            showAlert(title: "Notice", message: "Email unvalidate.", negativeTitle: "OK")
+            showAlert(title: "Chú ý", message: "Email không hợp lệ.", negativeTitle: "OK")
             return
         }
         if !phoneNumberTextField.text!.isEmpty, !phoneNumberTextField.text!.isValidatePhone() {
-            showAlert(title: "Notice", message: "Phone number unvalidate.", negativeTitle: "OK")
+            showAlert(title: "Chú ý", message: "Số điện thoại không hợp lệ", negativeTitle: "OK")
             return
         }
         patient.firstName = firstNameTextField.text!
@@ -200,37 +190,28 @@ class ProfileViewController: UIViewController {
             guard let sSelf = self else { return }
             sSelf.stopWaiting()
             if let _ = response.data {
-                sSelf.showSnackBar(message: "You updated successfully")
-                if #available(iOS 10.0, *) {
-                    let _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
-                        sSelf.navigationController?.popViewController(animated: true)
-                    })
-                } else {
-                    let _ = Timer.scheduledTimer(timeInterval: 1, target: sSelf, selector: #selector(sSelf.backToViewController), userInfo: nil, repeats: false)
-                }
+                sSelf.showAlert(title: "Thông báo",
+                                message: "Cập nhật sổ y bạ thành công.",
+                                negativeTitle: "OK")
+
             } else if let error = response.error {
-                sSelf.showAlert(title: "Error",
+                sSelf.showAlert(title: "Thông báo",
                                 message: error.localizedDescription,
                                 negativeTitle: "OK")
             }
         }
     }
     
-    @objc
-    internal func backToViewController() {
-        navigationController?.popViewController(animated: true)
-    }
-    
     internal func showAddImage() {
         
-        let alertController = UIAlertController(title: "Select image", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Chọn ảnh", message: nil, preferredStyle: .actionSheet)
         let galleryAction = UIAlertAction(title: "Gallery", style: .default) { _ in
-            self.handleSelectProfile()
+            self.selectGallery()
         }
         let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
-            
+            self.takeImage()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: "Huỷ", style: .cancel)
         
         alertController.addAction(galleryAction)
         alertController.addAction(cameraAction)
@@ -241,7 +222,23 @@ class ProfileViewController: UIViewController {
         }
         showDetailViewController(alertController, sender: nil)
     }
+    
+    internal func restoreImageView() {
+        if let url = URL(string: patient.avatar) {
+            avatarImageView.af_setImage(
+                withURL         : url,
+                placeholderImage: "ic_user_default".image,
+                imageTransition : .crossDissolve(0.2),
+                completion: { response in
+                    if let _ = response.result.error {
+                        self.avatarImageView.image = "ic_user_default".image
+                    }
+            })
+        } else {
+            avatarImageView.image = "ic_user_default".image
+        }
 
+    }
     
     // MARK: Action
     
@@ -250,7 +247,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func chooseGenderAction(_ sender: Any) {
-        let gender = ["Female","Male","Other"]
+        let gender = ["Nữ","Nam","Khác"]
         let initialSelection = gender.index(of: genderTextField.text!) ?? 0
         let picker = ActionSheetStringPicker(title: "Giới tính", rows: gender, initialSelection: initialSelection, doneBlock: { (_, index, value) in
             if let gen = value as? String {
@@ -297,27 +294,55 @@ class ProfileViewController: UIViewController {
 
 extension  ProfileViewController:  IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Information")
+        return IndicatorInfo(title: "Thông tin")
     }
 }
 
 extension ProfileViewController: UIImagePickerControllerDelegate {
-    func handleSelectProfile() {
+    
+    internal func selectGallery() {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = [kUTTypeImage as String]
         present(picker, animated: true, completion: nil)
         
     }
     
+    internal func takeImage() {
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+            showAlert(title: "Chú ý",
+                      message: "Lỗi camera",
+                      negativeTitle: "OK")
+            return
+        }
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .camera
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage,
-            let _ = info[UIImagePickerControllerReferenceURL] as? NSURL {
-            let data = UIImagePNGRepresentation(image)!
-            print("data    \(data)")
-            homecareService.changePatientAvatar(patientId: patient.patientId, image: data, handler: { (_) in
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage  {
+            let data = UIImageJPEGRepresentation(image,0.1)!
+            avatarImageView.image = image
+            homecareService.changePatientAvatar(patientId: patient.patientId, image: data, handler: { [weak self] (response) in
                 
+                guard let sSelf = self else { return }
+                
+                if let error = response.error {
+                    sSelf.restoreImageView()
+                    sSelf.showSnackBar(message: error.localizedDescription)
+                } else {
+                    sSelf.showSnackBar(message: "Cập nhật ảnh đại diện thành công.")
+                }
             })
+        } else {
+            showAlert(title: "Lỗi",
+                      message: "Xảy ra lỗi. Vui lòng thử lại.",
+                      negativeTitle: "OK")
         }
         picker.dismiss(animated: true, completion: nil)
     }

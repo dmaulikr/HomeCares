@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B1a-Zk-dkn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZPj-ua-tjp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -19,225 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--MEDICAL REPORT-->
-        <scene sceneID="tfG-4I-2KI">
-            <objects>
-                <viewController storyboardIdentifier="MedicalReportBookViewController" id="KOo-yX-p6f" customClass="MedicalReportBookViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9kf-QG-CAd"/>
-                        <viewControllerLayoutGuide type="bottom" id="ItK-Xh-sSh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hLG-01-wuR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="181" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Sa-pW-vGs">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.8994297696672604" green="0.91856657327720215" blue="0.91856657327720215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MedicalReportCell" rowHeight="181" id="fwM-k0-lm1" customClass="MedicalReportCell" customModule="HomeCares" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="181"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fwM-k0-lm1" id="NGs-YR-ddv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="181"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIq-dk-HwT">
-                                                    <rect key="frame" x="8" y="4" width="359" height="169"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yie-gb-KaI">
-                                                            <rect key="frame" x="8" y="8" width="45" height="45"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="45" id="H7w-5J-zU0"/>
-                                                                <constraint firstAttribute="height" constant="45" id="dmK-OF-pMs"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ho ten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTW-NJ-r6s">
-                                                            <rect key="frame" x="61" y="8" width="60" height="22"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="53.5" id="9Gv-bm-Z5Z"/>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="aoU-aA-rGv"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
-                                                            <color key="textColor" red="0.86666666670000003" green="0.2784313725" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vT1-5m-89u">
-                                                            <rect key="frame" x="61" y="33" width="141" height="16"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuoi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaY-I1-50c">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="27" height="16"/>
-                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
-                                                                    <color key="textColor" red="0.31503311709999998" green="0.31834925520000001" blue="0.31834925520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuoi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsd-qJ-Elz">
-                                                                    <rect key="frame" x="57" y="0.0" width="27" height="16"/>
-                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
-                                                                    <color key="textColor" red="0.31503311709999998" green="0.31834925520000001" blue="0.31834925520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuoi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEQ-qL-dN9">
-                                                                    <rect key="frame" x="114" y="0.0" width="27" height="16"/>
-                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
-                                                                    <color key="textColor" red="0.31503311709999998" green="0.31834925520000001" blue="0.31834925520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-jP-zAu" customClass="FlatButton" customModule="Material">
-                                                            <rect key="frame" x="171" y="79" width="180" height="30"/>
-                                                            <color key="backgroundColor" red="0.49019607840000001" green="0.90980392160000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                            <state key="normal" title="View profile">
-                                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            </state>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="5"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                                    <color key="value" red="0.49019607840000001" green="0.90980392160000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="viewProfileAction:" destination="fwM-k0-lm1" eventType="touchUpInside" id="wLh-eu-p8p"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suM-Jw-ZcO" customClass="FlatButton" customModule="Material">
-                                                            <rect key="frame" x="171" y="124" width="180" height="30"/>
-                                                            <color key="backgroundColor" red="0.49019607840000001" green="0.90980392160000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="180" id="uS2-hm-dAw"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                                            <state key="normal" title="Make appointment">
-                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="5"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                                    <color key="value" red="0.49019607840000001" green="0.90980392160000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="makeAppointmentAction:" destination="fwM-k0-lm1" eventType="touchUpInside" id="n2E-hs-CzS"/>
-                                                            </connections>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1t-1D-crV">
-                                                            <rect key="frame" x="8" y="79" width="35" height="16"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="4mP-b5-Bsj"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8TS-YF-Mz6">
-                                                            <rect key="frame" x="1" y="61" width="357" height="1"/>
-                                                            <color key="backgroundColor" red="0.86666666670000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="0.80000000000000004" id="Vox-Xb-nhZ"/>
-                                                            </constraints>
-                                                        </view>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="G1t-1D-crV" secondAttribute="bottom" constant="8" id="3bw-ap-Kev"/>
-                                                        <constraint firstItem="cU1-jP-zAu" firstAttribute="top" secondItem="vT1-5m-89u" secondAttribute="bottom" constant="30" id="ASH-y4-o4A"/>
-                                                        <constraint firstAttribute="trailing" secondItem="cU1-jP-zAu" secondAttribute="trailing" constant="8" id="Cl2-xq-mzn"/>
-                                                        <constraint firstItem="suM-Jw-ZcO" firstAttribute="top" secondItem="cU1-jP-zAu" secondAttribute="bottom" constant="15" id="Gki-eV-AYI"/>
-                                                        <constraint firstItem="vT1-5m-89u" firstAttribute="leading" secondItem="yie-gb-KaI" secondAttribute="trailing" constant="8" id="JMU-th-mVM"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BTW-NJ-r6s" secondAttribute="trailing" constant="8" id="K6z-BZ-pcA"/>
-                                                        <constraint firstItem="vT1-5m-89u" firstAttribute="top" secondItem="BTW-NJ-r6s" secondAttribute="bottom" constant="3" id="Oab-Ev-d0b"/>
-                                                        <constraint firstAttribute="trailing" secondItem="suM-Jw-ZcO" secondAttribute="trailing" constant="8" id="OeL-Lb-g1p"/>
-                                                        <constraint firstItem="cU1-jP-zAu" firstAttribute="width" secondItem="suM-Jw-ZcO" secondAttribute="width" id="Zp5-JH-UHH"/>
-                                                        <constraint firstItem="yie-gb-KaI" firstAttribute="leading" secondItem="dIq-dk-HwT" secondAttribute="leading" constant="8" id="cZg-nQ-RJ3"/>
-                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="suM-Jw-ZcO" secondAttribute="bottom" priority="999" constant="12" id="cji-en-8Kx"/>
-                                                        <constraint firstAttribute="trailing" secondItem="8TS-YF-Mz6" secondAttribute="trailing" constant="1" id="iyV-Jg-6ss"/>
-                                                        <constraint firstItem="G1t-1D-crV" firstAttribute="top" secondItem="vT1-5m-89u" secondAttribute="bottom" constant="30" id="jM4-AL-cqb"/>
-                                                        <constraint firstItem="8TS-YF-Mz6" firstAttribute="top" secondItem="yie-gb-KaI" secondAttribute="bottom" constant="8" id="jeV-Wg-yMT"/>
-                                                        <constraint firstItem="G1t-1D-crV" firstAttribute="leading" secondItem="dIq-dk-HwT" secondAttribute="leading" constant="8" id="jga-yO-X8X"/>
-                                                        <constraint firstItem="8TS-YF-Mz6" firstAttribute="leading" secondItem="dIq-dk-HwT" secondAttribute="leading" constant="1" id="ksR-gS-G6F"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vT1-5m-89u" secondAttribute="trailing" constant="8" id="mAA-tI-2xf"/>
-                                                        <constraint firstItem="BTW-NJ-r6s" firstAttribute="leading" secondItem="yie-gb-KaI" secondAttribute="trailing" constant="8" id="nPa-WT-ydg"/>
-                                                        <constraint firstItem="BTW-NJ-r6s" firstAttribute="top" secondItem="yie-gb-KaI" secondAttribute="top" id="qsm-Bz-NjV"/>
-                                                        <constraint firstItem="yie-gb-KaI" firstAttribute="top" secondItem="dIq-dk-HwT" secondAttribute="top" constant="8" id="rrp-72-yuZ"/>
-                                                        <constraint firstItem="cU1-jP-zAu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G1t-1D-crV" secondAttribute="trailing" constant="10" id="vPa-ud-Los"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                            <size key="value" width="0.0" height="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                            <color key="value" red="0.82736045120000001" green="0.82750314469999997" blue="0.82735145089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstItem="dIq-dk-HwT" firstAttribute="leading" secondItem="NGs-YR-ddv" secondAttribute="leading" constant="8" id="456-uf-CXO"/>
-                                                <constraint firstAttribute="bottom" secondItem="dIq-dk-HwT" secondAttribute="bottom" constant="8" id="APK-Uz-9qh"/>
-                                                <constraint firstAttribute="trailing" secondItem="dIq-dk-HwT" secondAttribute="trailing" constant="8" id="HXr-ep-zaw"/>
-                                                <constraint firstItem="dIq-dk-HwT" firstAttribute="top" secondItem="NGs-YR-ddv" secondAttribute="top" constant="4" id="xKQ-FP-26x"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.82736045120000001" green="0.82750314469999997" blue="0.82735145089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outlet property="avatarImageView" destination="yie-gb-KaI" id="yo5-7H-57Z"/>
-                                            <outlet property="backGroundView" destination="dIq-dk-HwT" id="RtY-1h-YxM"/>
-                                            <outlet property="genderLabel" destination="Fsd-qJ-Elz" id="Vmv-qe-ZKS"/>
-                                            <outlet property="nameMemberLabel" destination="BTW-NJ-r6s" id="LVc-by-YSx"/>
-                                            <outlet property="oldLabel" destination="vaY-I1-50c" id="lzT-yi-fMe"/>
-                                            <outlet property="relationLabel" destination="ZEQ-qL-dN9" id="zjh-ls-oFh"/>
-                                            <outlet property="statusHealthLabel" destination="G1t-1D-crV" id="HpD-Su-bYQ"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="KOo-yX-p6f" id="071-Lt-cH5"/>
-                                    <outlet property="delegate" destination="KOo-yX-p6f" id="71c-pc-Z3j"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="2Sa-pW-vGs" secondAttribute="bottom" id="4Sb-1u-0Em"/>
-                            <constraint firstItem="2Sa-pW-vGs" firstAttribute="top" secondItem="hLG-01-wuR" secondAttribute="top" id="M6Y-zC-RBf"/>
-                            <constraint firstItem="2Sa-pW-vGs" firstAttribute="leading" secondItem="hLG-01-wuR" secondAttribute="leading" id="cyt-K0-SjP"/>
-                            <constraint firstAttribute="trailing" secondItem="2Sa-pW-vGs" secondAttribute="trailing" id="qRR-i7-VZd"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="ic_book" id="Udi-XC-qGn"/>
-                    <navigationItem key="navigationItem" title="MEDICAL REPORT" id="bqx-7z-jHf">
-                        <barButtonItem key="backBarButtonItem" title=" " id="fYS-fw-vzy"/>
-                    </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="tableView" destination="2Sa-pW-vGs" id="gG5-YB-8lB"/>
-                        <segue destination="kqg-8M-wW2" kind="show" identifier="ShowBookView" id="0Q8-6V-l14">
-                            <nil key="action"/>
-                        </segue>
-                        <segue destination="yLg-y6-5mQ" kind="show" identifier="ShowAddMedical" id="Iga-JY-9De"/>
-                        <segue destination="l9U-Ji-r9d" kind="show" identifier="ShowDetailPatientView" id="ZiU-vj-7nO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eon-Xp-6SM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1154.4000000000001" y="1163.568215892054"/>
-        </scene>
-        <!--SERVICE BOOKING-->
+        <!--ĐẶT DỊCH VỤ-->
         <scene sceneID="sty-AG-hAu">
             <objects>
                 <viewController storyboardIdentifier="ServiceBookingViewController" hidesBottomBarWhenPushed="YES" id="kqg-8M-wW2" customClass="ServiceBookingViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
@@ -255,7 +36,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIh-lM-kx7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Who use service" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Py-dm-GsI" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Người sử dụng dịch vụ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Py-dm-GsI" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="10" width="343" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="fD2-eS-xN1"/>
@@ -265,10 +46,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -278,7 +59,7 @@
                                                     <action selector="choosePeopleAction:" destination="kqg-8M-wW2" eventType="touchUpInside" id="t5a-Py-90o"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBv-Oj-aKT" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBv-Oj-aKT" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="60" width="343" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="ehV-qV-geO"/>
@@ -288,14 +69,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What service do you choose" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIu-l1-od6" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Loại dịch vụ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIu-l1-od6" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="110" width="343" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="T2U-cB-lvj"/>
@@ -305,10 +86,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -318,7 +99,7 @@
                                                     <action selector="chooseTypeServiceAction:" destination="kqg-8M-wW2" eventType="touchUpInside" id="p6E-KD-1Sl"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1a-bf-FwL" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Địa chỉ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1a-bf-FwL" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="160" width="343" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="Eld-mS-ez4"/>
@@ -328,14 +109,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Detail information" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVN-uj-SdP" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Thông tin chi tiết" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVN-uj-SdP" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="210" width="343" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="fHI-EX-kxq"/>
@@ -345,14 +126,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OGv-xc-XLT" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Thời gian" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OGv-xc-XLT" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="260" width="343" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="yDf-4P-tVX"/>
@@ -362,10 +143,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -376,8 +157,8 @@
                                                     <action selector="chooseTimeAction:" destination="kqg-8M-wW2" eventType="touchUpInside" id="db3-YQ-ByG"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zc-gT-woY">
-                                                <rect key="frame" x="16" y="310" width="103.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vị trí của bạn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zc-gT-woY">
+                                                <rect key="frame" x="16" y="310" width="104" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="qIF-Os-SeL"/>
                                                 </constraints>
@@ -408,7 +189,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="Wng-SV-mBC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
-                                                <state key="normal" title="Confirm">
+                                                <state key="normal" title="Xác nhận">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -489,7 +270,7 @@
                             <constraint firstItem="Bme-n0-DR4" firstAttribute="leading" secondItem="3ae-ne-CVa" secondAttribute="leading" id="kaT-3f-lEH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SERVICE BOOKING" id="Ayz-xu-1ZE">
+                    <navigationItem key="navigationItem" title="ĐẶT DỊCH VỤ" id="Ayz-xu-1ZE">
                         <barButtonItem key="backBarButtonItem" title=" " id="TLU-Bk-e8I"/>
                     </navigationItem>
                     <connections>
@@ -508,26 +289,223 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GpI-Gm-6gj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1154" y="2025"/>
+            <point key="canvasLocation" x="-1860" y="1984"/>
         </scene>
-        <!--Medical Report-->
-        <scene sceneID="4yY-rJ-c0y">
+        <!--SỔ Y BẠ-->
+        <scene sceneID="ycc-A7-oAa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B1a-Zk-dkn" customClass="HomeCareNavigationController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Medical Report" image="ic_book" id="rmq-VD-Zot"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="scC-ef-fSg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <viewController storyboardIdentifier="MedicalReportBookViewController" id="fEW-Hx-GtB" customClass="MedicalReportBookViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U2i-Tv-Hod"/>
+                        <viewControllerLayoutGuide type="bottom" id="xko-Q4-f8u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J7A-W1-G4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="181" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BWG-Lp-3wz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" red="0.89942976969999999" green="0.91856657330000002" blue="0.91856657330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MedicalReportCell" rowHeight="181" id="htO-0d-hdF" customClass="MedicalReportCell" customModule="HomeCares" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="181"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="htO-0d-hdF" id="aGo-pf-ppq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="181"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rye-lu-1OS">
+                                                    <rect key="frame" x="8" y="4" width="359" height="169"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ro8-RW-a4C">
+                                                            <rect key="frame" x="8" y="8" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="45" id="bMv-1z-bgr"/>
+                                                                <constraint firstAttribute="width" constant="45" id="mNg-Zj-hY8"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ho ten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulp-8b-Fdy">
+                                                            <rect key="frame" x="61" y="8" width="60" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="53.5" id="5Un-PU-b7X"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="tGQ-bs-8Yw"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                                            <color key="textColor" red="0.86666666670000003" green="0.2784313725" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cIp-MH-0NH">
+                                                            <rect key="frame" x="61" y="33" width="141" height="16"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuoi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obv-7O-7v9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="27" height="16"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                                    <color key="textColor" red="0.31503311709999998" green="0.31834925520000001" blue="0.31834925520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuoi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1p-Ml-E2u">
+                                                                    <rect key="frame" x="57" y="0.0" width="27" height="16"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                                    <color key="textColor" red="0.31503311709999998" green="0.31834925520000001" blue="0.31834925520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuoi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhq-3d-aLb">
+                                                                    <rect key="frame" x="114" y="0.0" width="27" height="16"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                                    <color key="textColor" red="0.31503311709999998" green="0.31834925520000001" blue="0.31834925520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJc-EN-wsZ" customClass="FlatButton" customModule="Material">
+                                                            <rect key="frame" x="171" y="79" width="180" height="30"/>
+                                                            <color key="backgroundColor" red="0.49019607840000001" green="0.90980392160000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                            <state key="normal" title="Xem hồ sơ">
+                                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                                    <color key="value" red="0.49019607840000001" green="0.90980392160000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="viewProfileAction:" destination="htO-0d-hdF" eventType="touchUpInside" id="end-2u-1SW"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWF-iA-3wY" customClass="FlatButton" customModule="Material">
+                                                            <rect key="frame" x="171" y="124" width="180" height="30"/>
+                                                            <color key="backgroundColor" red="0.49019607840000001" green="0.90980392160000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="180" id="SdN-ic-TCc"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                            <state key="normal" title="Đặt lịch hẹn">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                                    <color key="value" red="0.49019607840000001" green="0.90980392160000001" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="makeAppointmentAction:" destination="htO-0d-hdF" eventType="touchUpInside" id="Q8A-yR-fYI"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7m-EK-zwR">
+                                                            <rect key="frame" x="8" y="79" width="35" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="39w-KC-EEB"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1T-m2-hb7">
+                                                            <rect key="frame" x="1" y="61" width="357" height="1"/>
+                                                            <color key="backgroundColor" red="0.86666666670000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="0.80000000000000004" id="PE9-bN-UoV"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="KWF-iA-3wY" secondAttribute="trailing" constant="8" id="02w-po-D8t"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ulp-8b-Fdy" secondAttribute="trailing" constant="8" id="1Kv-fC-ra2"/>
+                                                        <constraint firstItem="cIp-MH-0NH" firstAttribute="top" secondItem="ulp-8b-Fdy" secondAttribute="bottom" constant="3" id="3jR-ss-h2G"/>
+                                                        <constraint firstAttribute="trailing" secondItem="z1T-m2-hb7" secondAttribute="trailing" constant="1" id="66h-xo-VyG"/>
+                                                        <constraint firstItem="z1T-m2-hb7" firstAttribute="top" secondItem="ro8-RW-a4C" secondAttribute="bottom" constant="8" id="8K3-el-Iu9"/>
+                                                        <constraint firstItem="m7m-EK-zwR" firstAttribute="leading" secondItem="rye-lu-1OS" secondAttribute="leading" constant="8" id="8ZF-Kp-VMO"/>
+                                                        <constraint firstItem="ulp-8b-Fdy" firstAttribute="top" secondItem="ro8-RW-a4C" secondAttribute="top" id="A5a-2O-zkb"/>
+                                                        <constraint firstItem="m7m-EK-zwR" firstAttribute="top" secondItem="cIp-MH-0NH" secondAttribute="bottom" constant="30" id="A9C-GO-BvD"/>
+                                                        <constraint firstItem="z1T-m2-hb7" firstAttribute="leading" secondItem="rye-lu-1OS" secondAttribute="leading" constant="1" id="ClB-1o-Hf6"/>
+                                                        <constraint firstItem="cIp-MH-0NH" firstAttribute="leading" secondItem="ro8-RW-a4C" secondAttribute="trailing" constant="8" id="GjF-68-tIa"/>
+                                                        <constraint firstItem="KWF-iA-3wY" firstAttribute="top" secondItem="DJc-EN-wsZ" secondAttribute="bottom" constant="15" id="XXr-Se-PMG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DJc-EN-wsZ" secondAttribute="trailing" constant="8" id="b7Q-rn-XcU"/>
+                                                        <constraint firstItem="ro8-RW-a4C" firstAttribute="leading" secondItem="rye-lu-1OS" secondAttribute="leading" constant="8" id="cbf-Nj-UwZ"/>
+                                                        <constraint firstItem="DJc-EN-wsZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m7m-EK-zwR" secondAttribute="trailing" constant="10" id="cda-da-cIe"/>
+                                                        <constraint firstItem="DJc-EN-wsZ" firstAttribute="width" secondItem="KWF-iA-3wY" secondAttribute="width" id="cy5-MU-7C4"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cIp-MH-0NH" secondAttribute="trailing" constant="8" id="erA-sT-c90"/>
+                                                        <constraint firstItem="ro8-RW-a4C" firstAttribute="top" secondItem="rye-lu-1OS" secondAttribute="top" constant="8" id="gv1-r8-Q1A"/>
+                                                        <constraint firstItem="ulp-8b-Fdy" firstAttribute="leading" secondItem="ro8-RW-a4C" secondAttribute="trailing" constant="8" id="jaD-WV-gtV"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KWF-iA-3wY" secondAttribute="bottom" priority="999" constant="12" id="nwr-Za-U0n"/>
+                                                        <constraint firstItem="DJc-EN-wsZ" firstAttribute="top" secondItem="cIp-MH-0NH" secondAttribute="bottom" constant="30" id="oZx-kz-HxV"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="m7m-EK-zwR" secondAttribute="bottom" constant="8" id="tDj-ro-dKT"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="0.0" height="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" red="0.82736045120000001" green="0.82750314469999997" blue="0.82735145089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="rye-lu-1OS" secondAttribute="bottom" constant="8" id="DF1-KV-hRD"/>
+                                                <constraint firstItem="rye-lu-1OS" firstAttribute="leading" secondItem="aGo-pf-ppq" secondAttribute="leading" constant="8" id="DWJ-Io-7Pg"/>
+                                                <constraint firstAttribute="trailing" secondItem="rye-lu-1OS" secondAttribute="trailing" constant="8" id="Rxp-aS-dz6"/>
+                                                <constraint firstItem="rye-lu-1OS" firstAttribute="top" secondItem="aGo-pf-ppq" secondAttribute="top" constant="4" id="seI-Uq-qCX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.82736045120000001" green="0.82750314469999997" blue="0.82735145089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="ro8-RW-a4C" id="pGa-4P-IQ8"/>
+                                            <outlet property="backGroundView" destination="rye-lu-1OS" id="Q1O-jI-rh7"/>
+                                            <outlet property="genderLabel" destination="t1p-Ml-E2u" id="S6h-Wy-gDV"/>
+                                            <outlet property="nameMemberLabel" destination="ulp-8b-Fdy" id="5LY-6L-yFn"/>
+                                            <outlet property="oldLabel" destination="Obv-7O-7v9" id="VRx-u9-DdM"/>
+                                            <outlet property="relationLabel" destination="hhq-3d-aLb" id="hbu-32-aUq"/>
+                                            <outlet property="statusHealthLabel" destination="m7m-EK-zwR" id="6Wy-o6-dCN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fEW-Hx-GtB" id="J3b-7f-tkv"/>
+                                    <outlet property="delegate" destination="fEW-Hx-GtB" id="Xyo-Oa-Rkk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BWG-Lp-3wz" firstAttribute="top" secondItem="J7A-W1-G4Q" secondAttribute="top" id="PRI-Jy-tpI"/>
+                            <constraint firstAttribute="trailing" secondItem="BWG-Lp-3wz" secondAttribute="trailing" id="QKe-vW-vre"/>
+                            <constraint firstItem="BWG-Lp-3wz" firstAttribute="leading" secondItem="J7A-W1-G4Q" secondAttribute="leading" id="uXe-OY-7JN"/>
+                            <constraint firstItem="xko-Q4-f8u" firstAttribute="top" secondItem="BWG-Lp-3wz" secondAttribute="bottom" id="yDB-Yz-IvX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hồ sơ" image="ic_book" id="iPm-2R-YAn"/>
+                    <navigationItem key="navigationItem" title="SỔ Y BẠ" id="d7f-J5-sk5">
+                        <barButtonItem key="backBarButtonItem" title=" " id="yXe-Bq-4m1"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="KOo-yX-p6f" kind="relationship" relationship="rootViewController" id="92T-ld-8r3"/>
+                        <outlet property="tableView" destination="BWG-Lp-3wz" id="Cub-qs-94Z"/>
+                        <segue destination="kqg-8M-wW2" kind="show" identifier="ShowBookView" id="aLg-RH-4ab"/>
+                        <segue destination="yLg-y6-5mQ" kind="show" identifier="ShowAddMedical" id="nlL-aa-ZOF"/>
+                        <segue destination="l9U-Ji-r9d" kind="show" identifier="ShowDetailPatientView" id="PU1-dH-zDv"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sWc-mP-oJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PCN-ps-Igl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2268" y="1164"/>
+            <point key="canvasLocation" x="-1692" y="1163"/>
         </scene>
         <!--Patient Detail View Controller-->
         <scene sceneID="zSC-Z4-uTg">
@@ -545,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUg-7J-dIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-258" y="1164"/>
+            <point key="canvasLocation" x="-362" y="1984"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="sVF-CJ-faW">
@@ -588,8 +566,8 @@
                                                     <constraint firstAttribute="height" constant="1" id="3X6-Cj-eMO"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2Y-93-hFg">
-                                                <rect key="frame" x="16" y="87" width="73.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2Y-93-hFg">
+                                                <rect key="frame" x="16" y="87" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="7G5-EA-CIN"/>
                                                 </constraints>
@@ -597,8 +575,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Middle name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhy-ch-lRV">
-                                                <rect key="frame" x="190" y="87" width="92.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên đệm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhy-ch-lRV">
+                                                <rect key="frame" x="190" y="87" width="60.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="3v6-Ba-3nu"/>
                                                 </constraints>
@@ -606,8 +584,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUh-bd-zRa">
-                                                <rect key="frame" x="16" y="158" width="71.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUh-bd-zRa">
+                                                <rect key="frame" x="16" y="158" width="24.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="DmW-EU-OOj"/>
                                                 </constraints>
@@ -615,8 +593,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esn-oC-uVT">
-                                                <rect key="frame" x="167" y="158" width="59" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày sinh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esn-oC-uVT">
+                                                <rect key="frame" x="167" y="158" width="68" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="uKi-TK-oAe"/>
                                                 </constraints>
@@ -624,8 +602,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksc-Uw-vQ8">
-                                                <rect key="frame" x="16" y="230.5" width="51.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="Giới tính" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksc-Uw-vQ8">
+                                                <rect key="frame" x="16" y="230.5" width="59" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Vu4-zX-e95"/>
                                                 </constraints>
@@ -633,8 +611,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relation " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxX-pu-94Y">
-                                                <rect key="frame" x="119.5" y="230.5" width="61.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mối quan hệ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxX-pu-94Y">
+                                                <rect key="frame" x="119.5" y="230.5" width="87" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="S0Y-ZM-JwT"/>
                                                 </constraints>
@@ -658,10 +636,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -678,10 +656,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -698,10 +676,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -715,10 +693,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -732,15 +710,15 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myr-IL-Wla">
-                                                <rect key="frame" x="16" y="303" width="40" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myr-IL-Wla">
+                                                <rect key="frame" x="16" y="303" width="90.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="zIk-IU-qav"/>
                                                 </constraints>
@@ -758,15 +736,15 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43l-PD-9fK">
-                                                <rect key="frame" x="16" y="375.5" width="105" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số điện thoại" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43l-PD-9fK">
+                                                <rect key="frame" x="16" y="375.5" width="91" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="dmA-IZ-L5D"/>
                                                 </constraints>
@@ -784,15 +762,15 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identify number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-bK-Ae7">
-                                                <rect key="frame" x="16" y="448.5" width="113" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số CMND" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-bK-Ae7">
+                                                <rect key="frame" x="16" y="448.5" width="66" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="QBq-B8-3Bf"/>
                                                 </constraints>
@@ -810,15 +788,15 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insurance number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dO-eS-gZD">
-                                                <rect key="frame" x="16" y="521.5" width="127" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mã số bảo hiểm" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dO-eS-gZD">
+                                                <rect key="frame" x="16" y="521.5" width="110" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="cAp-XE-ZEb"/>
                                                 </constraints>
@@ -836,15 +814,15 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLL-zZ-WOt">
-                                                <rect key="frame" x="16" y="594.5" width="55.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLL-zZ-WOt">
+                                                <rect key="frame" x="16" y="594.5" width="48" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Khz-7U-MGB"/>
                                                 </constraints>
@@ -861,16 +839,16 @@
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM9-jV-Zm7">
-                                                <rect key="frame" x="16" y="667.5" width="63.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng quan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM9-jV-Zm7">
+                                                <rect key="frame" x="16" y="667.5" width="73.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="6IW-V7-DGn"/>
                                                 </constraints>
@@ -878,8 +856,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical history" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kp-el-DW3">
-                                                <rect key="frame" x="16" y="740.5" width="105" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiền sử bệnh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kp-el-DW3">
+                                                <rect key="frame" x="16" y="740.5" width="88.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="RJT-DB-CYa"/>
                                                 </constraints>
@@ -887,8 +865,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergy history" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wh-j8-Sxa">
-                                                <rect key="frame" x="16" y="813" width="98.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lịch sử dị ứng" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wh-j8-Sxa">
+                                                <rect key="frame" x="16" y="813" width="96" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Pms-Oz-smx"/>
                                                 </constraints>
@@ -903,7 +881,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="fXQ-4r-ByD"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
-                                                <state key="normal" title="Update medical book">
+                                                <state key="normal" title="CẬP NHẬT SỔ Y BẠ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -965,10 +943,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -982,10 +960,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -999,10 +977,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -1016,10 +994,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -1174,7 +1152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSy-ZL-bLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312.8" y="1162.2188905547227"/>
+            <point key="canvasLocation" x="1386" y="2134"/>
         </scene>
         <!--Notes Patient View Controller-->
         <scene sceneID="ifS-K4-fG1">
@@ -1192,9 +1170,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFh-dz-35q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="546" y="1164"/>
+            <point key="canvasLocation" x="422" y="1984"/>
         </scene>
-        <!--ADD MEDICAL REPORT-->
+        <!--THÊM SỔ Y BẠ-->
         <scene sceneID="r9C-M7-h3p">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="yLg-y6-5mQ" customClass="AddMedicalReportBookViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
@@ -1212,7 +1190,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSL-eY-fjM">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Wm-EY-hk2" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Họ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Wm-EY-hk2" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="41" width="167.5" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="XFG-nS-ud6"/>
@@ -1222,14 +1200,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Middle name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdf-gm-tr3" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên đệm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdf-gm-tr3" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="191.5" y="41" width="167.5" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="GZq-ld-HD1"/>
@@ -1239,14 +1217,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qnn-FE-qMb" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qnn-FE-qMb" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="112" width="343" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="hkz-hk-2DE"/>
@@ -1256,14 +1234,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kVk-e1-fK6" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ngày sinh" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kVk-e1-fK6" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="188" width="239.5" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Jbu-rO-YYo"/>
@@ -1273,10 +1251,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -1286,7 +1264,7 @@
                                                     <action selector="choseDateOfBirthAction:" destination="yLg-y6-5mQ" eventType="touchUpInside" id="qlH-t6-aem"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Woy-wj-60G" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Giới tính" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Woy-wj-60G" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="263.5" y="188" width="95.5" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="rxs-cl-VAs"/>
@@ -1296,10 +1274,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -1309,7 +1287,7 @@
                                                     <action selector="choseGenderAction:" destination="yLg-y6-5mQ" eventType="touchUpInside" id="hmt-GR-tUO"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c56-U5-MRz" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mối quan hệ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c56-U5-MRz" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="16" y="259" width="343" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="fD9-5l-dsu"/>
@@ -1319,10 +1297,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerNormalHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="dividerActiveHeight">
-                                                        <real key="value" value="1"/>
+                                                        <real key="value" value="0.69999999999999996"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
@@ -1339,7 +1317,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="dTm-gf-o16"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
-                                                <state key="normal" title="Add">
+                                                <state key="normal" title="THÊM">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -1354,24 +1332,24 @@
                                                     <action selector="addPatientAction:" destination="yLg-y6-5mQ" eventType="touchUpInside" id="v3g-VK-Zkb"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntr-2F-dcB">
-                                                <rect key="frame" x="16" y="16" width="73.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntr-2F-dcB">
+                                                <rect key="frame" x="16" y="16" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="dUA-cq-e0w"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Middle name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64z-iK-Qpv">
-                                                <rect key="frame" x="191" y="16" width="92.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên đệm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64z-iK-Qpv">
+                                                <rect key="frame" x="191" y="16" width="60.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="bCf-8l-sxl"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ2-d6-PiR">
-                                                <rect key="frame" x="16" y="87" width="71.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ2-d6-PiR">
+                                                <rect key="frame" x="16" y="87" width="24.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="axu-DP-wag"/>
                                                     <constraint firstAttribute="height" constant="20" id="ivK-fU-L1X"/>
@@ -1380,8 +1358,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osC-6J-c72">
-                                                <rect key="frame" x="16" y="163" width="59" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày sinh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osC-6J-c72">
+                                                <rect key="frame" x="16" y="163" width="68" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="H6V-x1-WYk"/>
                                                 </constraints>
@@ -1389,8 +1367,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQ8-EB-bpu">
-                                                <rect key="frame" x="263" y="163" width="51.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới tính" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQ8-EB-bpu">
+                                                <rect key="frame" x="263" y="163" width="59" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="iZo-3u-cwy"/>
                                                 </constraints>
@@ -1398,7 +1376,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relationship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngb-jO-81v">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mối quan hệ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngb-jO-81v">
                                                 <rect key="frame" x="16" y="234" width="87" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="wP3-Bg-iDo"/>
@@ -1478,7 +1456,7 @@
                             <constraint firstItem="3DS-7e-dsX" firstAttribute="top" secondItem="Np8-Gs-v83" secondAttribute="top" id="uUa-yk-gLM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ADD MEDICAL REPORT" id="i5q-7h-u7q"/>
+                    <navigationItem key="navigationItem" title="THÊM SỔ Y BẠ" id="i5q-7h-u7q"/>
                     <connections>
                         <outlet property="addButton" destination="ml5-Qn-1Vf" id="6e3-lV-Gn1"/>
                         <outlet property="dateOfBirthTextField" destination="kVk-e1-fK6" id="57i-Fi-4dI"/>
@@ -1491,7 +1469,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f29-Ov-u9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-455.19999999999999" y="2023.5382308845578"/>
+            <point key="canvasLocation" x="-1158" y="1984"/>
+        </scene>
+        <!--Home Care Navigation Controller-->
+        <scene sceneID="s6X-0O-zpx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZPj-ua-tjp" customClass="HomeCareNavigationController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yAs-VF-Q9F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fEW-Hx-GtB" kind="relationship" relationship="rootViewController" id="cBA-dg-GJ9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxs-mT-sQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2511" y="1163"/>
         </scene>
     </scenes>
     <resources>

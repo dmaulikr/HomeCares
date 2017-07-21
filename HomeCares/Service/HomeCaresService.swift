@@ -42,8 +42,9 @@ class HomeCaresService {
     
     internal func register(user: User, handler: @escaping (ApiResponse<User>) -> Void) {
 
-        apiHelper.post("\(Configuration.Api)/applicationRegister", parameters: user.parameters) { (json, error) in
+        apiHelper.post("\(Configuration.Api)/applicationRegister", parameters: user.parameters, encoding: JSONEncoding.default) { (json, error) in
             
+            print("\(user.parameters)")
             let response = ApiResponse<User>()
             if let json = json {
                 response.data = User(json: json)
@@ -336,12 +337,35 @@ class HomeCaresService {
         }
     }
     
-    internal func changePatientAvatar(patientId: Int, image: Data, handler: @escaping (ApiResponse<UserPerson>) -> Void) {
+    internal func changePatientAvatar(patientId: Int, image: Data, handler: @escaping (ApiResponse<Patient>) -> Void) {
         
-        let parameters = ["patientId": patientId]
- 
+        let parameters = ["patientId": "\(patientId)"]
         apiHelper.upload("\(Configuration.Api)/changePatientAvatar",parameters:parameters, data: image) { (json, error) in
-            print("json  \(json)   \n error \(error?.localizedDescription)")
+            let response = ApiResponse<Patient>()
+            if let error = error {
+                if (error as NSError).code == 201 {
+                    response.error = nil
+                } else {
+                    response.error = error
+                }
+            }
+            handler(response)
+        }
+    }
+    
+    internal func changeUserAvatar(personId: Int, image: Data, handler: @escaping (ApiResponse<Patient>) -> Void) {
+        
+        let parameters = ["personId": "\(personId)"]
+        apiHelper.upload("\(Configuration.Api)/changeUserAvatar",parameters:parameters, data: image) { (json, error) in
+            let response = ApiResponse<Patient>()
+            if let error = error {
+                if (error as NSError).code == 201 {
+                    response.error = nil
+                } else {
+                    response.error = error
+                }
+            }
+            handler(response)
         }
     }
 }

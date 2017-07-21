@@ -97,7 +97,7 @@ class Patient: NSObject {
         insuranceNumber = json["insuranceNumber"].stringValue
         medicalHistory = json["medicalHistory"].stringValue
         healthOverview = json["healthOverview"].stringValue
-        avatar = json["avatar"].stringValue
+        avatar = "\(Configuration.BaseUrl)\(json["avatar"].stringValue)"
         allergyHistory = json["allergyHistory"].stringValue
         note = json["note"].stringValue
         created = json["created"].stringValue

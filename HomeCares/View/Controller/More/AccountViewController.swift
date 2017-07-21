@@ -11,6 +11,7 @@ import Material
 import ActionSheetPicker_3_0
 import SpringIndicator
 import MJSnackBar
+import MobileCoreServices
 
 class AccountViewController: UIViewController {
     
@@ -69,26 +70,14 @@ class AccountViewController: UIViewController {
     }
     
     internal func bindData() {
-        if let url = URL(string: userPerson.avatar) {
-            avatarImageView.af_setImage(
-                withURL         : url,
-                placeholderImage: "ic_user_default".image,
-                imageTransition : .crossDissolve(0.2),
-                completion: { (response) in
-                    if let _  = response.result.error {
-                        self.avatarImageView.image = "ic_user_default".image
-                    }
-            })
-        } else {
-            self.avatarImageView.image = "ic_user_default".image
-        }
+        restoreImageView()
         nameLabel.text = "\(userPerson.firstName!) \(userPerson.middleName!) \(userPerson.lastName!)"
         detailLabel.text = userPerson.subInfor
         firstNameTextField.text = userPerson.firstName
         middleNameTextField.text = userPerson.middleName
         lastNameTextField.text = userPerson.lastName
         birthdayTextField.text = userPerson.birthDay.date(format: .dd_MM_yyyy)
-        genderTextField.text = userPerson.gender! == .male ? "Male" : userPerson.gender! == .male ? "Female" : "Other"
+        genderTextField.text = userPerson.gender! == .male ? "Nam" : userPerson.gender! == .male ? "Nữ" : "Nam"
         addressTextField.text = userPerson.address
         identifyTextField.text = userPerson.idCardNumber
     }
@@ -141,33 +130,27 @@ class AccountViewController: UIViewController {
                 
                 sSelf.stopWaiting()
                 if let _ = response.data {
-                    sSelf.showSnackBar(message: "You updated successfully")
-                    if #available(iOS 10.0, *) {
-                        let _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
-                            sSelf.navigationController?.popViewController(animated: true)
-                        })
-                    } else {
-                        let _ = Timer.scheduledTimer(timeInterval: 1, target: sSelf, selector: #selector(sSelf.backToMore), userInfo: nil, repeats: false)
-                    }
-
-                } else if let error = response.error {
-                    sSelf.showAlert(title: "Error",
-                                    message: error.localizedDescription,
+                    sSelf.showAlert(title: "Thông báo",
+                              message: "Cập nhật tài khoản thành công.",
+                              negativeTitle: "OK")
+                } else if let _ = response.error {
+                    sSelf.showAlert(title: "Thông báo",
+                                    message: "Cập nhật tài khoản thất bại.",
                                     negativeTitle: "OK")
                 }
             })
 
         } else {
-            showAlert(title: "Notice",
-                      message: "Please fill in information",
+            showAlert(title: "Chú",
+                      message: "Vui lòng điền đầy đủ thông tin",
                       negativeTitle: "OK")
         }
     }
     
-    internal func backToMore() {
-        navigationController?.popViewController(animated: true)
+    public func showSnackBar(message: String) {
+        let snackBar = MJSnackBar(onView: self.view)
+        snackBar.show(data: MJSnackBarData(message: message), onView: self.view)
     }
-    
     
     internal func startWaiting() {
         indicator = SpringIndicator()
@@ -186,21 +169,16 @@ class AccountViewController: UIViewController {
             indicator.stopAnimation(false)
         }
     }
-    public func showSnackBar(message: String) {
-        let snackBar = MJSnackBar(onView: self.view)
-        snackBar.show(data: MJSnackBarData(message: message), onView: self.view)
-    }
-    
     internal func showAddImage() {
         
-        let alertController = UIAlertController(title: "Select image", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Chọn ảnh", message: nil, preferredStyle: .actionSheet)
         let galleryAction = UIAlertAction(title: "Gallery", style: .default) { _ in
-            self.handleSelectProfile()
+            self.selectGallery()
         }
         let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
-
+            self.takeImage()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: "Huỷ", style: .cancel)
         
         alertController.addAction(galleryAction)
         alertController.addAction(cameraAction)
@@ -210,6 +188,37 @@ class AccountViewController: UIViewController {
             popupOver.sourceView = avatarImageView
         }
         showDetailViewController(alertController, sender: nil)
+    }
+    
+    internal func getUserPerson() {
+        
+        DispatchQueue.global(qos: .background).async {
+            guard let userId = UserDefaults.userId else {
+                return
+            }
+            self.homecareService.getUserPersonBy(userId: userId) {(response) in
+                if let data = response.data {
+                    UserDefaults.avatar = data.avatar
+                }
+            }
+        }
+        
+    }
+    
+    internal func restoreImageView() {
+        if let url = URL(string: userPerson.avatar) {
+            avatarImageView.af_setImage(
+                withURL         : url,
+                placeholderImage: "ic_user_default".image,
+                imageTransition : .crossDissolve(0.2),
+                completion: { (response) in
+                    if let _  = response.result.error {
+                        self.avatarImageView.image = "ic_user_default".image
+                    }
+            })
+        } else {
+            self.avatarImageView.image = "ic_user_default".image
+        }
     }
     
     // MARK: Action
@@ -232,7 +241,7 @@ class AccountViewController: UIViewController {
     }
     @IBAction func choseGenderAction(_ sender: Any) {
         if isEdit {
-            let gender = ["Female","Male","Other"]
+            let gender = ["Nữ","Nam","Khác"]
             let initialSelection = gender.index(of: genderTextField.text!) ?? 0
             let picker = ActionSheetStringPicker(title: "Giới tính", rows: gender, initialSelection: initialSelection, doneBlock: { (_, index, value) in
                 if let gen = value as? String {
@@ -265,20 +274,57 @@ class AccountViewController: UIViewController {
 
 
 extension AccountViewController: UIImagePickerControllerDelegate {
-    func handleSelectProfile() {
+    
+    internal func selectGallery() {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = [kUTTypeImage as String]
         present(picker, animated: true, completion: nil)
         
     }
     
+    internal func takeImage() {
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+            showAlert(title: "Chú ý",
+                      message: "Camera lỗi",
+                      negativeTitle: "OK")
+            return
+        }
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .camera
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage  {
+            let data = UIImageJPEGRepresentation(image,0.1)!
             avatarImageView.image = image
-            imageSelected = image
+            homecareService.changeUserAvatar(personId: userPerson.personId, image: data, handler: { [weak self] (response) in
+                
+                guard let sSelf = self else { return }
+                
+                if let error = response.error {
+                    sSelf.restoreImageView()
+                    sSelf.showSnackBar(message: "Thay đổi ảnh đại điện thất bại. \(error.localizedDescription)")
+                } else {
+                    sSelf.getUserPerson()
+                    sSelf.showSnackBar(message: "Thay đổi ảnh đại diện thành công.")
+                }
+            })
+        } else {
+            showAlert(title: "Lỗi",
+                      message: "Xảy ra lỗi. Vui lòng thử lại sau.",
+                      negativeTitle: "OK")
         }
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
 }
+
 

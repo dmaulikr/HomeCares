@@ -53,7 +53,7 @@ class MoreViewController: UIViewController {
             }
             
             if let error = response.error {
-                sSelf.showAlert(title: "Error", message: error.localizedDescription, negativeTitle: "OK")
+                sSelf.showAlert(title: "Lỗi", message: error.localizedDescription, negativeTitle: "OK")
             }
         }
     }
@@ -75,8 +75,8 @@ class MoreViewController: UIViewController {
         } else {
             avatarImageView.image = "ic_user_default".image
         }
-        nameLabel.text = "Welcome \(userPerson.firstName!)"
-        detailLabel.text = "Your account have \(userPerson.balances!) VND."
+        nameLabel.text = "Xin chào \(userPerson.lastName!)"
+        detailLabel.text = "Tài khoản của bạn có \(userPerson.balances!) VND."
     }
     
     internal func prepareUI() {

@@ -59,8 +59,10 @@ class RegisterViewController: UIViewController {
         passwordLabel.dividerNormalColor = .darkGray
         confirmPassword.dividerNormalColor = .darkGray
 
+        genderLabel.text = "Nữ"
     }
-
+    
+    
     // MARK: Action
     
     @IBAction func resgisterAction(_ sender: Any) {
@@ -76,16 +78,16 @@ class RegisterViewController: UIViewController {
             if passwordLabel.text! == confirmPassword.text! {
                 if !emailLabel.text!.isValidEmail() {
                     showAlert(
-                        title: "Notice",
-                        message: "Unvalidate email",
+                        title: "Chú ý",
+                        message: "Email không hợp lệ.",
                         negativeTitle: "OK")
                     return
                 }
                 
                 if !phoneNumberLabel.text!.isValidatePhone() {
                     showAlert(
-                        title: "Notice",
-                        message: "Unvalidate phone number",
+                        title: "Chú ý",
+                        message: "Số điện thoại không hợp lệ.",
                         negativeTitle: "OK")
                     return
                 }
@@ -97,11 +99,16 @@ class RegisterViewController: UIViewController {
                 user.phoneNumberConfirmed = false
                 user.accessFailedCount = 0
                 user.twoFactorEnabled = false
+                user.emailConfirmed = false
                 let userPerson = UserPerson()
                 userPerson.firstName = firstNameLabel.text!
                 userPerson.middleName = middleNameLabel.text!
                 userPerson.lastName = lastNameLabel.text!
                 userPerson.gender = genderSelected
+                userPerson.balances = 0
+                userPerson.avatar = ""
+                userPerson.longitude = 0
+                userPerson.latitude = 0
                 let birthDay = birthdayLabel.text!
                 let date = DateHelper.shared.date(from: birthDay, format: .dd_MM_yyyy)!
                 userPerson.birthDay = DateHelper.shared.string(from: date, format: .yyyy_MM_dd_T_HH_mm_ss_Z)
@@ -114,22 +121,25 @@ class RegisterViewController: UIViewController {
                     
                     sSelf.stopWaitingRegister()
                     if let _ = response.data {
-                       sSelf.navigationController?.popViewController(animated: true)
-                    } else {
-                        
+                        sSelf.showAlert(title: "Thông báo", message: "Tài khoản được tạo thành công.", negativeTitle: "OK", negativeHandler: { _ in
+                            sSelf.navigationController?.popViewController(animated: true)
+                        })
+                       
+                    } else if let _ = response.error {
+                        sSelf.showAlert(title: "Lỗi", message: "Email đã tồn tại.", negativeTitle: "OK")
                     }
                 })
             
             } else {
                 showAlert(
-                    title: "Notice",
-                    message: "Password and Confirm Password is not match",
+                    title: "Chú ý",
+                    message: "Mật khẩu không khớp.",
                     negativeTitle: "OK")
             }
         } else {
             showAlert(
-                title: "Notice",
-                message: "Please fill in information",
+                title: "Chú ý",
+                message: "Vui lòng điền đầy đủ thông tin.",
                 negativeTitle: "OK")
         }
         
@@ -164,7 +174,7 @@ class RegisterViewController: UIViewController {
         let datePicker = ActionSheetDatePicker(title: "Ngày sinh", datePickerMode: .date, selectedDate: date, doneBlock: {
             _, value, index in
             if let date = value as? Date {
-                self.birthdayLabel.text = "\(DateHelper.shared.string(from: date, format: .dd_MM_yyyy))"
+                self.birthdayLabel.text = DateHelper.shared.string(from: date, format: .dd_MM_yyyy)
             }
             
         }, cancel: { ActionStringCancelBlock in return }, origin: view)
@@ -173,7 +183,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func chooseGenderAction(_ sender: Any) {
-        let gender = ["Female","Male","Other"]
+        let gender = ["Nữ","Nam","Khác"]
         let initialSelection = gender.index(of: genderLabel.text!) ?? 0
         let picker = ActionSheetStringPicker(title: "Giới tính", rows: gender, initialSelection: initialSelection, doneBlock: { (_, index, value) in
             if let gen = value as? String {

@@ -37,14 +37,14 @@
                                     <constraint firstAttribute="width" constant="60" id="zir-Nz-MoA"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdj-zJ-IPY">
-                                <rect key="frame" x="84" y="104" width="75" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xin chào" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdj-zJ-IPY">
+                                <rect key="frame" x="84" y="104" width="69" height="20"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your account have 0.0 VND." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruw-mY-Mau">
-                                <rect key="frame" x="84" y="128" width="176.5" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tài khoản của bạn có" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruw-mY-Mau">
+                                <rect key="frame" x="84" y="128" width="135.5" height="16"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="13"/>
                                 <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -61,14 +61,14 @@
                                     <action selector="showDetailAccountAction:" destination="To5-Pf-JXG" eventType="touchUpInside" id="0mR-Tj-m3q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCV-BH-dZ5">
-                                <rect key="frame" x="16" y="72" width="73" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tài khoản" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCV-BH-dZ5">
+                                <rect key="frame" x="16" y="72" width="85.5" height="22"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6y-qj-qbu">
-                                <rect key="frame" x="16" y="190" width="101.5" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ứng dụng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6y-qj-qbu">
+                                <rect key="frame" x="16" y="190" width="89.5" height="22"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -192,7 +192,7 @@
                             <constraint firstItem="1ov-zJ-OQf" firstAttribute="top" secondItem="V6y-qj-qbu" secondAttribute="bottom" constant="8" id="z3t-eZ-4BM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="More" image="ic_more" id="iBg-jR-Pt6"/>
+                    <tabBarItem key="tabBarItem" title="Thêm" image="ic_more" id="iBg-jR-Pt6"/>
                     <navigationItem key="navigationItem" title="MORE" id="Ylo-V9-hzU">
                         <barButtonItem key="backBarButtonItem" title=" " id="eaX-aV-Tit"/>
                     </navigationItem>
@@ -210,7 +210,7 @@
             </objects>
             <point key="canvasLocation" x="5192.8000000000002" y="1539.5802098950526"/>
         </scene>
-        <!--ACCOUNT-->
+        <!--TÀI KHOẢN-->
         <scene sceneID="zUd-tf-34f">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="vsQ-Tv-4mU" customClass="AccountViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
@@ -263,8 +263,8 @@
                                                     <constraint firstAttribute="height" constant="1" id="ogu-R3-FXE"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="First name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx4-oW-0NJ">
-                                                <rect key="frame" x="16" y="118" width="85.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Họ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx4-oW-0NJ">
+                                                <rect key="frame" x="16" y="118" width="21.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="cUy-JS-QSe"/>
                                                 </constraints>
@@ -292,8 +292,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Middle name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgU-xh-V2C">
-                                                <rect key="frame" x="191.5" y="119" width="106" height="18.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Tên đệm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgU-xh-V2C">
+                                                <rect key="frame" x="191.5" y="119" width="65" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -318,8 +318,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Last name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLL-R0-AuT">
-                                                <rect key="frame" x="16" y="196" width="83.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Tên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLL-R0-AuT">
+                                                <rect key="frame" x="16" y="196" width="26.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="6a0-yD-u0p"/>
                                                 </constraints>
@@ -347,8 +347,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Birthday :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQC-d1-mOY">
-                                                <rect key="frame" x="16" y="274" width="70" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Ngày sinh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQC-d1-mOY">
+                                                <rect key="frame" x="16" y="274" width="72.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="OaJ-LF-5aa"/>
                                                 </constraints>
@@ -376,8 +376,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Gender :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odh-HQ-L0R">
-                                                <rect key="frame" x="263" y="274" width="62" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Giới tính" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odh-HQ-L0R">
+                                                <rect key="frame" x="263" y="274" width="63.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="WW1-rD-83Q"/>
                                                 </constraints>
@@ -405,8 +405,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Address :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpG-zB-hsU">
-                                                <rect key="frame" x="16" y="352" width="66.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Địa chỉ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpG-zB-hsU">
+                                                <rect key="frame" x="16" y="352" width="51.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="4qZ-hr-v1q"/>
                                                 </constraints>
@@ -434,8 +434,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Identify number :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lph-va-kVZ">
-                                                <rect key="frame" x="16" y="430" width="128" height="18.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Số CMND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lph-va-kVZ">
+                                                <rect key="frame" x="16" y="430" width="71" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="XWp-be-Qmg"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -494,7 +497,7 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w4Z-qr-ETy" customClass="TextField" customModule="Material">
-                                                <rect key="frame" x="16" y="456.5" width="343" height="35"/>
+                                                <rect key="frame" x="16" y="458" width="343" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="uHY-Up-e7H"/>
                                                 </constraints>
@@ -599,7 +602,7 @@
                             <constraint firstItem="zWc-RD-Vtq" firstAttribute="leading" secondItem="1e3-xL-270" secondAttribute="leading" id="wN2-HB-3xd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ACCOUNT" id="Se2-C2-OKT">
+                    <navigationItem key="navigationItem" title="TÀI KHOẢN" id="Se2-C2-OKT">
                         <barButtonItem key="rightBarButtonItem" image="ic_edit" id="sHa-hr-878">
                             <color key="tintColor" red="0.98314038209999999" green="0.98314038209999999" blue="0.98314038209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -625,7 +628,7 @@
             </objects>
             <point key="canvasLocation" x="5700" y="2235.832083958021"/>
         </scene>
-        <!--SETTINGS-->
+        <!--CÀI ĐẶT-->
         <scene sceneID="24x-Zg-KIZ">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="CdQ-Ca-5L9" customClass="SettingViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
@@ -673,8 +676,8 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnM-b3-Buf">
-                                                            <rect key="frame" x="42" y="13" width="55.5" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng xuất" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnM-b3-Buf">
+                                                            <rect key="frame" x="42" y="13" width="81.5" height="20"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -722,7 +725,7 @@
                             <constraint firstItem="laT-Pu-hYz" firstAttribute="top" secondItem="Kgd-P9-Vcg" secondAttribute="bottom" id="c1W-XE-IVa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SETTINGS" id="nqo-3M-f0l"/>
+                    <navigationItem key="navigationItem" title="CÀI ĐẶT" id="nqo-3M-f0l"/>
                     <connections>
                         <outlet property="tableView" destination="laT-Pu-hYz" id="fq4-bI-G9X"/>
                     </connections>

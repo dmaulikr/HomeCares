@@ -49,8 +49,10 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Take your picture</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string></string>
+	<string>Enable location </string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>Enable location </string>
+	<key>NSCameraUsageDescription</key>
+	<string>Take your picture</string>
 </dict>
 </plist>

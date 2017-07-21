@@ -33,7 +33,7 @@ class UserPerson: NSObject {
     internal var subInfor: String {
         get {
             if let date = DateHelper.shared.date(from: self.birthDay, format: .yyyy_MM_dd_T_HH_mm_ss_Z) {
-                return self.gender! == .male ? "Male - " + " \(date.age) years old." : self.gender! == .male ? "Female - " + " \(date.age) years old.": "Other - "  + " \(date.age) years old."
+                return self.gender! == .male ? "Nam - " + " \(date.age) tuổi." : self.gender! == .male ? "Nữ - " + " \(date.age) tuổi.": "Khác - "  + " \(date.age) tuổi."
             }
             return ""
         }
