@@ -160,7 +160,7 @@ class AddMedicalReportBookViewController: UIViewController {
                 self.dateOfBirthTextField.text = "\(DateHelper.shared.string(from: date, format: .dd_MM_yyyy))"
             }
             
-        }, cancel: { ActionStringCancelBlock in return }, origin: view)
+        }, cancel: { ActionStringCancelBlock in return }, origin: dateOfBirthTextField)
         datePicker?.show()
     }
     
@@ -174,7 +174,7 @@ class AddMedicalReportBookViewController: UIViewController {
             }
         }, cancel: { (_) in
             return
-        }, origin: view)
+        }, origin: genderTextField)
         picker?.show()
     }
     
@@ -188,7 +188,7 @@ class AddMedicalReportBookViewController: UIViewController {
             }
         }, cancel: { (_) in
             return
-        }, origin: view)
+        }, origin: relationshipTextField)
         picker?.show()
 
     }

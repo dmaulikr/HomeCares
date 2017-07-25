@@ -24,6 +24,11 @@ class SettingViewController: UIViewController {
 extension SettingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let window = UIApplication.shared.keyWindow else { return }
+        UserDefaults.userId = nil
+        UserDefaults.personId = nil
+        UserDefaults.avatar = nil
+        UserDefaults.email = nil
+        UserDefaults.nameUser = nil
         if let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
             window.rootViewController = HomeCareNavigationController(rootViewController: vc)
             

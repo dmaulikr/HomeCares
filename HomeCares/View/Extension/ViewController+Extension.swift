@@ -23,6 +23,20 @@ extension UIViewController {
         showDetailViewController(alertController, sender: nil)
     }
     
+    public func showAlert(
+        title           : String,
+        message         : String,
+        negativeTitle   : String,
+        positiveTitle   : String,
+        negativeHandler : ((UIAlertAction) -> Void)? = nil,
+        positiveHandler : ((UIAlertAction) -> Void)? = nil) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: negativeTitle, style: .cancel, handler: negativeHandler))
+        alertController.addAction(UIAlertAction(title: positiveTitle, style: .default, handler: positiveHandler))
+        showDetailViewController(alertController, sender: nil)
+    }
+
 
     public func beginIgnoringEvent() {
         UIApplication.shared.beginIgnoringInteractionEvents()

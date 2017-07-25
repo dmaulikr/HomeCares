@@ -8,7 +8,7 @@
 			<key>background</key>
 			<string>#8edcce</string>
 			<key>icon</key>
-			<string>ic_service_home</string>
+			<string>ic_service_1</string>
 			<key>type</key>
 			<integer>0</integer>
 			<key>service</key>
@@ -16,15 +16,16 @@
 			<key>name</key>
 			<string>THĂM KHÁM TẠI NHÀ</string>
 			<key>overview</key>
-			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<string>Bạn có con nhỏ hoặc gười thân khó khăn trong việc đi lại, hoặc bệnh nhẹ chưa cần thiết phải đến bệnh viện, hãy để các Bác sỹ HomeCares đến thăm hỏi và theo dõi người nhà của bạn như người nhà của HomeCares .</string>
 			<key>detail</key>
-			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
+			<string>Dịch vụ khám bệnh tại nhà cho người lớn đang hướng đến các gia đình đang có thân nhân bị bệnh nhưng lại không có thời gian đi khám hoặc chờ đợi trong cảnh chen chúc tại bệnh viện. Dịch vụ khám bệnh tại nhà cho người lớn của chúng tôi do bác sĩ giàu kinh nghiệm của các Bệnh viện lớn tại Đà Nẵng đảm nhận. Dịch vụ nhanh chóng chuyên nghiệp, tại nhà, cá nhân hóa. Giá cả minh bạch, bác sĩ tận tâm.\n&quot; +
+                &quot;Đến với chúng tôi, bạn sẽ biết được toàn bộ quá trình khám bệnh của bác sĩ , được tư vấn trực tiếp , trực tiếp trao đổi với bác sĩ thông tin về sức khỏe của mình và người thân</string>
 		</dict>
 		<dict>
 			<key>background</key>
 			<string>#ea6fe6</string>
 			<key>icon</key>
-			<string>ic_service_home</string>
+			<string>ic_service_2</string>
 			<key>type</key>
 			<integer>1</integer>
 			<key>service</key>
@@ -32,7 +33,7 @@
 			<key>name</key>
 			<string>ĐIỀU DƯỠNG TẠI NHÀ</string>
 			<key>overview</key>
-			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<string>Bạn bận rộn với công việc và không có người để tin tưởng chăm sóc người thân của mình? Chúng tôi cung cấp Điều dưỡng đến tận nhà chăm sóc cho người thân của bạn, bên người thân bạn như người nhà là tiêu chí mà chúng tôi đào tạo cho đội ngũ điều dưỡng HomeCares</string>
 			<key>detail</key>
 			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
 		</dict>
@@ -40,7 +41,7 @@
 			<key>background</key>
 			<string>#ca8dce</string>
 			<key>icon</key>
-			<string>ic_service_home</string>
+			<string>ic_service_3</string>
 			<key>type</key>
 			<integer>2</integer>
 			<key>service</key>
@@ -48,15 +49,15 @@
 			<key>name</key>
 			<string>XÉT NGHIỆM TẠI NHÀ</string>
 			<key>overview</key>
-			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<string>Dịch vụ mang đến sự nhanh chóng và tiện lợi cho bạn khi chúng tôi đến lấy mẫu và trả kết quả ngay tại nhà.</string>
 			<key>detail</key>
-			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
+			<string>Điều kiện sống thay đổi kéo theo đó là sự phát triển phức tạp của nhiều loại bệnh lý. Để có thể chẩn đoán được bệnh nhanh chóng thì xét nghiệm là phương pháp được nhiều người sử dụng nhất. Nó giúp chúng ta có thể biết được mình có mắc bệnh hay không và hướng điều trị là gì. Để tạo sự thuận tiện cho người dân, có không ít phòng khám cung cấp dịch vụ lấy mẫu xét nghiệm tại nhà.\n Dịch vụ lấy mẫu xét nghiệm tại nhà được mở ra bởi người dân ngày càng bận rộn, ít có thời gian tới bệnh viện hay phòng khám xếp hàng chờ đợi. Hơn nữa ở thành phố lớn như Hà Nội, lượng dân cư đông đúc đổ dồn vào các bệnh viện khiến cho nhiều người bệnh cảm giác ngột ngạt mỗi khi đi khám bệnh. Với dịch vụ lấy mẫu xét nghiệm tại nhà, người dân hoàn toàn có thể yên tâm dù ở đâu cũng có thể lấy được mẫu xét nghiệm và được trả kết quả về tận nhà</string>
 		</dict>
 		<dict>
 			<key>background</key>
 			<string>#eaa418</string>
 			<key>icon</key>
-			<string>ic_service_home</string>
+			<string>ic_service_4</string>
 			<key>type</key>
 			<integer>3</integer>
 			<key>service</key>
@@ -64,15 +65,15 @@
 			<key>name</key>
 			<string>ĐIỀU TRỊ MÃN TÍNH</string>
 			<key>overview</key>
-			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<string>Điều trị mãn tính là điều trị lâu dài và cần theo dõi liên tục, chúng tôi sẽ theo dõi bệnh nhân mãn tính hàng ngày và có có những giải pháp thay đổi để bệnh nhân tiến triển mỗi ngày, không những thế chúng tôi còn bên bệnh nhân kịp thời và đúng lúc như người nhà của bệnh nhân</string>
 			<key>detail</key>
-			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
+			<string>Mô hình bệnh tật Việt Nam đang giảm dần các bệnh cấp tính, truyền nhiễm, trong khi lại ngày càng có nhiều người mắc các bệnh lý mãn tính như bệnh phổi tắc nghẽn mãn tính, hen phế quản, tăng huyết áp, bệnh cơ tim thiếu máu, suy tim, đái tháo đường, gout, viêm đa khớp, suy thận, rối loạn mỡ máu, đau thần kinh tọa, vai gáy, rối loạn tiền đình, viêm gan, xơ gan... việc điều trị những bệnh lý này là thường xuyên và kéo dài hết cả cuộc đời, không chỉ điều trị những đợt cấp ở bệnh viện, mà còn phải chú ý tuân thủ điều trị đồng thời theo dõi sát diễn biến trong thời gian điều trị tại nhà tránh làm nặng tình trạng bệnh, tránh xuất hiện biến chứng. Homecares quy tụ nhiều bác sĩ có kinh nghiệm đang làm việc tại bệnh viện Đà Nẵng, với tâm huyết của mình đã xây dựng những gói chăm sóc, điều trị, theo dõi bệnh lý mãn tính hiệu quả, giảm thiểu được những tai biến có thể dự phòng, giúp cải thiện chất lượng cuộc sống của người mắc bệnh mãn tính</string>
 		</dict>
 		<dict>
 			<key>background</key>
 			<string>#1ae2e9</string>
 			<key>icon</key>
-			<string>ic_service_home</string>
+			<string>ic_service_5</string>
 			<key>type</key>
 			<integer>4</integer>
 			<key>service</key>
@@ -80,7 +81,7 @@
 			<key>name</key>
 			<string>VẬT LÝ TRỊ LIỆU</string>
 			<key>overview</key>
-			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<string>Hiện nay nhu cầu khám chữa bệnh bằng y học cổ truyền ngày càng tăng cao do phương pháp này không chỉ mang lại hiệu quả cao mà còn rất an toàn, không để lại tác dụng phụ như nhiều phương pháp khác. Bên cạnh điều trị bằng thuốc thì y học cổ truyền còn kết hợp vật lý trị liệu –phục hồi chức năng nhằm rút ngắn thời gian điều trị và tăng hiệu quả.</string>
 			<key>detail</key>
 			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
 		</dict>
@@ -88,7 +89,7 @@
 			<key>background</key>
 			<string>#60b2ed</string>
 			<key>icon</key>
-			<string>ic_service_home</string>
+			<string>ic_service_6</string>
 			<key>type</key>
 			<integer>5</integer>
 			<key>service</key>
@@ -96,9 +97,9 @@
 			<key>name</key>
 			<string>KHÁM SỨC KHOẺ DN</string>
 			<key>overview</key>
-			<string>Chúng tôi đến từ Homecares, một dự án chăm sóc sức khỏe tại nhà. Được thành lập bởi các bác sĩ, điều dưỡng, kỹ thuật viên xét nghiệm đến từ các bệnh viện công của Đà Nẵng.</string>
+			<string>Kết nối các cơ sở y tế chất lượng trong thành phố, chúng tôi đưa ra dịch vụ khám sức khỏe cho doanh nghiệp một cách nhanh chóng, hiệu quả, có đầy đủ máy móc trong thiết bị và giá cả phải chăng.</string>
 			<key>detail</key>
-			<string>Sau khi chứng kiến những hình ảnh thân nhân và bệnh nhân chen chúc trong bệnh viện. Chúng tôi hi vọng Homecares sẽ giải quyết được được tình trạng bệnh viện quá tải, bệnh nhân không được cung cấp dịch vụ y tế chất lượng . Tại đây khi các bạn đăng kí khám chữa bệnh, các bạn sẽ được theo dõi sức khỏe miễn phí trên hệ thống phần mềm của Homecares.  Homecares sẽ lưu giữ hồ sơ sức khỏe của bạn và gia đình, sẵn sàng truy xuất hồ sơ khi cần thiết. Nhận khám kể cả trong giờ và ngoài giờ. Bác sĩ Homecares sẽ đến tận nhà phục vụ theo thời gian thích hợp nhất cho quý khách</string>
+			<string>Môi trường làm việc luôn tiềm ẩn nhiều nguy cơ bệnh tật mà chính bản thân người lao động và người chủ lao động cũng không thể dự phòng hết được. Bệnh lý tiềm ẩn từ di truyền đến những vấn đề phát sinh do lối sống, cường độ làm việc và môi trường công ty ảnh hưởng đến năng suất lao động và chất lượng cuộc sống. Vì thế, các cơ quan doanh nghiệp đều có các chương trình khám sức khỏe cho người lao động hàng năm, và đã giúp phát hiện sớm nhiều bệnh lý. Tuy nhiên việc sắp xếp đi lại cho nhân viên đến khám ở bệnh viện vốn rất đông bệnh nhân vào ra gây không biết bao nhiêu phiền hà và lãng phí cả thời gian lẫn công sức. Hiểu được điều này, Homecares liên kết với các trung tâm khám chữa bệnh, xét nghiệm và các bác sĩ nhiều năm kinh nghiệm để triển khai dịch vụ khám sức khỏe cho công nhân viên ngay tại doanh nghiệp, công ty, trường học. Dịch vụ sẽ được thực hiện nhanh chóng và tiện lợi, tiết kiệm nhiều thời gian và tiền bạc cho doanh nghiệp đồng thời đảm bảo chất lượng khám chữa bệnh, tránh lây nhiễm bệnh. Tất cả các trường hợp nghi ngờ, sẽ được chúng tôi tư vấn theo dõi định kỳ</string>
 		</dict>
 	</array>
 	<key>optionMenu</key>

@@ -177,7 +177,7 @@ class RegisterViewController: UIViewController {
                 self.birthdayLabel.text = DateHelper.shared.string(from: date, format: .dd_MM_yyyy)
             }
             
-        }, cancel: { ActionStringCancelBlock in return }, origin: view)
+        }, cancel: { ActionStringCancelBlock in return }, origin: birthdayLabel)
         datePicker?.show()
 
     }
@@ -192,7 +192,7 @@ class RegisterViewController: UIViewController {
             }
         }, cancel: { (_) in
             return
-        }, origin: view)
+        }, origin: genderLabel)
         picker?.show()
     }
     

@@ -52,8 +52,8 @@ class MoreViewController: UIViewController {
                 sSelf.bindData()
             }
             
-            if let error = response.error {
-                sSelf.showAlert(title: "Lỗi", message: error.localizedDescription, negativeTitle: "OK")
+            if let _ = response.error {
+                sSelf.showAlert(title: "Lỗi", message: "No network connection", negativeTitle: "OK")
             }
         }
     }

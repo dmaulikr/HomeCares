@@ -58,9 +58,9 @@ class MedicalReportCell: UITableViewCell {
         nameMemberLabel.text = "\(patient.firstName!) \(patient.middleName!) \(patient.lastName!)"
         switch patient.gender! {
         case .male:
-            genderLabel.text = "Nam"
-        case .female:
             genderLabel.text = "Nữ"
+        case .female:
+            genderLabel.text = "Nam"
         default :
             genderLabel.text = "Khác"
         }
@@ -74,47 +74,47 @@ class MedicalReportCell: UITableViewCell {
     internal func getRelation(relation: PatientRelations) -> String {
         switch relation {
         case .me:
-            return "Me"
+            return "Tôi"
         case .son:
-            return "Son"
+            return "Con trai"
         case .dauther:
-            return "Dauther"
+            return "Con gái"
         case .father:
-            return "Father"
+            return "Cha"
         case .mother:
-            return "Mother"
+            return "Mẹ"
         case .fatherInLaw:
-            return "Father in law"
+            return "Bố chồng(vợ)"
         case .motherInlaw:
-            return "Mother in law"
+            return "Mẹ chồng(vợ)"
         case .grandFather:
-            return "Grand father"
+            return "Ông"
         case .grandMother:
-            return "Grand mother"
+            return "Bà"
         case .grandFatherInLaw:
-            return "Grand father in law"
+            return "Ông bên chồng(vợ)"
         case .grandMotherInLaw:
-            return "Grand mother in law"
+            return "Bà bên chồng(vợ)"
         case .elderBrother:
-            return "Elder brother"
+            return "Anh trai"
         case .elderSister:
-            return "Elder sister"
+            return "Chị gái"
         case .youngerBrother:
-            return "Younger brother"
+            return "Em trai"
         case .youngerSister:
-            return "Younger sister"
+            return "Em gái"
         case .elderBrotherInLaw:
-            return "Elder brother in law"
+            return "Anh trai chồng(vợ)"
         case .elderSisterInLaw:
-            return "Elder sister in law"
+            return "Chị gái chồng(vợ)"
         case .youngerBrotherInLaw:
-            return "Younger brother in law"
+            return "Em trai chồng(vợ)"
         case .youngerSisterInlaw:
-            return "Younger sister in law"
+            return "Em gái chồng(vợ)"
         case .neighbor:
-            return "Neighbour"
+            return "Hàng xóm"
         default:
-            return "Other"
+            return "Khác"
         }
     }
     

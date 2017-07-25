@@ -37,6 +37,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var allergyHistoryTextField: TextField!
     @IBOutlet weak var medicalHistoryTextField: TextField!
     @IBOutlet weak var updateBurron: RaisedButton!
+    @IBOutlet weak var indicatorView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     internal var genderSelected: Gender!
     internal var relations: [String]!
@@ -89,7 +91,8 @@ class ProfileViewController: UIViewController {
         overviewTextField.dividerNormalColor = .darkGray
         allergyHistoryTextField.dividerNormalColor = .darkGray
         medicalHistoryTextField.dividerNormalColor = .darkGray
-
+        indicatorView.layer.cornerRadius = 25
+        indicatorView.isHidden = true
         
         genderTextField.addRightImage("ic_arrow_down".image)
         relationTextField.addRightImage("ic_arrow_down".image)
@@ -186,9 +189,11 @@ class ProfileViewController: UIViewController {
         patient.insuranceNumber = insuranceTextField.text!
         patient.updated = "\(Date())"
         startWaiting()
+        beginIgnoringEvent()
         homecareService.updatePatient(patient: patient) {[weak self] (response) in
             guard let sSelf = self else { return }
             sSelf.stopWaiting()
+            sSelf.endIgnoringEvent()
             if let _ = response.data {
                 sSelf.showAlert(title: "Thông báo",
                                 message: "Cập nhật sổ y bạ thành công.",
@@ -256,7 +261,7 @@ class ProfileViewController: UIViewController {
             }
         }, cancel: { (_) in
             return
-        }, origin: view)
+        }, origin: genderTextField)
         picker?.show()
     }
     
@@ -268,7 +273,7 @@ class ProfileViewController: UIViewController {
                 self.birthdayTextField.text = "\(DateHelper.shared.string(from: date, format: .dd_MM_yyyy))"
             }
             
-        }, cancel: { ActionStringCancelBlock in return }, origin: view)
+        }, cancel: { ActionStringCancelBlock in return }, origin: birthdayTextField)
         datePicker?.show()
 
     }
@@ -282,7 +287,7 @@ class ProfileViewController: UIViewController {
             }
         }, cancel: { (_) in
             return
-        }, origin: view)
+        }, origin: relationTextField)
         picker?.show()
     }
     
@@ -328,10 +333,15 @@ extension ProfileViewController: UIImagePickerControllerDelegate {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage  {
             let data = UIImageJPEGRepresentation(image,0.1)!
             avatarImageView.image = image
+            indicatorView.isHidden = false
+            activityIndicator.startAnimating()
+            beginIgnoringEvent()
             homecareService.changePatientAvatar(patientId: patient.patientId, image: data, handler: { [weak self] (response) in
                 
                 guard let sSelf = self else { return }
-                
+                sSelf.activityIndicator.stopAnimating()
+                sSelf.indicatorView.isHidden = true
+                sSelf.endIgnoringEvent()
                 if let error = response.error {
                     sSelf.restoreImageView()
                     sSelf.showSnackBar(message: error.localizedDescription)

@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
 
     
     internal func isValidPassword() -> Bool {
-        return passwordTextField.text!.trimmed.characters.count > 6
+        return passwordTextField.text!.trimmed.characters.count >= 6
     }
     
     internal func startWaitingLogin() {
@@ -92,7 +92,7 @@ class LoginViewController: UIViewController {
         }
         if !isValidPassword() {
             showAlert(title: "Chú ý",
-                      message: "Mật khẩu ít nhất 7 kí tự.",
+                      message: "Mật khẩu ít nhất 6 kí tự.",
                       negativeTitle: "OK")
             return
         }

@@ -46,7 +46,7 @@ class QuestionCell: UITableViewCell {
         } else {
             self.avartaImageView.image = "ic_user_default".image
         }
-        nameLabel.text = question.userPerson.firstName +  question.userPerson.middleName + question.userPerson.lastName
+        nameLabel.text = question.userPerson.firstName + " " +  question.userPerson.middleName + " " + question.userPerson.lastName
         contentLabel.text = question.content
         var old = ""
         if let date = DateHelper.shared.date(from: question.userPerson.birthDay, format: .yyyy_MM_dd_T_HH_mm_ss_Z) {

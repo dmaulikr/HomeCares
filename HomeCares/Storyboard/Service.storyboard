@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Dịch vụ-->
+        <!--DỊCH VỤ-->
         <scene sceneID="M9e-qO-289">
             <objects>
                 <viewController id="hSg-bL-1jt" customClass="ServiceViewController" customModule="HomeCares" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,13 +42,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_service" translatesAutoresizingMaskIntoConstraints="NO" id="Mdu-k4-s2r">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="120" id="3bH-gh-Jxb"/>
+                                                        <constraint firstAttribute="width" secondItem="Mdu-k4-s2r" secondAttribute="height" multiplier="125:43" id="VUA-6M-3se"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcX-yk-AYk">
-                                                    <rect key="frame" x="0.0" y="80" width="375" height="40"/>
+                                                    <rect key="frame" x="0.0" y="89" width="375" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hôm nay gia đình bạn thế nào?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAb-q7-6MM">
                                                             <rect key="frame" x="8" y="4" width="359" height="32"/>
@@ -162,7 +163,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dịch vụ" image="ic_library_books" id="AuF-MH-3uJ"/>
-                    <navigationItem key="navigationItem" id="oyU-Ve-nDU"/>
+                    <navigationItem key="navigationItem" title="DỊCH VỤ" id="oyU-Ve-nDU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="PNT-Ws-JEI" id="3rL-ST-zA3"/>

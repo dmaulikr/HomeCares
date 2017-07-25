@@ -142,7 +142,7 @@ class ServiceBookingViewController: UIViewController {
             }
         }, cancel: { (_) in
             return
-        }, origin: view)
+        }, origin: peopleUseServiceTextField)
         picker?.show()
 
     }
@@ -162,7 +162,7 @@ class ServiceBookingViewController: UIViewController {
             }
         }, cancel: { (_) in
             return
-        }, origin: view)
+        }, origin: typeServiceTextField)
         picker?.show()
 
     }
@@ -175,7 +175,7 @@ class ServiceBookingViewController: UIViewController {
                 self.timeTextField.text = "\(DateHelper.shared.string(from: date, format: .HH_mm_dd_MM_yyyy))"
             }
             
-        }, cancel: { ActionStringCancelBlock in return }, origin: view)
+        }, cancel: { ActionStringCancelBlock in return }, origin: timeTextField)
         
         datePicker?.show()
 

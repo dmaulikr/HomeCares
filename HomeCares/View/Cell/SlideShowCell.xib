@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="120" id="1eC-FC-22W"/>
+                            <constraint firstAttribute="width" secondItem="96T-d9-4t9" secondAttribute="height" multiplier="8:3" id="aa4-mA-tU8"/>
                         </constraints>
                     </view>
                 </subviews>

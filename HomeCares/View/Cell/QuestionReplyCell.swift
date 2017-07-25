@@ -46,7 +46,7 @@ class QuestionReplyCell: UITableViewCell {
         } else {
             self.avartaImageView.image = "ic_user_default".image
         }
-        nameLabel.text = question.userPerson.firstName +  question.userPerson.middleName + question.userPerson.lastName
+        nameLabel.text = question.userPerson.firstName + " " +  question.userPerson.middleName + " " + question.userPerson.lastName
         contentLabel.text = question.content
         thankLabel.text = "\(question.questionReplyThanks.count) cảm ơn."
         timeLabel.text = question.created.timeInterval

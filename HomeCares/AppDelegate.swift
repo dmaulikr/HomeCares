@@ -20,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
+        
+        if let userId = UserDefaults.userId, userId != 0, let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainController") as? HomeCareTabbarController {
+            
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.makeKeyAndVisible()
+            window?.rootViewController = vc
+        }
         return true
     }
 }

@@ -44,7 +44,7 @@ extension UITableView {
     }
     
     public func startHeaderLoading() {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: frame.width, height: 60.0))
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 60.0))
         let springIndicator = self.springIndicator
         springIndicator.startAnimation()
         springIndicator.center = headerView.center
@@ -68,7 +68,7 @@ extension UITableView {
         if let springIndicator = tableFooterView?.subviews.first as? SpringIndicator {
             springIndicator.startAnimation()
         } else {
-            let footerView = UIView(frame: CGRect(x: 0, y: 0, width: frame.width, height: 60.0))
+            let footerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 60.0))
             let springIndicator = self.springIndicator
             springIndicator.center = footerView.center
             springIndicator.startAnimation()

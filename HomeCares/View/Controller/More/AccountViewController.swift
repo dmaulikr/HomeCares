@@ -28,6 +28,8 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var addressTextField: TextField!
     @IBOutlet weak var identifyTextField: TextField!
     @IBOutlet weak var updateAccountButton: RaisedButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var indicatorView: UIView!
     
     internal var isEdit = false
     internal var genderSelected = Gender.female
@@ -50,6 +52,7 @@ class AccountViewController: UIViewController {
         birthdayTextField.addRightImage("ic_arrow_down".image)
         genderTextField.addRightImage("ic_arrow_down".image)
         avatarImageView.layer.cornerRadius = 30
+        indicatorView.layer.cornerRadius = 30
         avatarImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showAddImage)))
 
         firstNameTextField.font = UIFont(name:"Montserrat-Light", size:16)
@@ -125,9 +128,11 @@ class AccountViewController: UIViewController {
                 userPerson.birthDay = DateHelper.shared.string(from: date, format: .yyyy_MM_dd_T_HH_mm_ss_Z)
             }
             startWaiting()
+            beginIgnoringEvent()
             homecareService.updateUserPerson(userPerson: userPerson, handler: {[weak self] (response) in
                 guard let sSelf = self else {return}
                 
+                sSelf.endIgnoringEvent()
                 sSelf.stopWaiting()
                 if let _ = response.data {
                     sSelf.showAlert(title: "Thông báo",
@@ -303,10 +308,15 @@ extension AccountViewController: UIImagePickerControllerDelegate {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage  {
             let data = UIImageJPEGRepresentation(image,0.1)!
             avatarImageView.image = image
+            activityIndicator.startAnimating()
+            indicatorView.isHidden = false
+            beginIgnoringEvent()
             homecareService.changeUserAvatar(personId: userPerson.personId, image: data, handler: { [weak self] (response) in
                 
                 guard let sSelf = self else { return }
-                
+                sSelf.endIgnoringEvent()
+                sSelf.activityIndicator.stopAnimating()
+                sSelf.indicatorView.isHidden = true
                 if let error = response.error {
                     sSelf.restoreImageView()
                     sSelf.showSnackBar(message: "Thay đổi ảnh đại điện thất bại. \(error.localizedDescription)")

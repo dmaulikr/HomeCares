@@ -15,6 +15,10 @@ class MedicalReportBookViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    internal var waitingView: UIView!
+    internal var activityIndicator: UIActivityIndicatorView!
+    
+    
     internal var newButton: FABButton!
     internal let baseSize = CGSize(width: 52, height: 52)
     internal let bottomInset: CGFloat = 60
@@ -78,6 +82,37 @@ class MedicalReportBookViewController: UIViewController {
         }
     }
     
+    internal func startWaiting() {
+        guard let window = UIApplication.shared.keyWindow else {
+            return
+        }
+        waitingView = UIView(frame: CGRect(x: 0, y: 0, width: window.bounds.width, height: window.bounds.height))
+        waitingView.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        waitingView.layout(activityIndicator)
+            .centerVertically()
+            .centerHorizontally()
+        activityIndicator.startAnimating()
+        window.addSubview(waitingView)
+    }
+    
+    internal func handleDeletePatient(patient: Patient, completion: @escaping (Bool) -> ()) {
+        startWaiting()
+        homeCareService.deletePatientsBy(id: patient.patientId) {
+            [weak self] (response) in
+            guard let sSelf = self else {return}
+            sSelf.activityIndicator.stopAnimating()
+            sSelf.waitingView.removeFromSuperview()
+            if let _ = response.data {
+                completion(true)
+            } else {
+                sSelf.showAlert(title: "Thông báo",
+                          message: "Xoá sổ y bạ thất bại. Vui lòng thử lại sau.",
+                          negativeTitle: "OK")
+            }
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetailPatientView" {
             if let vc = segue.destination as? PatientDetailViewController {
@@ -101,8 +136,18 @@ extension MedicalReportBookViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            patients.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            showAlert(
+                title: "Chú ý",
+                message: "Bạn có thực sự muốn xoá sổ y bạ này",
+                negativeTitle: "Không", positiveTitle: "Có",
+                positiveHandler: { _ in
+                    self.handleDeletePatient(patient: self.patients[indexPath.row], completion: { (success) in
+                        if success {
+                            self.patients.remove(at: indexPath.row)
+                            self.tableView.deleteRows(at: [indexPath], with: .fade)
+                        }
+                    })
+            })
         }
      }
 }
